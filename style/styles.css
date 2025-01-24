@@ -6,7 +6,7 @@ body {
     color: #ffffff;
 }
 header {
-    background: url('LLN_lol_icon.jpg') no-repeat center/cover;
+    background: url('../src/LLN_lol_icon.jpg') no-repeat center/cover;
     text-align: center;
     padding: 60px 0;
     color: #fff;
