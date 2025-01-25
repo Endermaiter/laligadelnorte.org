@@ -1,43 +1,55 @@
 
-    const summonerName = getFirstSummonerName()
-    const API_KEY = 'RGAPI-481cec0f-c653-401b-a9de-50bc47ad3bd2';
-    const continent = 'europe';
-    const url = `https://${continent}.api.riotgames.com/riot/account/v1/accounts/by-riot-id/FF15%20Endermaiter/FF15?api_key=${API_KEY}`;
+const API_KEY = 'RGAPI-481cec0f-c653-401b-a9de-50bc47ad3bd2';
+const continent = 'europe';
+const playersJsonFilePath = '../data/players_pruebas.json'
 
-    async function fetchSummonerData() {
+async function loadPUUID() {
 
-        try {
+    try {
+
+        const playerList = await getPlayerListFromJSON();
+        console.log(playerList);
+        let puuIDList = [];
+        for (let i = 0; i < playerList.length; i++) {
+            const summonerName = playerList[i].summonerName;
+            const summonerTag = playerList[i].tag;
+            let summonerNameParsed = `${summonerName.replace(/ /g, '%20')}`;
+            const url = `https://${continent}.api.riotgames.com/riot/account/v1/accounts/by-riot-id/${summonerNameParsed}/${summonerTag}?api_key=${API_KEY}`;
+            console.log(url);
             const response = await fetch(url);
-
-            if (!response.ok) {
+            if (response.ok) {
+                const data = await response.json();
+                puuIDList.push(data.puuid)
+            } else {
                 throw new Error('No se pudo obtener la información del invocador.');
             }
-
-            const data = await response.json();
-            document.getElementById('player1').textContent = JSON.stringify(data, null, 2);
-        } catch (error) {
-            document.getElementById('player1').textContent = `Error: ${error.message}`;
         }
+        return puuIDList;
+    } catch (error) {
+        document.getElementById('player1').textContent = `Error: ${error.message}`;
     }
+}
 
-    async function getFirstSummonerName() {
-        try {
-            const response = await fetch(jsonFilePath);
-            if (!response.ok) {
-                throw new Error('Error al cargar el archivo JSON');
-            }
-    
-            const players = await response.json();
-    
-            let firstSummonerName = players.player1.summonerName;
-            let firstSummonerTag = players.player1.tag;
-    
-            firstSummonerName = firstSummonerName.replace(/ /g, '%20');
-
-            return `${firstSummonerName}/${firstSummonerTag}`;
-        } catch (error) {
-            console.error('Error:', error.message);
+async function getPlayerListFromJSON() {
+    try {
+        const response = await fetch(playersJsonFilePath);
+        if (!response.ok) {
+            throw new Error('Error al cargar el archivo JSON');
         }
-    }
 
-document.addEventListener('DOMContentLoaded', fetchSummonerData);
+        const players = await response.json();
+
+        const playerList = [];
+
+        Object.entries(players).forEach(([key, value]) => {
+            console.log(`Processing ${key}:`, value);
+            playerList.push(value);
+        });
+        return playerList;
+
+    } catch (error) {
+        console.error('Error:', error.message);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', loadPUUID);
