@@ -23,7 +23,9 @@ async function loadPUUID() {
             } else {
                 throw new Error('No se pudo obtener la información del invocador.');
             }
+            await sleep(500)
         }
+        console.log(puuIDList);
         return puuIDList;
     } catch (error) {
         document.getElementById('player1').textContent = `Error: ${error.message}`;
@@ -50,6 +52,10 @@ async function getPlayerListFromJSON() {
     } catch (error) {
         console.error('Error:', error.message);
     }
+}
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 document.addEventListener('DOMContentLoaded', loadPUUID);
