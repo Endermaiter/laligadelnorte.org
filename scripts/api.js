@@ -22,7 +22,7 @@ async function getPUUID() {
             } else {
                 throw new Error('No se pudo obtener la información del invocador.');
             }
-            await sleep(500)
+            await Utils.sleep(500)
         }
         return puuIDList;
     } catch (error) {
@@ -44,7 +44,7 @@ async function getDDragonLastVersion() {
     }
 }
 
-async function getLevel() {
+async function getLevels() {
     const puuidList = await getPUUID();
     let levelList = [];
     for (let i = 0; i < puuidList.length; i++) {
@@ -56,12 +56,12 @@ async function getLevel() {
         } else {
             throw new Error('No se pudo obtener la información del invocador.');
         }
-        await sleep(500)
+        await Utils.sleep(500)
     }
     return levelList;
 }
 
-async function getIconID() {
+async function getIconIDs() {
     const puuidList = await getPUUID();
     let iconIDList = [];
     for (let i = 0; i < puuidList.length; i++) {
@@ -73,9 +73,45 @@ async function getIconID() {
         } else {
             throw new Error('No se pudo obtener la información del invocador.');
         }
-        await sleep(500)
+        await Utils.sleep(500)
     }
     return iconIDList;
 }
 
-export { getLevel, getIconID, getDDragonLastVersion };
+async function getSummonerIDs() {
+    const puuidList = await getPUUID();
+    let summonerIDList = [];
+    for (let i = 0; i < puuidList.length; i++) {
+        const url = `https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/${puuidList[i]}?api_key=${API_KEY}`
+        const response = await fetch(url);
+        if (response.ok) {
+            const data = await response.json();
+            summonerIDList.push(data.id)
+        } else {
+            throw new Error('No se pudo obtener la información del invocador.');
+        }
+        await Utils.sleep(500)
+    }
+    return summonerIDList;
+}
+
+async function getRankedInfo() {
+    const summonerIDList = await getSummonerIDs();
+    let randkedInfoList = [];
+    for (let i = 0; i < summonerIDList.length; i++) {
+        const url = `https://euw1.api.riotgames.com/lol/league/v4/entries/by-summoner/${summonerIDList[i]}?api_key=${API_KEY}`
+        const response = await fetch(url);
+        if (response.ok) {
+            const data = await response.json();
+            randkedInfoList.push(data)
+        } else {
+            throw new Error('No se pudo obtener la información del invocador.');
+        }
+        await Utils.sleep(500)
+    }
+    return randkedInfoList;
+}
+
+export { getLevels, getIconIDs, getDDragonLastVersion, getSummonerIDs, getRankedInfo };
+
+document.addEventListener('DOMContentLoaded', getRankedInfo);

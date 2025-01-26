@@ -14,7 +14,7 @@ header {
     background-position: left center, right center;
     background-color: black;
     text-align: center;
-    padding: 120px 40px; /* Añadir 40px de espacio a los lados */
+    padding: 120px 40px;
     color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
     position: relative;
@@ -22,10 +22,10 @@ header {
 
 header::after {
     background-size: cover;
-    width: calc(100% - 80px); /* Reducir el ancho total del pseudoelemento */
+    width: calc(100% - 80px);
     height: 100%;
     background-position: center;
-    left: 40px; /* Ajuste para dejar espacio a la izquierda */
+    left: 40px;
 }
 
 nav {
@@ -187,4 +187,28 @@ footer p {
     background-color: #6695d3;
     padding: 10px;
     border-radius: 5px;
+}
+
+.rrss-text {
+    color: #fff;
+    text-decoration: solid;
+    margin-left: 10%;
+    font-weight: bold;
+    margin-bottom: 20%;
+}
+
+.rrss-img {
+    border-radius: 15px;
+    width: 40px;
+    vertical-align: middle;
+    margin-right: 2%;
+}
+
+.rrss-list {
+    margin-bottom: 2%;
+}
+
+.video-frame {
+    width: 560px;
+    height: 315px;
 }
