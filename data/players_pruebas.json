@@ -1,5 +1,26 @@
 {
-    "player1": { "summonerName": "FF15 Endermaiter", "tag": "FF15" },
-    "player2": { "summonerName": "Iontxas", "tag": "MNC" },
-    "player3": { "summonerName": "Macho Toretto", "tag": "EUW" }
-}
+    "player1": {
+      "lol": {
+        "summonerName": "FF15 Endermaiter",
+        "tag": "FF15"
+      },
+      "discord": "FF15_Endermaiter#1234",
+      "liga": "Team A"
+    },
+    "player2": {
+      "lol": {
+        "summonerName": "Iontxas",
+        "tag": "MNC"
+      },
+      "discord": "Iontxas#5678",
+      "liga": "Team B"
+    },
+    "player3": {
+      "lol": {
+        "summonerName": "Macho Toretto",
+        "tag": "EUW"
+      },
+      "discord": "MachoToretto#9876",
+      "liga": "Team C"
+    }
+  }
