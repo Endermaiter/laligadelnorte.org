@@ -69,7 +69,6 @@ async function showRankedInfo() {
     for (let i = 0; i < rankedInfoList.length; i++) {
         for (let j = 0; j < rankedInfoList[i].length; j++) {
             let rankedinfoJSON = rankedInfoList[i][j]
-            console.log(rankedinfoJSON)
             let cola = rankedinfoJSON.queueType
             let elo = rankedinfoJSON.tier
             let rango = rankedinfoJSON.rank
@@ -77,23 +76,26 @@ async function showRankedInfo() {
             let wins = rankedinfoJSON.wins
             let loses = rankedinfoJSON.loses
             const rankedColumn = document.getElementById(`player${i + 1}_column3`);
-            const image = document.createElement('img');
             const data = document.createElement('div');
-            const colaData = document.createElement('p');
+            const colaData = document.createElement('h4');
+            if (cola.includes('SOLO')) {
+                colaData.textContent = 'CLASIFICATORIA SOLO/DUO'
+            } else if (cola.includes('FLEX')) {
+                colaData.textContent = 'CLASIFICATORIA FLEX'
+            }
+            data.appendChild(colaData)
+            const image = document.createElement('img');
             const image_path = `../src/rank/${elo}.png`
             image.src = image_path
             image.alt = "RankIcon"
             image.width = 250;
             image.height = 250;
-            image.style.margin = '0 auto';
-            if (cola.includes('SOLO')){
-                colaData.textContent = 'Clasificatoria SOLO/DUO'
-            }else if (cola.includes('FLEX')){
-                colaData.textContent = 'Clasificatoria FLEX'
-            }
-            colaData.style.margin = '0 auto';
-            rankedColumn.appendChild(image)
-            data.appendChild(colaData)
+            image.style.margin = '0';
+            data.appendChild(image)
+            const rankedData = document.createElement('h4');
+            colaData.style.marginBottom = '0';
+            rankedData.textContent = `${elo} ${rango} - ${LPs} LPs`
+            data.appendChild(rankedData)
             rankedColumn.appendChild(data)
         }
     }

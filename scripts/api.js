@@ -22,7 +22,6 @@ async function getPUUID() {
             } else {
                 throw new Error('No se pudo obtener la información del invocador.');
             }
-            await Utils.sleep(500)
         }
         return puuIDList;
     } catch (error) {
@@ -56,7 +55,6 @@ async function getLevels() {
         } else {
             throw new Error('No se pudo obtener la información del invocador.');
         }
-        await Utils.sleep(500)
     }
     return levelList;
 }
@@ -73,7 +71,6 @@ async function getIconIDs() {
         } else {
             throw new Error('No se pudo obtener la información del invocador.');
         }
-        await Utils.sleep(500)
     }
     return iconIDList;
 }
@@ -90,7 +87,6 @@ async function getSummonerIDs() {
         } else {
             throw new Error('No se pudo obtener la información del invocador.');
         }
-        await Utils.sleep(500)
     }
     return summonerIDList;
 }
@@ -107,7 +103,6 @@ async function getRankedInfo() {
         } else {
             throw new Error('No se pudo obtener la información del invocador.');
         }
-        await Utils.sleep(500)
     }
     return randkedInfoList;
 }

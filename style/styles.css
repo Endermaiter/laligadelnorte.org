@@ -212,3 +212,52 @@ footer p {
     width: 560px;
     height: 315px;
 }
+
+.teams-images {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.team {
+    text-align: center;
+}
+
+
+.section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.teams-h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.schedule {
+    display:block;
+    padding: 20px;
+}
+
+.card-match {
+    background: #1f4068;
+    padding: 20px;
+    border: 2px solid #778da9;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-match:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9);
+}
