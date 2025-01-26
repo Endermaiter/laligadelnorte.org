@@ -7,12 +7,12 @@
     <link rel="icon" href="../src/LLN_wolf_header_icon.png" type="image/png">
     <title>La Liga del Norte Tournament</title>
     <link rel="stylesheet" href="../style/styles.css">
-    <script src="../scripts/api.js"></script>
+    <script type="module" src="../scripts/page.js"></script>
 </head>
 
 <body>
-    <header>
-        <h1>La Liga del Norte</h1>
+    <header class="header-container">
+        <img src="../src/LLN_text.png">
     </header>
     <nav>
         <a href="../index.html">Inicio</a>
@@ -22,7 +22,9 @@
     </nav>
     <div class="container">
         <section id="players" class="section">
-            <h2>Jugadores</h2>
+            <h2>JUGADORES</h2>
+            <p style="text-align:center;">【 Haz click encima de un jugador para acceder a su perfil de OP.GG 】</p>
+            <p style="text-align:center;">─────────────────────────────────────────────────────────────────────────────</p>
             <div class="players">
                 <div class="card-player" id="player1">
                     <div class="top-row">
@@ -30,17 +32,17 @@
                         <p>✻ ─────────── ✦ ─────────── ✻</p>
                     </div>
                     <div class="bottom-row">
-                        <div class="column">
-                            <h4>Icono</h4>
-                            <img src="icono.jpg" alt="Icono del Invocador">
+                        <div class="column" id="player1_column1">
+                            <h4>PERFIL</h4>
+                            <img src="https://ddragon.leagueoflegends.com/cdn/15.2.1/img/profileicon/6768.png" alt="Icono del Invocador">
                         </div>
-                        <div class="column">
-                            <h4>Estadísticas</h4>
+                        <div class="column" id="player1_column2">
+                            <h4>ESTADÍSTICAS</h4>
                             <p>Victorias: 10</p>
                             <p>Derrotas: 5</p>
                         </div>
-                        <div class="column">
-                            <h4>Información adicional</h4>
+                        <div class="column" id="player1_column3">
+                            <h4>CLASIFICATORIA</h4>
                             <p>Más detalles aquí...</p>
                         </div>
                     </div>
@@ -53,7 +55,7 @@
                     <div class="bottom-row">
                         <div class="column">
                             <h4>Icono</h4>
-                            <img src="../src/LLN_lol_icon.jpg" alt="Icono del Invocador">
+                            <img src="https://ddragon.leagueoflegends.com/cdn/15.2.1/img/profileicon/6768.png" alt="Icono del Invocador">
                         </div>
                         <div class="column">
                             <h4>Estadísticas</h4>
@@ -74,7 +76,7 @@
                     <div class="bottom-row">
                         <div class="column">
                             <h4>Icono</h4>
-                            <img src="icono.jpg" alt="Icono del Invocador">
+                            <img src="https://ddragon.leagueoflegends.com/cdn/15.2.1/img/profileicon/6768.png" alt="Icono del Invocador">
                         </div>
                         <div class="column">
                             <h4>Estadísticas</h4>
