@@ -7,15 +7,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Endermaiter/LLN_WEB.git"
+    "url": "git+https://github.com/Endermaiter/laligadelnorte.org.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Endermaiter/LLN_WEB/issues"
+    "url": "https://github.com/Endermaiter/laligadelnorte.org/issues"
   },
-  "homepage": "https://github.com/Endermaiter/LLN_WEB#readme",
+  "homepage": "https://github.com/Endermaiter/laligadelnorte.org#readme",
   "description": "",
   "dependencies": {
     "axios": "^1.7.9",

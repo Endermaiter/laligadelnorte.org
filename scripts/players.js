@@ -59,6 +59,8 @@ async function showSummonerLevels() {
         const numberLevel = document.createElement('b');
         numberLevel.textContent = levelList[i]
         levelText.textContent = 'NIVEL: '
+        levelText.id = "exclude-format"
+        numberLevel.id = "exclude-format"
         levelText.appendChild(numberLevel)
         profileColumn.appendChild(levelText)
     }
@@ -96,6 +98,11 @@ async function showRankedInfo() {
             colaData.style.marginBottom = '0';
             rankedData.textContent = `${elo} ${rango} - ${LPs} LPs`
             data.appendChild(rankedData)
+            if (j>0) {
+                const divider_line = document.createElement('p')
+                divider_line.textContent = "─────────────"
+                rankedColumn.appendChild(divider_line)
+            }
             rankedColumn.appendChild(data)
         }
     }
