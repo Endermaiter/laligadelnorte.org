@@ -276,6 +276,7 @@ footer p {
     gap: 20px; /* Espacio entre la fila de imágenes y el texto */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 20px;
 }
 
 .card-match:hover {

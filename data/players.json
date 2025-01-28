@@ -1,234 +1,242 @@
 {
     "player1": {
       "lol": {
-        "summonerName": "FF15 Endermaiter",
-        "tag": "FF15"
+        "summonerName": "5x30",
+        "tag": "DAYY"
       },
-      "discord": "FF15_Endermaiter#1234",
-      "liga": "Team A"
+      "discord": "",
+      "team": "FF15"
     },
     "player2": {
+      "lol": {
+        "summonerName": "Alejan121",
+        "tag": "EUW"
+      },
+      "discord": "",
+      "team": "DMG"
+    },
+    "player3": {
+      "lol": {
+        "summonerName": "ARK Zackielazo",
+        "tag": "EUW"
+      },
+      "discord": "",
+      "team": "DMG"
+    },
+    "player4": {
+      "lol": {
+        "summonerName": "alex132mini",
+        "tag": "EUW"
+      },
+      "discord": "",
+      "team": "TNS"
+    },
+    "player5": {
+      "lol": {
+        "summonerName": "BlackCloudForce",
+        "tag": "EUW"
+      },
+      "discord": "",
+      "team": "DMG"
+    },
+    "player6": {
+      "lol": {
+        "summonerName": "Cαnyon Pαrαguαyo",
+        "tag": "FF15"
+      },
+      "discord": "",
+      "team": "FF15"
+    },
+    "player7": {
+      "lol": {
+        "summonerName": "CCE DaniCoru23",
+        "tag": "CCE"
+      },
+      "discord": "",
+      "team": "FF15"
+    },
+    "player8": {
+      "lol": {
+        "summonerName": "DT Adria Kila",
+        "tag": "EUW"
+      },
+      "discord": "",
+      "team": "TNS"
+    },
+    "player9": {
+      "lol": {
+        "summonerName": "DT EPIKA07",
+        "tag": "6996"
+      },
+      "discord": "",
+      "team": ""
+    },
+    "player10": {
+      "lol": {
+        "summonerName": "DT Markos316",
+        "tag": "GGWP"
+      },
+      "discord": "",
+      "team": ""
+    },
+    "player11": {
+      "lol": {
+        "summonerName": "ERIKBROS",
+        "tag": "EUW"
+      },
+      "discord": "",
+      "team": "N4W"
+    },
+    "player12": {
+      "lol": {
+        "summonerName": "FallenStarke",
+        "tag": "EUW"
+      },
+      "discord": "",
+      "team": "DMG"
+    },
+    "player13": {
+      "lol": {
+        "summonerName": "FF15 APEDRADA",
+        "tag": "EUW"
+      },
+      "discord": "",
+      "team": "7962"
+    },
+    "player14": {
+      "lol": {
+        "summonerName": "FF15 Endermaiter",
+        "tag": "EUW"
+      },
+      "discord": "",
+      "team": "FF15"
+    },
+    "player15": {
+      "lol": {
+        "summonerName": "Guren no Shogun",
+        "tag": "EUW"
+      },
+      "discord": "",
+      "team": "DMG"
+    },
+    "player16": {
       "lol": {
         "summonerName": "Iontxas",
         "tag": "MNC"
       },
-      "discord": "Iontxas#5678",
-      "liga": "Team B"
-    },
-    "playe4": {
-      "lol": {
-        "summonerName": "Macho Toretto",
-        "tag": "EUW"
-      },
-      "discord": "MachoToretto#9876",
-      "liga": "Team C"
-    },
-    "player5": {
-      "lol": {
-        "summonerName": "Macho Toretto",
-        "tag": "EUW"
-      },
-      "discord": "MachoToretto#9876",
-      "liga": "Team C"
-    },
-    "player6": {
-      "lol": {
-        "summonerName": "Macho Toretto",
-        "tag": "EUW"
-      },
-      "discord": "MachoToretto#9876",
-      "liga": "Team C"
-    },
-    "player7": {
-      "lol": {
-        "summonerName": "Macho Toretto",
-        "tag": "EUW"
-      },
-      "discord": "MachoToretto#9876",
-      "liga": "Team C"
-    },
-    "player8": {
-      "lol": {
-        "summonerName": "Macho Toretto",
-        "tag": "EUW"
-      },
-      "discord": "MachoToretto#9876",
-      "liga": "Team C"
-    },
-    "player9": {
-      "lol": {
-        "summonerName": "Macho Toretto",
-        "tag": "EUW"
-      },
-      "discord": "MachoToretto#9876",
-      "liga": "Team C"
-    },
-    "player10": {
-      "lol": {
-        "summonerName": "Macho Toretto",
-        "tag": "EUW"
-      },
-      "discord": "MachoToretto#9876",
-      "liga": "Team C"
-    },
-    "player11": {
-      "lol": {
-        "summonerName": "Macho Toretto",
-        "tag": "EUW"
-      },
-      "discord": "MachoToretto#9876",
-      "liga": "Team C"
-    },
-    "player12": {
-      "lol": {
-        "summonerName": "Macho Toretto",
-        "tag": "EUW"
-      },
-      "discord": "MachoToretto#9876",
-      "liga": "Team C"
-    },
-    "player13": {
-      "lol": {
-        "summonerName": "Macho Toretto",
-        "tag": "EUW"
-      },
-      "discord": "MachoToretto#9876",
-      "liga": "Team C"
-    },
-    "player14": {
-      "lol": {
-        "summonerName": "Macho Toretto",
-        "tag": "EUW"
-      },
-      "discord": "MachoToretto#9876",
-      "liga": "Team C"
-    },
-    "player15": {
-      "lol": {
-        "summonerName": "Macho Toretto",
-        "tag": "EUW"
-      },
-      "discord": "MachoToretto#9876",
-      "liga": "Team C"
-    },
-    "player16": {
-      "lol": {
-        "summonerName": "Macho Toretto",
-        "tag": "EUW"
-      },
-      "discord": "MachoToretto#9876",
-      "liga": "Team C"
+      "discord": "",
+      "team": "MNC"
     },
     "player17": {
       "lol": {
-        "summonerName": "Macho Toretto",
+        "summonerName": "Ivencheater",
         "tag": "EUW"
       },
-      "discord": "MachoToretto#9876",
-      "liga": "Team C"
+      "discord": "",
+      "team": "EGT"
     },
     "player18": {
       "lol": {
-        "summonerName": "Macho Toretto",
+        "summonerName": "JULIAN ROSS",
         "tag": "EUW"
       },
-      "discord": "MachoToretto#9876",
-      "liga": "Team C"
+      "discord": "",
+      "team": "TNS"
     },
     "player19": {
       "lol": {
-        "summonerName": "Macho Toretto",
-        "tag": "EUW"
+        "summonerName": "MNC Roicetee",
+        "tag": "014"
       },
-      "discord": "MachoToretto#9876",
-      "liga": "Team C"
+      "discord": "",
+      "team": "MNC"
     },
     "player20": {
       "lol": {
-        "summonerName": "Macho Toretto",
-        "tag": "EUW"
+        "summonerName": "MNC T0m Baker",
+        "tag": "MNC"
       },
-      "discord": "MachoToretto#9876",
-      "liga": "Team C"
+      "discord": "",
+      "team": "MNC"
     },
     "player21": {
       "lol": {
-        "summonerName": "Macho Toretto",
+        "summonerName": "NeoZoro91",
         "tag": "EUW"
       },
-      "discord": "MachoToretto#9876",
-      "liga": "Team C"
+      "discord": "",
+      "team": "MNC"
     },
     "player22": {
       "lol": {
-        "summonerName": "Macho Toretto",
+        "summonerName": "Nomada",
         "tag": "EUW"
       },
-      "discord": "MachoToretto#9876",
-      "liga": "Team C"
+      "discord": "",
+      "team": "N4W"
     },
     "player23": {
       "lol": {
-        "summonerName": "Macho Toretto",
+        "summonerName": "NXT Arkinos",
         "tag": "EUW"
       },
-      "discord": "MachoToretto#9876",
-      "liga": "Team C"
+      "discord": "",
+      "team": "EGT"
     },
     "player24": {
       "lol": {
-        "summonerName": "Macho Toretto",
-        "tag": "EUW"
+        "summonerName": "PF Andoni",
+        "tag": "2010"
       },
-      "discord": "MachoToretto#9876",
-      "liga": "Team C"
+      "discord": "",
+      "team": "EGT"
     },
     "player25": {
       "lol": {
-        "summonerName": "Macho Toretto",
-        "tag": "EUW"
+        "summonerName": "QuiniJR",
+        "tag": "2000"
       },
-      "discord": "MachoToretto#9876",
-      "liga": "Team C"
+      "discord": "",
+      "team": "EGT"
     },
     "player26": {
       "lol": {
-        "summonerName": "Macho Toretto",
-        "tag": "EUW"
+        "summonerName": "SrKebab",
+        "tag": "ESP"
       },
-      "discord": "MachoToretto#9876",
-      "liga": "Team C"
+      "discord": "",
+      "team": "EGT"
     },
     "player27": {
       "lol": {
-        "summonerName": "Macho Toretto",
-        "tag": "EUW"
+        "summonerName": "Tugoldobello",
+        "tag": "ATLETI"
       },
-      "discord": "MachoToretto#9876",
-      "liga": "Team C"
+      "discord": "",
+      "team": "MNC"
     },
     "player28": {
       "lol": {
-        "summonerName": "Macho Toretto",
+        "summonerName": "Vickvid",
         "tag": "EUW"
       },
-      "discord": "MachoToretto#9876",
-      "liga": "Team C"
+      "discord": "",
+      "team": "N4W"
     },
     "player29": {
       "lol": {
-        "summonerName": "Macho Toretto",
+        "summonerName": "Zargot",
         "tag": "EUW"
       },
-      "discord": "MachoToretto#9876",
-      "liga": "Team C"
+      "discord": "",
+      "team": "N4W"
     },
     "player30": {
       "lol": {
-        "summonerName": "Macho Toretto",
+        "summonerName": "Zenit",
         "tag": "EUW"
       },
-      "discord": "MachoToretto#9876",
-      "liga": "Team C"
+      "discord": "",
+      "team": "N4W"
     }
   }

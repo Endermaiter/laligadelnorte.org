@@ -76,7 +76,12 @@ async function showRankedInfo() {
             let rango = rankedinfoJSON.rank
             let LPs = rankedinfoJSON.leaguePoints
             let wins = rankedinfoJSON.wins
-            let loses = rankedinfoJSON.loses
+            let loses = rankedinfoJSON.losses
+
+            console.log(rankedinfoJSON)
+
+            //Elo
+
             const rankedColumn = document.getElementById(`player${i + 1}_column3`);
             const data = document.createElement('div');
             const colaData = document.createElement('h4');
@@ -104,6 +109,33 @@ async function showRankedInfo() {
                 rankedColumn.appendChild(divider_line)
             }
             rankedColumn.appendChild(data)
+
+            //Stats
+
+            const statsColumn = document.getElementById(`player${i + 1}_column2`)
+            const statsData = document.createElement('div')
+            const statsHeader = document.createElement('h5')
+            if (cola.includes('SOLO')) {
+                statsHeader.textContent = 'WINS / LOSES SOLO/DUO'
+            } else if (cola.includes('FLEX')) {
+                statsHeader.textContent = 'WINS / LOSES FLEX'
+            }
+            statsData.appendChild(statsHeader)
+            const wins_loses = document.createElement('p')
+            const winsSpan = document.createElement('span')
+            const middleSpan = document.createElement('span')
+            const losesSpan = document.createElement('span')
+            winsSpan.textContent = wins
+            middleSpan.textContent = ' - '
+            losesSpan.textContent = loses
+            winsSpan.style.color = 'lightgreen'
+            middleSpan.style.color = 'white'
+            losesSpan.style.color = '#FE0000'
+            wins_loses.appendChild(winsSpan)
+            wins_loses.appendChild(middleSpan)
+            wins_loses.appendChild(losesSpan)
+            statsData.appendChild(wins_loses)
+            statsColumn.appendChild(statsData)
         }
     }
 }
