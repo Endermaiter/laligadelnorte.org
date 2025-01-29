@@ -3,6 +3,7 @@ import * as Utils from './utils.js'
 
 const API_KEY = 'RGAPI-481cec0f-c653-401b-a9de-50bc47ad3bd2';
 const continent = 'europe';
+const region = 'euw1'
 
 async function getPUUID() {
 
@@ -21,6 +22,11 @@ async function getPUUID() {
                 puuIDList.push(data.puuid)
             } else {
                 throw new Error('No se pudo obtener la información del invocador.');
+            }
+            if (i % 20 === 19) {
+                await new Promise(resolve => setTimeout(resolve, 1000));
+            } else {
+                await new Promise(resolve => setTimeout(resolve, 100));
             }
         }
         return puuIDList;
@@ -47,13 +53,18 @@ async function getLevels() {
     const puuidList = await getPUUID();
     let levelList = [];
     for (let i = 0; i < puuidList.length; i++) {
-        const url = `https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/${puuidList[i]}?api_key=${API_KEY}`
+        const url = `https://${region}.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/${puuidList[i]}?api_key=${API_KEY}`
         const response = await fetch(url);
         if (response.ok) {
             const data = await response.json();
             levelList.push(data.summonerLevel)
         } else {
             throw new Error('No se pudo obtener la información del invocador.');
+        }
+        if (i % 20 === 19) {
+            await new Promise(resolve => setTimeout(resolve, 1000));
+        } else {
+            await new Promise(resolve => setTimeout(resolve, 100));
         }
     }
     return levelList;
@@ -63,13 +74,18 @@ async function getIconIDs() {
     const puuidList = await getPUUID();
     let iconIDList = [];
     for (let i = 0; i < puuidList.length; i++) {
-        const url = `https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/${puuidList[i]}?api_key=${API_KEY}`
+        const url = `https://${region}.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/${puuidList[i]}?api_key=${API_KEY}`
         const response = await fetch(url);
         if (response.ok) {
             const data = await response.json();
             iconIDList.push(data.profileIconId)
         } else {
             throw new Error('No se pudo obtener la información del invocador.');
+        }
+        if (i % 20 === 19) {
+            await new Promise(resolve => setTimeout(resolve, 1000));
+        } else {
+            await new Promise(resolve => setTimeout(resolve, 100));
         }
     }
     return iconIDList;
@@ -79,13 +95,18 @@ async function getSummonerIDs() {
     const puuidList = await getPUUID();
     let summonerIDList = [];
     for (let i = 0; i < puuidList.length; i++) {
-        const url = `https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/${puuidList[i]}?api_key=${API_KEY}`
+        const url = `https://${region}.api.riotgames.com/lol/summoner/v4/summoners/by-puuid/${puuidList[i]}?api_key=${API_KEY}`
         const response = await fetch(url);
         if (response.ok) {
             const data = await response.json();
             summonerIDList.push(data.id)
         } else {
             throw new Error('No se pudo obtener la información del invocador.');
+        }
+        if (i % 20 === 19) {
+            await new Promise(resolve => setTimeout(resolve, 1000));
+        } else {
+            await new Promise(resolve => setTimeout(resolve, 100));
         }
     }
     return summonerIDList;
@@ -95,7 +116,7 @@ async function getRankedInfo() {
     const summonerIDList = await getSummonerIDs();
     let randkedInfoList = [];
     for (let i = 0; i < summonerIDList.length; i++) {
-        const url = `https://euw1.api.riotgames.com/lol/league/v4/entries/by-summoner/${summonerIDList[i]}?api_key=${API_KEY}`
+        const url = `https://${region}.api.riotgames.com/lol/league/v4/entries/by-summoner/${summonerIDList[i]}?api_key=${API_KEY}`
         const response = await fetch(url);
         if (response.ok) {
             const data = await response.json();
@@ -103,10 +124,34 @@ async function getRankedInfo() {
         } else {
             throw new Error('No se pudo obtener la información del invocador.');
         }
+        if (i % 20 === 19) {
+            await new Promise(resolve => setTimeout(resolve, 1000));
+        } else {
+            await new Promise(resolve => setTimeout(resolve, 100));
+        }
     }
     return randkedInfoList;
 }
 
-export { getLevels, getIconIDs, getDDragonLastVersion, getSummonerIDs, getRankedInfo };
+async function getMasterChamps() {
+    const puuidList = await getPUUID();
+    let masterChampsList = [];
+    for (let i = 0; i < puuidList.length; i++) {
+        const url = `https://${region}.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-puuid/${puuidList[i]}/top?count=5&api_key=${API_KEY}`
+        const response = await fetch(url);
+        if (response.ok) {
+            const data = await response.json();
+            masterChampsList.push(data)
+        } else {
+            throw new Error('No se pudo obtener la información del invocador.');
+        }
+        if (i % 20 === 19) {
+            await new Promise(resolve => setTimeout(resolve, 1000));
+        } else {
+            await new Promise(resolve => setTimeout(resolve, 100));
+        }
+    }
+    return masterChampsList;
+}
 
-document.addEventListener('DOMContentLoaded', getRankedInfo);
+export { getLevels, getIconIDs, getDDragonLastVersion, getSummonerIDs, getRankedInfo, getMasterChamps };

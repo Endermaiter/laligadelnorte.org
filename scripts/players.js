@@ -140,8 +140,59 @@ async function showRankedInfo() {
     }
 }
 
+async function showMasterChamps() {
+    const masterChampsList = await Api.getMasterChamps();
+    const dDragonVersion = await Api.getDDragonLastVersion();
+    const url_data = `https://ddragon.leagueoflegends.com/cdn/${dDragonVersion}/data/es_ES/champion.json`;
+    const response = await fetch(url_data);
+    const championData = response.ok ? await response.json() : null;
+
+    if (!championData) {
+        console.error("No se pudo obtener la información de los campeones.");
+        return;
+    }
+    
+    for (let i = 0; i < masterChampsList.length; i++) {
+        const contenedor = document.getElementById(`player${i+1}_column2`);
+        contenedor.innerHTML = "";
+        const mastery_title = document.createElement("h5");
+        mastery_title.textContent = "MAESTRÍA DE CAMPEON";
+        contenedor.appendChild(mastery_title)
+        for (let j = 0; j < masterChampsList[i].length; j++) {
+            let masterChampsJSON = masterChampsList[i][j];
+            console.log(masterChampsJSON)
+            let championID = masterChampsJSON.championId;
+            let championLevel = masterChampsJSON.championLevel;
+            const championPoints = masterChampsJSON.championPoints;
+
+            let championName = Object.keys(championData.data).find(key => championData.data[key].key == championID);
+            if (!championName) continue;
+
+            const url_image = `http://ddragon.leagueoflegends.com/cdn/img/champion/tiles/${championName}_0.jpg`;
+
+            const img = document.createElement("img");
+            const mastery = document.createElement("p");
+            let championPointsRender = championPoints.toLocaleString("es-ES")
+            mastery.textContent = `LVL: ${championLevel} - (${championPointsRender}p)`
+            mastery.id = "exclude-format"
+            img.src = url_image;
+            img.alt = championName;
+            img.style.width = "100px";
+            img.style.margin = "5px";
+
+            contenedor.appendChild(img);
+            contenedor.appendChild(mastery)
+        }
+        const divider = document.createElement("p");
+        divider.textContent = "───────────";
+        divider.id = "exclude-format"
+        contenedor.appendChild(divider)
+    }
+}
+
+document.addEventListener('DOMContentLoaded', setOPGGLinks);
 document.addEventListener('DOMContentLoaded', showSummonerNames);
 document.addEventListener('DOMContentLoaded', showSummonerIcons);
 document.addEventListener('DOMContentLoaded', showSummonerLevels);
 document.addEventListener('DOMContentLoaded', showRankedInfo);
-document.addEventListener('DOMContentLoaded', setOPGGLinks);
+document.addEventListener('DOMContentLoaded', showMasterChamps);

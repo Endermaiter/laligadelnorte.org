@@ -1,5 +1,5 @@
 
-const playersJsonFilePath = '../data/players_pruebas.json'
+const playersJsonFilePath = '../data/players.json'
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
