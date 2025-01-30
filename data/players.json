@@ -9,7 +9,7 @@
     },
     "player2": {
       "lol": {
-        "summonerName": "Alejan121",
+        "summonerName": "Alejan1",
         "tag": "EUW"
       },
       "discord": "",
@@ -49,35 +49,35 @@
     },
     "player7": {
       "lol": {
-        "summonerName": "Gumayusi Peruano",
-        "tag": "Peruu"
+        "summonerName": "TR Adria Kila",
+        "tag": "DKS"
       },
       "discord": "",
-      "team": "FF15"
+      "team": "TNS"
     },
     "player8": {
       "lol": {
-        "summonerName": "DT Adria Kila",
-        "tag": "EUW"
+        "summonerName": "TR ElPIKA07",
+        "tag": "6996"
       },
       "discord": "",
       "team": "TNS"
     },
     "player9": {
       "lol": {
-        "summonerName": "DT EPIKA07",
-        "tag": "6996"
+        "summonerName": "TR Markos316",
+        "tag": "GGWP"
       },
       "discord": "",
       "team": "TNS"
     },
     "player10": {
       "lol": {
-        "summonerName": "DT Markos316",
-        "tag": "GGWP"
+        "summonerName": "eltopo81",
+        "tag": "EUW"
       },
       "discord": "",
-      "team": "TNS"
+      "team": "N4W"
     },
     "player11": {
       "lol": {
@@ -97,7 +97,7 @@
     },
     "player13": {
       "lol": {
-        "summonerName": "Zeus Boliviαno",
+        "summonerName": "FF15 Endermaiter",
         "tag": "FF15"
       },
       "discord": "",
@@ -105,8 +105,8 @@
     },
     "player14": {
       "lol": {
-        "summonerName": "FF15 Endermaiter",
-        "tag": "FF15"
+        "summonerName": "Gumayusi Peruano",
+        "tag": "Peruu"
       },
       "discord": "",
       "team": "FF15"
@@ -169,7 +169,7 @@
     },
     "player22": {
       "lol": {
-        "summonerName": "Nomada",
+        "summonerName": "Nómada",
         "tag": "EUW"
       },
       "discord": "",
@@ -225,7 +225,7 @@
     },
     "player29": {
       "lol": {
-        "summonerName": "Zargot",
+        "summonerName": "Zenit23",
         "tag": "EUW"
       },
       "discord": "",
@@ -233,10 +233,10 @@
     },
     "player30": {
       "lol": {
-        "summonerName": "Zenit",
-        "tag": "EUW"
+        "summonerName": "Zeus Boliviαno",
+        "tag": "FF15"
       },
       "discord": "",
-      "team": "N4W"
+      "team": "FF15"
     }
   }
