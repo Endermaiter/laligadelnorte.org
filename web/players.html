@@ -20,12 +20,21 @@
         <a href="scores.html">PuNTuACIONES</a>
         <a href="matches.html">PARTIDOS</a>
     </nav>
+    <div class="search-wrapper">
+        <div class="search-container">
+            <img src="../src/lupa.png" class="searchImage" style="vertical-align: middle;">
+            <input type="text" id="searchInput" placeholder="Buscar jugador..." onkeyup="searchPlayer()" style="vertical-align: middle;">
+        </div>
+    </div>    
     <div class="container">
         <section id="players" class="section">
             <p class="convert_font">JuGADORES</p>
             <p style="text-align: center;"><strong>【 Haz click encima de un jugador para acceder a su perfil de OP.GG 】</strong></p>
             <p style="text-align:center;">─────────────────────────────────────────────────────────────────────────────</p>
             <div class="players">
+                <div class="error-search" id="error-search">
+                    No se han encontrado resultados para la búsqueda.
+                </div>
                 <div class="card-player" id="player1">
                     <div class="top-row">
                         <h3 class="playerSummonerName" id="player1_summonerName">SummonerName</h3>
@@ -33,12 +42,10 @@
                     </div>
                     <div class="bottom-row">
                         <div class="column" id="player1_column1">
-                            <h4>PERFIL</h4>
+                            <h4>EQUIPO</h4>
                         </div>
                         <div class="column" id="player1_column2">
-                            <h4>ESTADÍSTICAS</h4>
-                        </div>
-                        <div class="column" id="player1_column3">
+                            <h4>ELO</h4>
                         </div>
                     </div>
                 </div>
@@ -49,12 +56,10 @@
                     </div>
                     <div class="bottom-row">
                         <div class="column" id="player2_column1">
-                            <h4>PERFIL</h4>
+                            <h4>EQUIPO</h4>
                         </div>
                         <div class="column" id="player2_column2">
-                            <h4>ESTADÍSTICAS</h4>
-                        </div>
-                        <div class="column" id="player2_column3">
+                            <h4>ELO</h4>
                         </div>
                     </div>
                 </div>
@@ -65,12 +70,388 @@
                     </div>
                     <div class="bottom-row">
                         <div class="column" id="player3_column1">
-                            <h4>PERFIL</h4>
+                            <h4>EQUIPO</h4>
                         </div>
                         <div class="column" id="player3_column2">
-                            <h4>ESTADÍSTICAS</h4>
+                            <h4>ELO</h4>
                         </div>
-                        <div class="column" id="player3_column3">
+                    </div>
+                </div>
+                <div class="card-player" id="player4">
+                    <div class="top-row">
+                        <h3 class="playerSummonerName" id="player4_summonerName">SummonerName</h3>
+                        <p>✻ ─────────── ✦ ─────────── ✻</p>
+                    </div>
+                    <div class="bottom-row">
+                        <div class="column" id="player4_column1">
+                            <h4>EQUIPO</h4>
+                        </div>
+                        <div class="column" id="player4_column2">
+                            <h4>ELO</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-player" id="player5">
+                    <div class="top-row">
+                        <h3 class="playerSummonerName" id="player5_summonerName">SummonerName</h3>
+                        <p>✻ ─────────── ✦ ─────────── ✻</p>
+                    </div>
+                    <div class="bottom-row">
+                        <div class="column" id="player5_column1">
+                            <h4>EQUIPO</h4>
+                        </div>
+                        <div class="column" id="player5_column2">
+                            <h4>ELO</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-player" id="player6">
+                    <div class="top-row">
+                        <h3 class="playerSummonerName" id="player6_summonerName">SummonerName</h3>
+                        <p>✻ ─────────── ✦ ─────────── ✻</p>
+                    </div>
+                    <div class="bottom-row">
+                        <div class="column" id="player6_column1">
+                            <h4>EQUIPO</h4>
+                        </div>
+                        <div class="column" id="player6_column2">
+                            <h4>ELO</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-player" id="player7">
+                    <div class="top-row">
+                        <h3 class="playerSummonerName" id="player7_summonerName">SummonerName</h3>
+                        <p>✻ ─────────── ✦ ─────────── ✻</p>
+                    </div>
+                    <div class="bottom-row">
+                        <div class="column" id="player7_column1">
+                            <h4>EQUIPO</h4>
+                        </div>
+                        <div class="column" id="player7_column2">
+                            <h4>ELO</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-player" id="player8">
+                    <div class="top-row">
+                        <h3 class="playerSummonerName" id="player8_summonerName">SummonerName</h3>
+                        <p>✻ ─────────── ✦ ─────────── ✻</p>
+                    </div>
+                    <div class="bottom-row">
+                        <div class="column" id="player8_column1">
+                            <h4>EQUIPO</h4>
+                        </div>
+                        <div class="column" id="player8_column2">
+                            <h4>ELO</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-player" id="player9">
+                    <div class="top-row">
+                        <h3 class="playerSummonerName" id="player9_summonerName">SummonerName</h3>
+                        <p>✻ ─────────── ✦ ─────────── ✻</p>
+                    </div>
+                    <div class="bottom-row">
+                        <div class="column" id="player9_column1">
+                            <h4>EQUIPO</h4>
+                        </div>
+                        <div class="column" id="player9_column2">
+                            <h4>ELO</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-player" id="player10">
+                    <div class="top-row">
+                        <h3 class="playerSummonerName" id="player10_summonerName">SummonerName</h3>
+                        <p>✻ ─────────── ✦ ─────────── ✻</p>
+                    </div>
+                    <div class="bottom-row">
+                        <div class="column" id="player10_column1">
+                            <h4>EQUIPO</h4>
+                        </div>
+                        <div class="column" id="player10_column2">
+                            <h4>ELO</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-player" id="player11">
+                    <div class="top-row">
+                        <h3 class="playerSummonerName" id="player11_summonerName">SummonerName</h3>
+                        <p>✻ ─────────── ✦ ─────────── ✻</p>
+                    </div>
+                    <div class="bottom-row">
+                        <div class="column" id="player11_column1">
+                            <h4>EQUIPO</h4>
+                        </div>
+                        <div class="column" id="player11_column2">
+                            <h4>ELO</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-player" id="player12">
+                    <div class="top-row">
+                        <h3 class="playerSummonerName" id="player12_summonerName">SummonerName</h3>
+                        <p>✻ ─────────── ✦ ─────────── ✻</p>
+                    </div>
+                    <div class="bottom-row">
+                        <div class="column" id="player12_column1">
+                            <h4>EQUIPO</h4>
+                        </div>
+                        <div class="column" id="player12_column2">
+                            <h4>ELO</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-player" id="player13">
+                    <div class="top-row">
+                        <h3 class="playerSummonerName" id="player13_summonerName">SummonerName</h3>
+                        <p>✻ ─────────── ✦ ─────────── ✻</p>
+                    </div>
+                    <div class="bottom-row">
+                        <div class="column" id="player13_column1">
+                            <h4>EQUIPO</h4>
+                        </div>
+                        <div class="column" id="player13_column2">
+                            <h4>ELO</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-player" id="player14">
+                    <div class="top-row">
+                        <h3 class="playerSummonerName" id="player14_summonerName">SummonerName</h3>
+                        <p>✻ ─────────── ✦ ─────────── ✻</p>
+                    </div>
+                    <div class="bottom-row">
+                        <div class="column" id="player14_column1">
+                            <h4>EQUIPO</h4>
+                        </div>
+                        <div class="column" id="player14_column2">
+                            <h4>ELO</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-player" id="player15">
+                    <div class="top-row">
+                        <h3 class="playerSummonerName" id="player15_summonerName">SummonerName</h3>
+                        <p>✻ ─────────── ✦ ─────────── ✻</p>
+                    </div>
+                    <div class="bottom-row">
+                        <div class="column" id="player15_column1">
+                            <h4>EQUIPO</h4>
+                        </div>
+                        <div class="column" id="player15_column2">
+                            <h4>ELO</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-player" id="player16">
+                    <div class="top-row">
+                        <h3 class="playerSummonerName" id="player16_summonerName">SummonerName</h3>
+                        <p>✻ ─────────── ✦ ─────────── ✻</p>
+                    </div>
+                    <div class="bottom-row">
+                        <div class="column" id="player16_column1">
+                            <h4>EQUIPO</h4>
+                        </div>
+                        <div class="column" id="player16_column2">
+                            <h4>ELO</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-player" id="player17">
+                    <div class="top-row">
+                        <h3 class="playerSummonerName" id="player17_summonerName">SummonerName</h3>
+                        <p>✻ ─────────── ✦ ─────────── ✻</p>
+                    </div>
+                    <div class="bottom-row">
+                        <div class="column" id="player17_column1">
+                            <h4>EQUIPO</h4>
+                        </div>
+                        <div class="column" id="player17_column2">
+                            <h4>ELO</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-player" id="player18">
+                    <div class="top-row">
+                        <h3 class="playerSummonerName" id="player18_summonerName">SummonerName</h3>
+                        <p>✻ ─────────── ✦ ─────────── ✻</p>
+                    </div>
+                    <div class="bottom-row">
+                        <div class="column" id="player18_column1">
+                            <h4>EQUIPO</h4>
+                        </div>
+                        <div class="column" id="player18_column2">
+                            <h4>ELO</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-player" id="player19">
+                    <div class="top-row">
+                        <h3 class="playerSummonerName" id="player19_summonerName">SummonerName</h3>
+                        <p>✻ ─────────── ✦ ─────────── ✻</p>
+                    </div>
+                    <div class="bottom-row">
+                        <div class="column" id="player19_column1">
+                            <h4>EQUIPO</h4>
+                        </div>
+                        <div class="column" id="player19_column2">
+                            <h4>ELO</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-player" id="player20">
+                    <div class="top-row">
+                        <h3 class="playerSummonerName" id="player20_summonerName">SummonerName</h3>
+                        <p>✻ ─────────── ✦ ─────────── ✻</p>
+                    </div>
+                    <div class="bottom-row">
+                        <div class="column" id="player20_column1">
+                            <h4>EQUIPO</h4>
+                        </div>
+                        <div class="column" id="player20_column2">
+                            <h4>ELO</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-player" id="player21">
+                    <div class="top-row">
+                        <h3 class="playerSummonerName" id="player21_summonerName">SummonerName</h3>
+                        <p>✻ ─────────── ✦ ─────────── ✻</p>
+                    </div>
+                    <div class="bottom-row">
+                        <div class="column" id="player21_column1">
+                            <h4>EQUIPO</h4>
+                        </div>
+                        <div class="column" id="player21_column2">
+                            <h4>ELO</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-player" id="player22">
+                    <div class="top-row">
+                        <h3 class="playerSummonerName" id="player22_summonerName">SummonerName</h3>
+                        <p>✻ ─────────── ✦ ─────────── ✻</p>
+                    </div>
+                    <div class="bottom-row">
+                        <div class="column" id="player22_column1">
+                            <h4>EQUIPO</h4>
+                        </div>
+                        <div class="column" id="player22_column2">
+                            <h4>ELO</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-player" id="player23">
+                    <div class="top-row">
+                        <h3 class="playerSummonerName" id="player23_summonerName">SummonerName</h3>
+                        <p>✻ ─────────── ✦ ─────────── ✻</p>
+                    </div>
+                    <div class="bottom-row">
+                        <div class="column" id="player23_column1">
+                            <h4>EQUIPO</h4>
+                        </div>
+                        <div class="column" id="player23_column2">
+                            <h4>ELO</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-player" id="player24">
+                    <div class="top-row">
+                        <h3 class="playerSummonerName" id="player24_summonerName">SummonerName</h3>
+                        <p>✻ ─────────── ✦ ─────────── ✻</p>
+                    </div>
+                    <div class="bottom-row">
+                        <div class="column" id="player24_column1">
+                            <h4>EQUIPO</h4>
+                        </div>
+                        <div class="column" id="player24_column2">
+                            <h4>ELO</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-player" id="player25">
+                    <div class="top-row">
+                        <h3 class="playerSummonerName" id="player25_summonerName">SummonerName</h3>
+                        <p>✻ ─────────── ✦ ─────────── ✻</p>
+                    </div>
+                    <div class="bottom-row">
+                        <div class="column" id="player25_column1">
+                            <h4>EQUIPO</h4>
+                        </div>
+                        <div class="column" id="player25_column2">
+                            <h4>ELO</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-player" id="player26">
+                    <div class="top-row">
+                        <h3 class="playerSummonerName" id="player26_summonerName">SummonerName</h3>
+                        <p>✻ ─────────── ✦ ─────────── ✻</p>
+                    </div>
+                    <div class="bottom-row">
+                        <div class="column" id="player26_column1">
+                            <h4>EQUIPO</h4>
+                        </div>
+                        <div class="column" id="player26_column2">
+                            <h4>ELO</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-player" id="player27">
+                    <div class="top-row">
+                        <h3 class="playerSummonerName" id="player27_summonerName">SummonerName</h3>
+                        <p>✻ ─────────── ✦ ─────────── ✻</p>
+                    </div>
+                    <div class="bottom-row">
+                        <div class="column" id="player27_column1">
+                            <h4>EQUIPO</h4>
+                        </div>
+                        <div class="column" id="player27_column2">
+                            <h4>ELO</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-player" id="player28">
+                    <div class="top-row">
+                        <h3 class="playerSummonerName" id="player28_summonerName">SummonerName</h3>
+                        <p>✻ ─────────── ✦ ─────────── ✻</p>
+                    </div>
+                    <div class="bottom-row">
+                        <div class="column" id="player28_column1">
+                            <h4>EQUIPO</h4>
+                        </div>
+                        <div class="column" id="player28_column2">
+                            <h4>ELO</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-player" id="player29">
+                    <div class="top-row">
+                        <h3 class="playerSummonerName" id="player29_summonerName">SummonerName</h3>
+                        <p>✻ ─────────── ✦ ─────────── ✻</p>
+                    </div>
+                    <div class="bottom-row">
+                        <div class="column" id="player29_column1">
+                            <h4>EQUIPO</h4>
+                        </div>
+                        <div class="column" id="player29_column2">
+                            <h4>ELO</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-player" id="player30">
+                    <div class="top-row">
+                        <h3 class="playerSummonerName" id="player30_summonerName">SummonerName</h3>
+                        <p>✻ ─────────── ✦ ─────────── ✻</p>
+                    </div>
+                    <div class="bottom-row">
+                        <div class="column" id="player30_column1">
+                            <h4>EQUIPO</h4>
+                        </div>
+                        <div class="column" id="player30_column2">
+                            <h4>ELO</h4>
                         </div>
                     </div>
                 </div>

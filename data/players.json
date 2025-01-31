@@ -2,7 +2,8 @@
     "player1": {
       "lol": {
         "summonerName": "5x30",
-        "tag": "DAYY"
+        "tag": "DAYY",
+        "elo": "ORO"
       },
       "discord": "",
       "team": "FF15"
@@ -10,7 +11,8 @@
     "player2": {
       "lol": {
         "summonerName": "Alejan1",
-        "tag": "EUW"
+        "tag": "EUW",
+        "elo": "BRONCE"
       },
       "discord": "",
       "team": "DMG"
@@ -18,7 +20,8 @@
     "player3": {
       "lol": {
         "summonerName": "ARK Zackielazo",
-        "tag": "EUW"
+        "tag": "EUW",
+        "elo": "PLATA"
       },
       "discord": "",
       "team": "DMG"
@@ -26,7 +29,8 @@
     "player4": {
       "lol": {
         "summonerName": "alex132mini",
-        "tag": "EUW"
+        "tag": "EUW",
+        "elo": "PLATA"
       },
       "discord": "",
       "team": "TNS"
@@ -34,7 +38,8 @@
     "player5": {
       "lol": {
         "summonerName": "BlackCloudForce",
-        "tag": "EUW"
+        "tag": "EUW",
+        "elo": "PLATINO"
       },
       "discord": "",
       "team": "DMG"
@@ -42,7 +47,8 @@
     "player6": {
       "lol": {
         "summonerName": "Cαnyon Pαrαguαyo",
-        "tag": "FF15"
+        "tag": "FF15",
+        "elo": "DIAMANTE"
       },
       "discord": "",
       "team": "FF15"
@@ -50,7 +56,8 @@
     "player7": {
       "lol": {
         "summonerName": "TR Adria Kila",
-        "tag": "DKS"
+        "tag": "DKS",
+        "elo": "PLATINO"
       },
       "discord": "",
       "team": "TNS"
@@ -58,7 +65,8 @@
     "player8": {
       "lol": {
         "summonerName": "TR ElPIKA07",
-        "tag": "6996"
+        "tag": "6996",
+        "elo": "PLATINO"
       },
       "discord": "",
       "team": "TNS"
@@ -66,7 +74,8 @@
     "player9": {
       "lol": {
         "summonerName": "TR Markos316",
-        "tag": "GGWP"
+        "tag": "GGWP",
+        "elo": "ORO"
       },
       "discord": "",
       "team": "TNS"
@@ -74,7 +83,8 @@
     "player10": {
       "lol": {
         "summonerName": "eltopo81",
-        "tag": "EUW"
+        "tag": "EUW",
+        "elo": "BRONCE"
       },
       "discord": "",
       "team": "N4W"
@@ -82,7 +92,8 @@
     "player11": {
       "lol": {
         "summonerName": "Erikbros",
-        "tag": "EUW"
+        "tag": "EUW",
+        "elo": "DIAMANTE"
       },
       "discord": "",
       "team": "N4W"
@@ -90,7 +101,8 @@
     "player12": {
       "lol": {
         "summonerName": "Fallen starke",
-        "tag": "EUW"
+        "tag": "EUW",
+        "elo": "PLATA"
       },
       "discord": "",
       "team": "DMG"
@@ -98,7 +110,8 @@
     "player13": {
       "lol": {
         "summonerName": "FF15 Endermaiter",
-        "tag": "FF15"
+        "tag": "FF15",
+        "elo": "ESMERALDA"
       },
       "discord": "",
       "team": "FF15"
@@ -106,7 +119,8 @@
     "player14": {
       "lol": {
         "summonerName": "Gumayusi Peruano",
-        "tag": "Peruu"
+        "tag": "Peruu",
+        "elo": "BRONCE"
       },
       "discord": "",
       "team": "FF15"
@@ -114,7 +128,8 @@
     "player15": {
       "lol": {
         "summonerName": "Guren no Shogun",
-        "tag": "EUW"
+        "tag": "EUW",
+        "elo": "BRONCE"
       },
       "discord": "",
       "team": "DMG"
@@ -122,7 +137,8 @@
     "player16": {
       "lol": {
         "summonerName": "Iontxas",
-        "tag": "MNC"
+        "tag": "MNC",
+        "elo": "BRONCE"
       },
       "discord": "",
       "team": "MNC"
@@ -130,7 +146,8 @@
     "player17": {
       "lol": {
         "summonerName": "lnvencheater",
-        "tag": "EUW"
+        "tag": "EUW",
+        "elo": "DIAMANTE"
       },
       "discord": "",
       "team": "EGT"
@@ -138,7 +155,8 @@
     "player18": {
       "lol": {
         "summonerName": "JULIAN ROSS",
-        "tag": "EUW"
+        "tag": "EUW",
+        "elo": "PLATINO"
       },
       "discord": "",
       "team": "TNS"
@@ -146,7 +164,8 @@
     "player19": {
       "lol": {
         "summonerName": "MNC Roicetee",
-        "tag": "014"
+        "tag": "014",
+        "elo": "HIERRO"
       },
       "discord": "",
       "team": "MNC"
@@ -154,7 +173,8 @@
     "player20": {
       "lol": {
         "summonerName": "MNC T0m Baker",
-        "tag": "MNC"
+        "tag": "MNC",
+        "elo": "PLATA"
       },
       "discord": "",
       "team": "MNC"
@@ -162,7 +182,8 @@
     "player21": {
       "lol": {
         "summonerName": "NeoZoro91",
-        "tag": "EUW"
+        "tag": "EUW",
+        "elo": "PLATA"
       },
       "discord": "",
       "team": "MNC"
@@ -170,7 +191,8 @@
     "player22": {
       "lol": {
         "summonerName": "Nómada",
-        "tag": "EUW"
+        "tag": "EUW",
+        "elo": "ESMERALDA"
       },
       "discord": "",
       "team": "N4W"
@@ -178,7 +200,8 @@
     "player23": {
       "lol": {
         "summonerName": "NXT Arkinos",
-        "tag": "EUW"
+        "tag": "EUW",
+        "elo": "PLATINO"
       },
       "discord": "",
       "team": "EGT"
@@ -186,7 +209,8 @@
     "player24": {
       "lol": {
         "summonerName": "PFAndoni",
-        "tag": "2010"
+        "tag": "2010",
+        "elo": "HIERRO"
       },
       "discord": "",
       "team": "EGT"
@@ -194,7 +218,8 @@
     "player25": {
       "lol": {
         "summonerName": "Quinijr",
-        "tag": "2000"
+        "tag": "2000",
+        "elo": "HIERRO"
       },
       "discord": "",
       "team": "EGT"
@@ -202,15 +227,17 @@
     "player26": {
       "lol": {
         "summonerName": "SrKebab",
-        "tag": "ESP"
+        "tag": "ESP",
+        "elo": "HIERRO"
       },
       "discord": "",
       "team": "EGT"
     },
     "player27": {
       "lol": {
-        "summonerName": "Tugoldobello",
-        "tag": "YOKO"
+        "summonerName": "TuOROobello",
+        "tag": "YOKO",
+        "elo": "BRONCE"
       },
       "discord": "",
       "team": "MNC"
@@ -218,7 +245,8 @@
     "player28": {
       "lol": {
         "summonerName": "VickViD",
-        "tag": "EUW"
+        "tag": "EUW",
+        "elo": "ORO"
       },
       "discord": "",
       "team": "N4W"
@@ -226,7 +254,8 @@
     "player29": {
       "lol": {
         "summonerName": "Zenit23",
-        "tag": "EUW"
+        "tag": "EUW",
+        "elo": "ESMERALDA"
       },
       "discord": "",
       "team": "N4W"
@@ -234,7 +263,8 @@
     "player30": {
       "lol": {
         "summonerName": "Zeus Boliviαno",
-        "tag": "FF15"
+        "tag": "FF15",
+        "elo": "PLATA"
       },
       "discord": "",
       "team": "FF15"

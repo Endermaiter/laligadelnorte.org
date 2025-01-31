@@ -36,109 +36,71 @@ async function showSummonerNames() {
     }
 }
 
-async function showSummonerIcons() {
-    const iconIDList = await Api.getIconIDs();
-    const dDragonVersion = await Api.getDDragonLastVersion();
-    for (let i = 0; i < iconIDList.length; i++) {
-        const image_link = `https://ddragon.leagueoflegends.com/cdn/${dDragonVersion}/img/profileicon/${iconIDList[i]}.png`
-        const playerDiv = document.getElementById(`player${i + 1}_column1`);
-        const image = document.createElement('img');
-        image.src = image_link
-        image.alt = "SummonerIcon"
-        image.width = 200;
-        image.height = 200;
-        playerDiv.appendChild(image)
-    }
-}
+window.searchPlayer = function() {
+    let input = document.getElementById('searchInput').value.trim();
+    let players = document.getElementsByClassName('card-player');
+    let errorSearch = document.getElementById('error-search');
 
-async function showSummonerLevels() {
-    const levelList = await Api.getLevels();
-    for (let i = 0; i < levelList.length; i++) {
-        const profileColumn = document.getElementById(`player${i + 1}_column1`);
-        const levelText = document.createElement('p');
-        const numberLevel = document.createElement('b');
-        numberLevel.textContent = levelList[i]
-        levelText.textContent = 'NIVEL: '
-        levelText.id = "exclude-format"
-        numberLevel.id = "exclude-format"
-        levelText.appendChild(numberLevel)
-        profileColumn.appendChild(levelText)
+    let found = false;
+
+    for (let i = 0; i < players.length; i++) {
+        let summonerName = document.getElementById(`player${i+1}_summonerName`).innerHTML;
+        let team = document.getElementById(`player${i+1}_column1`).innerHTML;
+        let elo = document.getElementById(`player${i+1}_column2`).innerHTML;
+
+        if (summonerName.includes(input) || team.includes(input) || elo.includes(input)) {
+            players[i].style.display = "grid";
+            found = true;
+        } else {
+            players[i].style.display = "none";
+        }
     }
-}
+
+    errorSearch.style.display = found ? "none" : "block";
+};
 
 async function showRankedInfo() {
-    const rankedInfoList = await Api.getRankedInfo();
-    for (let i = 0; i < rankedInfoList.length; i++) {
-        for (let j = 0; j < rankedInfoList[i].length; j++) {
-            let rankedinfoJSON = rankedInfoList[i][j]
-            let cola = rankedinfoJSON.queueType
-            let elo = rankedinfoJSON.tier
-            let rango = rankedinfoJSON.rank
-            let LPs = rankedinfoJSON.leaguePoints
-            let wins = rankedinfoJSON.wins
-            let loses = rankedinfoJSON.losses
+    const JSON = await Utils.getPlayerListFromJSON();
+    for (let i = 0; i < JSON.length; i++) {
+            let dataJSON = JSON[i]
+            let team = dataJSON.team
+            let elo = dataJSON.lol.elo
 
-            console.log(rankedinfoJSON)
+            //Team
+
+            const teamColumn = document.getElementById(`player${i + 1}_column1`);
+            const teamData = document.createElement('div');
+            const teamImage = document.createElement('img');
+            const teamImage_path = `../src/teams_logo/${team}_logo.png`
+            teamImage.src = teamImage_path
+            teamImage.alt = "TeamPlayer"
+            teamImage.width = 250;
+            teamImage.height = 250;
+            teamImage.style.margin = '0';
+            teamData.appendChild(teamImage)
+            const teamHeader = document.createElement('h4');
+            teamHeader.textContent = team
+            teamData.appendChild(teamHeader)
+            teamColumn.appendChild(teamData)
 
             //Elo
 
-            const rankedColumn = document.getElementById(`player${i + 1}_column3`);
-            const data = document.createElement('div');
-            const colaData = document.createElement('h4');
-            if (cola.includes('SOLO')) {
-                colaData.textContent = 'CLASIFICATORIA SOLO/DUO'
-            } else if (cola.includes('FLEX')) {
-                colaData.textContent = 'CLASIFICATORIA FLEX'
-            }
-            data.appendChild(colaData)
-            const image = document.createElement('img');
-            const image_path = `../src/rank/${elo}.png`
-            image.src = image_path
-            image.alt = "RankIcon"
-            image.width = 250;
-            image.height = 250;
-            image.style.margin = '0';
-            data.appendChild(image)
-            const rankedData = document.createElement('h4');
-            colaData.style.marginBottom = '0';
-            rankedData.textContent = `${elo} ${rango} - ${LPs} LPs`
-            data.appendChild(rankedData)
-            if (j>0) {
-                const divider_line = document.createElement('p')
-                divider_line.textContent = "─────────────"
-                rankedColumn.appendChild(divider_line)
-            }
-            rankedColumn.appendChild(data)
-
-            //Stats
-
-            const statsColumn = document.getElementById(`player${i + 1}_column2`)
-            const statsData = document.createElement('div')
-            const statsHeader = document.createElement('h5')
-            if (cola.includes('SOLO')) {
-                statsHeader.textContent = 'WINS / LOSES SOLO/DUO'
-            } else if (cola.includes('FLEX')) {
-                statsHeader.textContent = 'WINS / LOSES FLEX'
-            }
-            statsData.appendChild(statsHeader)
-            const wins_loses = document.createElement('p')
-            const winsSpan = document.createElement('span')
-            const middleSpan = document.createElement('span')
-            const losesSpan = document.createElement('span')
-            winsSpan.textContent = wins
-            middleSpan.textContent = ' - '
-            losesSpan.textContent = loses
-            winsSpan.style.color = 'lightgreen'
-            middleSpan.style.color = 'white'
-            losesSpan.style.color = '#FE0000'
-            wins_loses.appendChild(winsSpan)
-            wins_loses.appendChild(middleSpan)
-            wins_loses.appendChild(losesSpan)
-            statsData.appendChild(wins_loses)
-            statsColumn.appendChild(statsData)
+            const eloColumn = document.getElementById(`player${i + 1}_column2`);
+            const eloData = document.createElement('div');
+            const eloImage = document.createElement('img');
+            const eloImage_path = `../src/rank/${elo}.png`
+            eloImage.src = eloImage_path
+            eloImage.alt = "EloPlayer"
+            eloImage.width = 250;
+            eloImage.height = 250;
+            eloImage.style.margin = '0';
+            eloData.appendChild(eloImage)
+            const eloHeader = document.createElement('h4');
+            eloHeader.textContent = elo
+            eloData.appendChild(eloHeader)
+            eloColumn.appendChild(eloData)
         }
     }
-}
 
 async function showMasterChamps() {
     const masterChampsList = await Api.getMasterChamps();
@@ -192,7 +154,5 @@ async function showMasterChamps() {
 
 document.addEventListener('DOMContentLoaded', setOPGGLinks);
 document.addEventListener('DOMContentLoaded', showSummonerNames);
-document.addEventListener('DOMContentLoaded', showSummonerIcons);
-document.addEventListener('DOMContentLoaded', showSummonerLevels);
 document.addEventListener('DOMContentLoaded', showRankedInfo);
 document.addEventListener('DOMContentLoaded', showMasterChamps);

@@ -139,6 +139,37 @@ nav a:hover {
     justify-content: center;
 }
 
+.search-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    width: 230px;
+    margin-left: auto;
+    margin-right: 5%;
+    margin-top: 2%;
+    border: 2px solid #415977;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.searchImage {
+    margin-right: 10px;
+    width: 30px;
+}
+
+#searchInput {
+    flex: 1; 
+    border-radius: 10px; /* Bordes redondeados para el input */
+    border: 1px solid #ccc; /* Asegúrate de que el borde esté definido */
+    padding: 5px 10px
+
+}
+
 .card-player {
     background: #1f4068;
     padding: 20px;
@@ -149,7 +180,6 @@ nav a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     gap: 10px;
@@ -158,6 +188,11 @@ nav a:hover {
 .card-player:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9);
+}
+
+.error-search {
+    display: none;
+    text-align: center;
 }
 
 .playerSummonerName {
@@ -193,11 +228,17 @@ footer p {
     background-color: #3671df;
     padding: 20px;
     text-align: center;
+    margin-bottom:auto;
+    border-radius: 5px;
+}
+
+.top-row p {
+    margin: auto 0;
 }
 
 .bottom-row {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
 }
 
@@ -271,9 +312,9 @@ footer p {
     border: 2px solid #778da9;
     border-radius: 15px;
     display: flex;
-    flex-direction: column; /* Asegura que las imágenes y el texto se coloquen en columnas */
-    align-items: center; /* Centra el contenido horizontalmente */
-    gap: 20px; /* Espacio entre la fila de imágenes y el texto */
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-bottom: 20px;
@@ -284,30 +325,42 @@ footer p {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9);
 }
 
-.matches-images_left img {
-    width: 50%;
-    margin-left: 30%;
-}
-
-.matches-images_right img {
-    width: 50%;
-    margin-left: 20%;
-}
-
-.vs-images img {
+.images-row {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    gap: 20px; /* Espacio entre elementos */
     width: 100%;
 }
 
-.images-row {
+.matches-images_left,
+.matches-images_right {
+    flex: 2; /* Aumenta el tamaño de las imágenes de los lados */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-img.VS {
+.vs-images {
+    flex: 1; /* Reduce el tamaño del contenedor central */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.matches-images_left img,
+.matches-images_right img {
     max-width: 100%;
     height: auto;
+    width: 250px; /* Ajusta este valor para cambiar el tamaño */
 }
+
+.vs-images img {
+    max-width: 100%;
+    height: auto;
+    width: 100px; /* La imagen central es más pequeña */
+}
+
 
 .info {
     text-align: center;
