@@ -55,6 +55,15 @@
     },
     "player7": {
       "lol": {
+        "summonerName": "Chopero",
+        "tag": "MVP",
+        "elo": "ESMERALDA"
+      },
+      "discord": "",
+      "team": "TARNISHED"
+    },
+    "player8": {
+      "lol": {
         "summonerName": "TR Adria Kila",
         "tag": "DKS",
         "elo": "PLATINO"
@@ -62,7 +71,7 @@
       "discord": "",
       "team": "TARNISHED"
     },
-    "player8": {
+    "player9": {
       "lol": {
         "summonerName": "TR ElPIKA07",
         "tag": "6996",
@@ -71,7 +80,7 @@
       "discord": "",
       "team": "TARNISHED"
     },
-    "player9": {
+    "player10": {
       "lol": {
         "summonerName": "TR Markos316",
         "tag": "GGWP",
@@ -80,7 +89,7 @@
       "discord": "",
       "team": "TARNISHED"
     },
-    "player10": {
+    "player11": {
       "lol": {
         "summonerName": "eltopo81",
         "tag": "EUW",
@@ -89,7 +98,7 @@
       "discord": "",
       "team": "NOOBS4WIN"
     },
-    "player11": {
+    "player12": {
       "lol": {
         "summonerName": "Erikbros",
         "tag": "EUW",
@@ -98,7 +107,7 @@
       "discord": "",
       "team": "NOOBS4WIN"
     },
-    "player12": {
+    "player13": {
       "lol": {
         "summonerName": "Fallen starke",
         "tag": "EUW",
@@ -107,7 +116,7 @@
       "discord": "",
       "team": "DOMINGUEROS"
     },
-    "player13": {
+    "player14": {
       "lol": {
         "summonerName": "FF15 Endermaiter",
         "tag": "FF15",
@@ -116,7 +125,7 @@
       "discord": "",
       "team": "FF15"
     },
-    "player14": {
+    "player15": {
       "lol": {
         "summonerName": "Gumayusi Peruano",
         "tag": "Peruu",
@@ -125,7 +134,7 @@
       "discord": "",
       "team": "FF15"
     },
-    "player15": {
+    "player16": {
       "lol": {
         "summonerName": "Guren no Shogun",
         "tag": "EUW",
@@ -134,7 +143,7 @@
       "discord": "",
       "team": "DOMINGUEROS"
     },
-    "player16": {
+    "player17": {
       "lol": {
         "summonerName": "Iontxas",
         "tag": "MNC",
@@ -143,7 +152,7 @@
       "discord": "",
       "team": "MONOS CORUÑA"
     },
-    "player17": {
+    "player18": {
       "lol": {
         "summonerName": "lnvencheater",
         "tag": "EUW",
@@ -151,15 +160,6 @@
       },
       "discord": "",
       "team": "EGO TEAM"
-    },
-    "player18": {
-      "lol": {
-        "summonerName": "JULIAN R0SS",
-        "tag": "EUW",
-        "elo": "PLATA"
-      },
-      "discord": "",
-      "team": "TARNISHED"
     },
     "player19": {
       "lol": {
