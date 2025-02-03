@@ -216,6 +216,7 @@ footer {
     padding: 20px;
     color: #fff;
     border-top: 3px solid #1b263b;
+    margin-top: 50px; /* Ajusta este valor si sigue estando pegado */
 }
 
 footer p {
@@ -306,7 +307,38 @@ footer p {
     padding: 20px;
 }
 
-.card-match {
+.section-container {
+    perspective: 1000px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    max-width: 80%; /* Ajusta según tu diseño */
+    height: 450px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto; /* Esto lo centrará horizontalmente */
+    margin-top: 5%;
+    margin-bottom: 2%;
+}
+
+.card-match-front, .card-match-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 15px;
+}
+
+.card-match-front {
     background: #1f4068;
     padding: 20px;
     border: 2px solid #778da9;
@@ -320,7 +352,7 @@ footer p {
     margin-bottom: 20px;
 }
 
-.card-match:hover {
+.card-match-front:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9);
 }
@@ -405,4 +437,28 @@ footer p {
     margin: 2%;
     text-align: center;
     font-size:120%;
+}
+
+
+.card-match-back {
+    background-color: #4f75bb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(-180deg);
+    height: 500px;
+}
+
+.card-inner.flipped {
+    transform: rotateY(-180deg);
+
+}
+
+.card-match-back h3{
+    font-family: 'Baron';
+    font-size: 150%;
+}
+
+.card-match-back img {
+    width: 50%;
 }
