@@ -21,13 +21,93 @@
         <a href="matches.html">PARTIDOS</a>
     </nav>
     <div class="container">
-        <section id="schedule" class="section">
-            <p>PRÓXIMOS PARTIDOS PROGRAMADOS</p>
-            <p id="exclude-format" style="text-align: center; font-weight: bold;">【 Haz click encima de un partido para ver su resultado 】</p>
+        
+        <section id="exhibition" class="exhibition-match">
+                
+        </section>
+        <section id="regular-season" class="section">
+            <p>PARTIDOS</p>
             <div class="schedule">
-                <p style="text-align:center;" id="exclude-format">
-                    ─────────────────────────────────────────────────────────────────────────────</p>
-                <h2>TEMPORADA REGULAR</h2>
+                <p style="text-align:center;" id="exclude-format">─────────────────────────────────────────────────────────────────────────────</p>
+                <h2>✻ TEMPORADA REGULAR ✻</h2>
+                <h3 style="text-align: center;">PRÓXIMOS PARTIDOS PROGRAMADOS</h3>
+                <p style="text-align:center;" id="exclude-format">────────────────────────────────────────</p>
+
+                <div class="section-container">
+                    <div class="card-inner">
+                        <div class="card-match-front">
+                            <div class="images-row">
+                                <div class="matches-images_left">
+                                    <img class="VS" src="../src/teams_logo/TARNISHED_logo.png" alt="Team Blue">
+                                </div>
+                                <div class="vs-images">
+                                    <img class="VS" src="../src/VS.png" alt="VS">
+                                </div>
+                                <div class="matches-images_right">
+                                    <img class="VS" src="../src/teams_logo/FF15_logo.png" alt="Team Red">
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h3 style="margin-bottom: 0%;">PARTIDO 3</h3>
+                                <div class="info-row">
+                                    <div class="info-column-1">
+                                        <p id="exclude-format"><strong>FECHA</strong></p>
+                                        <p>08/02/2025</p>
+                                    </div>
+                                    <div class="info-column-2">
+                                        <p id="exclude-format"><strong>HORA</strong></p>
+                                        <p>23:00</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-match-back">
+                            <h3>VICTORY</h3>
+                            <img src="../src/teams_logo/FF15_logo.png" alt="Imagen">
+                            <h3>FF15</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-container">
+                    <div class="card-inner">
+                        <div class="card-match-front">
+                            <div class="images-row">
+                                <div class="matches-images_left">
+                                    <img class="VS" src="../src/teams_logo/EGO TEAM_logo.png" alt="Team Blue">
+                                </div>
+                                <div class="vs-images">
+                                    <img class="VS" src="../src/VS.png" alt="VS">
+                                </div>
+                                <div class="matches-images_right">
+                                    <img class="VS" src="../src/teams_logo/TARNISHED_logo.png" alt="Team Red">
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h3 style="margin-bottom: 0%;">PARTIDO 4</h3>
+                                <div class="info-row">
+                                    <div class="info-column-1">
+                                        <p id="exclude-format"><strong>FECHA</strong></p>
+                                        <p>09/02/2025</p>
+                                    </div>
+                                    <div class="info-column-2">
+                                        <p id="exclude-format"><strong>HORA</strong></p>
+                                        <p>23:00</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-match-back">
+                            <h3>VICTORY</h3>
+                            <img src="../src/teams_logo/FF15_logo.png" alt="Imagen">
+                            <h3>FF15</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 style="text-align: center; margin-top: 80px;">PARTIDOS JUGADOS</h3>
+                <p id="exclude-format" style="text-align: center; font-weight: bold;">【 Haz click encima de un partido para ver su resultado 】</p>
+                    <p style="text-align:center;" id="exclude-format">────────────────────────────────────────</p>
 
                 <div class="section-container"  onclick="this.querySelector('.card-inner').classList.toggle('flipped')">
                 <div class="card-inner">
@@ -64,6 +144,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="section-container"  onclick="this.querySelector('.card-inner').classList.toggle('flipped')">
                 <div class="card-inner">
                     <div class="card-match-front">
@@ -101,7 +182,7 @@
             </div>
             <p style="text-align:center;" id="exclude-format">
                 ─────────────────────────────────────────────────────────────────────────────</p>
-            <h2>PARTIDO DE EXHIBICIÓN</h2>
+            <h2>✻ PARTIDO DE EXHIBICIÓN ✻</h2>
 
             <div class="section-container"  onclick="this.querySelector('.card-inner').classList.toggle('flipped')">
                 <div class="card-inner">
@@ -138,12 +219,18 @@
                     </div>
                 </div>
             </div>
+        </section>
+        <section id="playoffs">
+
+        </section>
+        <section id="final">
 
         </section>
     </div>
     <footer>
         <p>&copy; 2025 La Liga del Norte - Todos los derechos reservados</p>
     </footer>
+    <script type="module" src="../scripts/matches.js"></script>
 </body>
 
 </html>
