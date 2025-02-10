@@ -120,6 +120,17 @@ nav a:hover {
     padding: 15px;
     text-align: center;
     color: #fff;
+    table-layout: fixed;
+    width: 50%;
+}
+
+#score {
+    font-size:180%;
+}
+
+.table img {
+    width: 40%;
+    
 }
 
 .table th {
