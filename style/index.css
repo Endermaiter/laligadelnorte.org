@@ -176,3 +176,8 @@ footer p {
 .rrss-list {
     margin-bottom: 2%;
 }
+
+.news-images {
+    display: flex;
+    justify-content: center;
+}

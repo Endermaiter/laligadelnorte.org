@@ -27,15 +27,52 @@
         </section>
         <section id="regular-season" class="section">
             <p>PARTIDOS</p>
+            <p id="exclude-format" style="text-align: center; font-weight: bold;">【 Haz click encima de un partido
+                para ver su resultado 】</p>
             <div class="schedule">
                 <p style="text-align:center;" id="exclude-format">
                     ─────────────────────────────────────────────────────────────────────────────</p>
-                <h2>✻ PLAYOFFS ✻</h2>
-                <h3 style="text-align: center;">PRÓXIMOS PARTIDOS PROGRAMADOS</h3>
-                <p style="text-align: center;">No hay partidos programados</p>
+                    <h3 style="text-align: center;">PRÓXIMOS PARTIDOS PROGRAMADOS</h3>
+                    <p style="text-align: center;">No hay partidos programados</p>
+                    <h2 style="margin-top: 80px">✻ PLAYOFFS ✻</h2>
+                    
+                    <div class="section-container" onclick="this.querySelector('.card-inner').classList.toggle('flipped')">
+                        <div class="card-inner">
+                            <div class="card-match-front">
+                                <div class="images-row">
+                                    <div class="matches-images_left">
+                                        <img class="VS" src="../src/teams_logo/FF15_logo.png" alt="Team Blue">
+                                    </div>
+                                    <div class="vs-images">
+                                        <img class="VS" src="../src/VS.png" alt="VS">
+                                    </div>
+                                    <div class="matches-images_right">
+                                        <img class="VS" src="../src/teams_logo/NOOBS4WIN_logo.png" alt="Team Red">
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <h3 style="margin-bottom: 0%;">SEMIFINAL</h3>
+                                    <div class="info-row">
+                                        <div class="info-column-1">
+                                            <p id="exclude-format"><strong>FECHA</strong></p>
+                                            <p>04/06/2025</p>
+                                        </div>
+                                        <div class="info-column-2">
+                                            <p id="exclude-format"><strong>HORA</strong></p>
+                                            <p>23:30</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-match-back">
+                                <h3>VICTORY</h3>
+                                <img src="../src/teams_logo/NOOBS4WIN_logo.png" alt="Imagen">
+                                <h3>NOOBS4WIN</h3>
+                            </div>
+                        </div>
+                    </div>
+
                 <h2 style="margin-top: 80px">✻ TEMPORADA REGULAR ✻</h2>
-                <p id="exclude-format" style="text-align: center; font-weight: bold;">【 Haz click encima de un partido
-                    para ver su resultado 】</p>
                 <p style="text-align:center;" id="exclude-format">────────────────────────────────────────</p>
 
                 <div class="section-container" onclick="this.querySelector('.card-inner').classList.toggle('flipped')">
