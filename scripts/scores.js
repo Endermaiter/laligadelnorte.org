@@ -1,25 +1,58 @@
+const teams = [
+  {
+    name: "TARNISHED",
+    logo: "../src/teams_logo/TARNISHED_logo.png",
+    wins: 6,
+    losses: 1,
+  },
+  {
+    name: "NOOBS4WIN",
+    logo: "../src/teams_logo/NOOBS4WIN_logo.png",
+    wins: 5,
+    losses: 2,
+  },
+  {
+    name: "FF15",
+    logo: "../src/teams_logo/FF15_logo.png",
+    wins: 4,
+    losses: 3,
+  },
+  {
+    name: "MONOS CORUÑA",
+    logo: "../src/teams_logo/MONOS CORUÑA_logo.png",
+    wins: 3,
+    losses: 4,
+  },
+  {
+    name: "EGO TEAM",
+    logo: "../src/teams_logo/EGO TEAM_logo.png",
+    wins: 2,
+    losses: 5,
+  },
+  {
+    name: "DOMINGUEROS",
+    logo: "../src/teams_logo/DOMINGUEROS_logo.png",
+    wins: 1,
+    losses: 6,
+  },
+];
 
+// Ordenar por más victorias
+teams.sort((a, b) => b.wins - a.wins);
 
-function sortTableByColumn(table, columnIndex) {
-    const rows = Array.from(table.querySelectorAll("tbody > tr"));
+const tbody = document.getElementById("scores-body");
 
-    rows.sort((a, b) => {
-        const aText = a.children[columnIndex].textContent.trim();
-        const bText = b.children[columnIndex].textContent.trim();
+teams.forEach((team, index) => {
+  const diff = team.wins - team.losses;
+  const row = document.createElement("tr");
 
-        return isNaN(aText) || isNaN(bText)
-            ? bText.localeCompare(aText)
-            : Number(bText) - Number(aText);
+  row.innerHTML = `
+    <td>${index + 1}</td>
+    <td><img src="${team.logo}" alt="${team.name}"> ${team.name}</td>
+    <td>${team.wins}</td>
+    <td>${team.losses}</td>
+    <td>${diff > 0 ? "+" : ""}${diff}</td>
+  `;
 
-    });
-
-    const tbody = table.querySelector("tbody");
-    tbody.innerHTML = "";
-    rows.forEach(row => tbody.appendChild(row));
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-    const table = document.getElementById("scoreTable");
-    const columnToSort = 1;
-    sortTableByColumn(table, columnToSort);
+  tbody.appendChild(row);
 });

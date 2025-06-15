@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Partidos - La Liga del Norte</title>
+  <link rel="stylesheet" href="../style/matches.css" />
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">LLN</div>
+    <nav class="nav-links">
+      <a href="../index.html">Inicio</a>
+      <a href="matches.html" class="active">Partidos</a>
+      <a href="scores.html">Clasificación</a>
+      <a href="teams.html">Equipos</a>
+      <a href="players.html">Jugadores</a>
+    </nav>
+  </header>
+
+  <main class="match-sections">
+    <h1>Calendario de Partidos</h1>
+    <p class="instruction">Haz clic sobre un partido para ver su resultado</p>
+
+    <!-- SECCIÓN: FINAL -->
+    <section>
+      <h2>✻ GRAN FINAL ✻</h2>
+      <div class="match-card-container" onclick="flipCard(this, true)">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="../src/teams_logo/TARNISHED_logo.png" alt="TARNISHED">
+            <span class="vs">VS</span>
+            <img src="../src/teams_logo/NOOBS4WIN_logo.png" alt="NOOBS4WIN">
+            <p class="info">18/06/2025 - 18:00h</p>
+            <p class="type">FINAL</p>
+          </div>
+          <div class="card-back">
+            <h3>VICTORY</h3>
+            <img src="../src/teams_logo/TARNISHED_logo.png" alt="TARNISHED">
+            <h3>TARNISHED</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN: PLAYOFFS -->
+    <section>
+      <h2>✻ PLAYOFFS ✻</h2>
+      <div class="match-list">
+        <!-- Repite para cada partido -->
+        <div class="match-card-container" onclick="flipCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="../src/teams_logo/TARNISHED_logo.png" alt="TARNISHED">
+              <span class="vs">VS</span>
+              <img src="../src/teams_logo/MONOS CORUÑA_logo.png" alt="MONOS CORUÑA">
+              <p class="info">18/06/2025 - 18:00h</p>
+              <p class="type">SEMIFINAL</p>
+            </div>
+            <div class="card-back">
+              <h3>VICTORY</h3>
+              <img src="../src/teams_logo/TARNISHED_logo.png" alt="TARNISHED">
+              <h3>TARNISHED</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- Otro ejemplo -->
+        <div class="match-card-container" onclick="flipCard(this)">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="../src/teams_logo/FF15_logo.png" alt="FF15">
+              <span class="vs">VS</span>
+              <img src="../src/teams_logo/NOOBS4WIN_logo.png" alt="NOOBS4WIN">
+              <p class="info">04/06/2025 - 23:30h</p>
+              <p class="type">SEMIFINAL</p>
+            </div>
+            <div class="card-back">
+              <h3>VICTORY</h3>
+              <img src="../src/teams_logo/NOOBS4WIN_logo.png" alt="NOOBS4WIN">
+              <h3>NOOBS4WIN</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Puedes continuar con TEMPORADA REGULAR y EXHIBICIÓN de la misma manera -->
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 La Liga del Norte - Todos los derechos reservados</p>
+  </footer>
+
+  <script>
+    function flipCard(cardElement, isFinal = false) {
+      const inner = cardElement.querySelector('.card-inner');
+      const isFlipped = inner.classList.contains('flipped');
+      inner.classList.toggle('flipped');
+
+      if (!isFlipped && isFinal) {
+        setTimeout(() => {
+          const duration = 3000;
+          const animationEnd = Date.now() + duration;
+          const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 1000 };
+
+          const interval = setInterval(() => {
+            const timeLeft = animationEnd - Date.now();
+            if (timeLeft <= 0) return clearInterval(interval);
+
+            confetti({
+              ...defaults,
+              particleCount: 60,
+              origin: { x: Math.random(), y: Math.random() * 0.6 }
+            });
+          }, 150);
+        }, 300);
+      }
+    }
+  </script>
+</body>
+</html>

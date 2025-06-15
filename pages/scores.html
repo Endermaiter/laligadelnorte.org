@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clasificación - La Liga del Norte</title>
+    <link rel="stylesheet" href="../style/scores.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo">LLN</div>
+        <nav class="nav-links">
+            <a href="../index.html">Inicio</a>
+            <a href="matches.html">Partidos</a>
+            <a href="scores.html" class="active">Clasificación</a>
+            <a href="teams.html">Equipos</a>
+            <a href="players.html">Jugadores</a>
+        </nav>
+    </header>
+
+    <main class="scores-container">
+        <h1>Clasificación General</h1>
+        <table class="scores-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Equipo</th>
+                    <th>Victorias</th>
+                    <th>Derrotas</th>
+                    <th>Diferencia</th>
+                </tr>
+            </thead>
+            <tbody id="scores-body">
+                <!-- Aquí se insertarán dinámicamente las filas -->
+            </tbody>
+        </table>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 La Liga del Norte - Todos los derechos reservados</p>
+    </footer>
+    <script type="module" src="../scripts/scores.js"></script>
+</body>
+
+</html>
