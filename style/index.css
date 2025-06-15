@@ -82,6 +82,10 @@ nav a:hover {
     margin-bottom: 20px;
 }
 
+h1 {
+    font-family: 'Baron';
+}
+
 .intro p {
     font-size: 1.2em;
     line-height: 1.6;
@@ -180,4 +184,23 @@ footer p {
 .news-images {
     display: flex;
     justify-content: center;
+}
+
+.winners {
+    background: #1f4068;
+    padding: 20px;
+    border: 2px solid #778da9;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 3%;
+}
+
+.winners:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9);
 }

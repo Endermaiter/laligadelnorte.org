@@ -7,6 +7,7 @@
     <link rel="icon" href="../src/LLN_wolf_header_icon.png" type="image/png">
     <title>La Liga del Norte Tournament</title>
     <link rel="stylesheet" href="../style/matches.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 
 <body>
@@ -32,45 +33,117 @@
             <div class="schedule">
                 <p style="text-align:center;" id="exclude-format">
                     ─────────────────────────────────────────────────────────────────────────────</p>
-                    <h3 style="text-align: center;">PRÓXIMOS PARTIDOS PROGRAMADOS</h3>
-                    <p style="text-align: center;">No hay partidos programados</p>
-                    <h2 style="margin-top: 80px">✻ PLAYOFFS ✻</h2>
-                    
-                    <div class="section-container" onclick="this.querySelector('.card-inner').classList.toggle('flipped')">
-                        <div class="card-inner">
-                            <div class="card-match-front">
-                                <div class="images-row">
-                                    <div class="matches-images_left">
-                                        <img class="VS" src="../src/teams_logo/FF15_logo.png" alt="Team Blue">
-                                    </div>
-                                    <div class="vs-images">
-                                        <img class="VS" src="../src/VS.png" alt="VS">
-                                    </div>
-                                    <div class="matches-images_right">
-                                        <img class="VS" src="../src/teams_logo/NOOBS4WIN_logo.png" alt="Team Red">
-                                    </div>
+                <h2 style="margin-top: 80px">✻ GRAN FINAL ✻</h2>
+
+                <div class="section-container" onclick="toggleCard(this)">
+                    <div class="card-inner">
+                        <div class="card-match-front">
+                            <div class="images-row">
+                                <div class="matches-images_left">
+                                    <img class="VS" src="../src/teams_logo/TARNISHED_logo.png" alt="Team Blue">
                                 </div>
-                                <div class="info">
-                                    <h3 style="margin-bottom: 0%;">SEMIFINAL</h3>
-                                    <div class="info-row">
-                                        <div class="info-column-1">
-                                            <p id="exclude-format"><strong>FECHA</strong></p>
-                                            <p>04/06/2025</p>
-                                        </div>
-                                        <div class="info-column-2">
-                                            <p id="exclude-format"><strong>HORA</strong></p>
-                                            <p>23:30</p>
-                                        </div>
-                                    </div>
+                                <div class="vs-images">
+                                    <img class="VS" src="../src/VS.png" alt="VS">
+                                </div>
+                                <div class="matches-images_right">
+                                    <img class="VS" src="../src/teams_logo/NOOBS4WIN_logo.png" alt="Team Red">
                                 </div>
                             </div>
-                            <div class="card-match-back">
-                                <h3>VICTORY</h3>
-                                <img src="../src/teams_logo/NOOBS4WIN_logo.png" alt="Imagen">
-                                <h3>NOOBS4WIN</h3>
+                            <div class="info">
+                                <h3 style="margin-bottom: 0%;">FINAL</h3>
+                                <div class="info-row">
+                                    <div class="info-column-1">
+                                        <p id="exclude-format"><strong>FECHA</strong></p>
+                                        <p>18/06/2025</p>
+                                    </div>
+                                    <div class="info-column-2">
+                                        <p id="exclude-format"><strong>HORA</strong></p>
+                                        <p>18:00</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+                        <div class="card-match-back" onload="launchConfetti()">
+                            <h3>VICTORY</h3>
+                            <img src="../src/teams_logo/TARNISHED_logo.png" alt="Imagen">
+                            <h3>TARNISHED</h3>
+                        </div>
                     </div>
+                </div>
+
+                <h2 style="margin-top: 80px">✻ PLAYOFFS ✻</h2>
+
+                <div class="section-container" onclick="this.querySelector('.card-inner').classList.toggle('flipped')">
+                    <div class="card-inner">
+                        <div class="card-match-front">
+                            <div class="images-row">
+                                <div class="matches-images_left">
+                                    <img class="VS" src="../src/teams_logo/TARNISHED_logo.png" alt="Team Blue">
+                                </div>
+                                <div class="vs-images">
+                                    <img class="VS" src="../src/VS.png" alt="VS">
+                                </div>
+                                <div class="matches-images_right">
+                                    <img class="VS" src="../src/teams_logo/MONOS CORUÑA_logo.png" alt="Team Red">
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h3 style="margin-bottom: 0%;">SEMIFINAL</h3>
+                                <div class="info-row">
+                                    <div class="info-column-1">
+                                        <p id="exclude-format"><strong>FECHA</strong></p>
+                                        <p>18/06/2025</p>
+                                    </div>
+                                    <div class="info-column-2">
+                                        <p id="exclude-format"><strong>HORA</strong></p>
+                                        <p>18:00</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-match-back">
+                            <h3>VICTORY</h3>
+                            <img src="../src/teams_logo/TARNISHED_logo.png" alt="Imagen">
+                            <h3>TARNISHED</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-container" onclick="this.querySelector('.card-inner').classList.toggle('flipped')">
+                    <div class="card-inner">
+                        <div class="card-match-front">
+                            <div class="images-row">
+                                <div class="matches-images_left">
+                                    <img class="VS" src="../src/teams_logo/FF15_logo.png" alt="Team Blue">
+                                </div>
+                                <div class="vs-images">
+                                    <img class="VS" src="../src/VS.png" alt="VS">
+                                </div>
+                                <div class="matches-images_right">
+                                    <img class="VS" src="../src/teams_logo/NOOBS4WIN_logo.png" alt="Team Red">
+                                </div>
+                            </div>
+                            <div class="info">
+                                <h3 style="margin-bottom: 0%;">SEMIFINAL</h3>
+                                <div class="info-row">
+                                    <div class="info-column-1">
+                                        <p id="exclude-format"><strong>FECHA</strong></p>
+                                        <p>04/06/2025</p>
+                                    </div>
+                                    <div class="info-column-2">
+                                        <p id="exclude-format"><strong>HORA</strong></p>
+                                        <p>23:30</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-match-back">
+                            <h3>VICTORY</h3>
+                            <img src="../src/teams_logo/NOOBS4WIN_logo.png" alt="Imagen">
+                            <h3>NOOBS4WIN</h3>
+                        </div>
+                    </div>
+                </div>
 
                 <h2 style="margin-top: 80px">✻ TEMPORADA REGULAR ✻</h2>
                 <p style="text-align:center;" id="exclude-format">────────────────────────────────────────</p>
@@ -110,7 +183,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="section-container" onclick="this.querySelector('.card-inner').classList.toggle('flipped')">
                     <div class="card-inner">
                         <div class="card-match-front">
@@ -146,7 +219,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="section-container" onclick="this.querySelector('.card-inner').classList.toggle('flipped')">
                     <div class="card-inner">
                         <div class="card-match-front">
@@ -182,7 +255,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="section-container" onclick="this.querySelector('.card-inner').classList.toggle('flipped')">
                     <div class="card-inner">
                         <div class="card-match-front">
@@ -218,7 +291,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="section-container" onclick="this.querySelector('.card-inner').classList.toggle('flipped')">
                     <div class="card-inner">
                         <div class="card-match-front">
@@ -290,7 +363,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="section-container" onclick="this.querySelector('.card-inner').classList.toggle('flipped')">
                     <div class="card-inner">
                         <div class="card-match-front">
@@ -398,7 +471,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="section-container" onclick="this.querySelector('.card-inner').classList.toggle('flipped')">
                     <div class="card-inner">
                         <div class="card-match-front">
@@ -434,7 +507,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="section-container" onclick="this.querySelector('.card-inner').classList.toggle('flipped')">
                     <div class="card-inner">
                         <div class="card-match-front">
@@ -665,7 +738,7 @@
     </div>
     <footer>
         <div class="main-footer">
-            <div  class="logo-footer">
+            <div class="logo-footer">
                 <img src="../src/LLN_lol_icon.jpg" alt="LLN logo">
             </div>
             <div class="social-media">
@@ -673,44 +746,40 @@
                     <li class="rrss-list">
                         <a class="rrss-text" href="https://www.instagram.com/roicetee/" target="_blank">
                             <img class="rrss-img"
-                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1024px-Instagram_logo_2022.svg.png"
-                                    alt="Logo de Instagram"> @la_liga_del_norte
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1024px-Instagram_logo_2022.svg.png"
+                                alt="Logo de Instagram"> @la_liga_del_norte
                         </a>
                     </li>
                     <li class="rrss-list">
                         <a class="rrss-text" href="https://x.com/liga_del_norte" target="_blank">
                             <img class="rrss-img"
-                            src="https://img.freepik.com/vector-gratis/nuevo-diseno-icono-x-logotipo-twitter-2023_1017-45418.jpg"
-                            alt="Logo de Twitter"> @liga_del_norte
+                                src="https://img.freepik.com/vector-gratis/nuevo-diseno-icono-x-logotipo-twitter-2023_1017-45418.jpg"
+                                alt="Logo de Twitter"> @liga_del_norte
                         </a>
                     </li>
                     <li class="rrss-list">
                         <a class="rrss-text" href="https://www.twitch.tv/laligadelnorte" target="_blank">
                             <img class="rrss-img"
-                                    src="https://img.freepik.com/vector-premium/logotipo-contraccion_578229-259.jpg"
-                                    alt="Logo de Twitch"> @LaLigadelNorte
+                                src="https://img.freepik.com/vector-premium/logotipo-contraccion_578229-259.jpg"
+                                alt="Logo de Twitch"> @LaLigadelNorte
                         </a>
                     </li>
                     <li class="rrss-list">
                         <a class="rrss-text" href="https://www.youtube.com/@LALIGADELNORTE" target="_blank">
                             <img class="rrss-img"
-                                    src="https://cdn3.iconfinder.com/data/icons/social-network-30/512/social-06-512.png"
-                                    alt="Logo de YouTube"> @LALIGADELNORTE
+                                src="https://cdn3.iconfinder.com/data/icons/social-network-30/512/social-06-512.png"
+                                alt="Logo de YouTube"> @LALIGADELNORTE
                         </a>
                     </li>
                 </ul>
             </div>
-    
+
             <div class="sponsor">
                 <a href="https://grefusa.com/" target="_blank">
-                    <img class="tijuana-img"
-                    src="../src/sponsors/tijuana.png"
-                    alt="Grefusa Pipas Tijuana">
+                    <img class="tijuana-img" src="../src/sponsors/tijuana.png" alt="Grefusa Pipas Tijuana">
                 </a>
                 <a href="https://www.toblerone.ch/de/" target="_blank">
-                    <img class="toblerone-img"
-                    src="../src/sponsors/toblerone.png"
-                    alt="Grefusa Pipas Tijuana">
+                    <img class="toblerone-img" src="../src/sponsors/toblerone.png" alt="Grefusa Pipas Tijuana">
                 </a>
             </div>
         </div>
@@ -720,6 +789,27 @@
 
     </footer>
     <script type="module" src="../scripts/matches.js"></script>
+
+    <script>
+        function toggleCard(cardElement) {
+            const innerCard = cardElement.querySelector('.card-inner');
+            const isFlipped = innerCard.classList.contains('flipped');
+
+            // Girar la tarjeta
+            innerCard.classList.toggle('flipped');
+
+            // Si no estaba girada y ahora se gira (mostrando la parte trasera), lanza confeti
+            if (!isFlipped) {
+                setTimeout(() => {
+                    confetti({
+                        particleCount: 150,
+                        spread: 100,
+                        origin: { y: 0.6 }
+                    });
+                }, 300); // ajusta al tiempo de la animación de flip si es necesario
+            }
+        }
+    </script>
 </body>
 
 </html>
