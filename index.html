@@ -1,78 +1,91 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>La Liga del Norte</title>
-  <link rel="stylesheet" href="style/index.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>La Liga del Norte</title>
+    <link rel="stylesheet" href="style/index.css" />
+    <link rel="icon" href="src/LLN_wolf_header_icon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <header class="navbar">
-    <div class="logo">LLN</div>
-    <nav class="nav-links">
-      <a href="index.html">Inicio</a>
-      <a href="pages/matches.html">Partidos</a>
-      <a href="pages/scores.html">Clasificación</a>
-      <a href="pages/teams.html">Equipos</a>
-      <a href="pages/players.html">Jugadores</a>
-    </nav>
-  </header>
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <img src="src/LLN_wolf_header_icon.png" alt="LLN logo" />
+        </a>
+        <nav class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="pages/matches.html">Partidos</a>
+            <a href="pages/scores.html">Clasificación</a>
+            <a href="pages/teams.html">Equipos</a>
+            <a href="pages/players.html">Jugadores</a>
+        </nav>
+    </header>
 
-  <main>
-    <section class="hero">
-      <h1>La Liga del Norte</h1>
-      <p>La competición definitiva entre equipos del norte</p>
-    </section>
+    <main>
+        <section class="hero">
+            <div class="hero-background">
+                <img src="src/LLN_wolf.png" alt="Lobo izquierdo" class="wolf left" />
+                <img src="src/LLN_wolf_inverted.png" alt="Lobo derecho" class="wolf right" />
+            </div>
 
-    <section class="next-match">
-      <h2>Próximo Partido</h2>
-      <div class="match-card">
-        <img src="src/teams_logo/TARNISHED_logo.png" alt="TARNISHED" />
-        <span class="vs">VS</span>
-        <img src="src/teams_logo/NOOBS4WIN_logo.png" alt="NOOBS4WIN" />
-        <div class="match-info">
-          <p>18/06/2025 - 18:00h</p>
-          <p class="final">Gran Final</p>
-        </div>
-      </div>
-    </section>
+            <div class="hero-title">
+                <h1>LA LIGA DEL NORTE</h1>
+                <p>League of Legends Tournament</p>
+            </div>
+        </section>
 
-    <section class="results">
-      <h2>Últimos Resultados</h2>
-      <div class="results-scroll">
-        <!-- Tarjetas de ejemplo -->
-        <div class="result-card">
-          <p>SEMIFINAL</p>
-          <img src="src/teams_logo/TARNISHED_logo.png" alt="TARNISHED" />
-          <span class="vs">VS</span>
-          <img src="src/teams_logo/MONOS CORUÑA_logo.png" alt="MONOS CORUÑA" />
-          <p class="winner">Ganó TARNISHED</p>
-        </div>
-        <div class="result-card">
-          <p>SEMIFINAL</p>
-          <img src="src/teams_logo/NOOBS4WIN_logo.png" alt="NOOBS4WIN" />
-          <span class="vs">VS</span>
-          <img src="src/teams_logo/FF15_logo.png" alt="FF15" />
-          <p class="winner">Ganó NOOBS4WIN</p>
-        </div>
-        <!-- Más tarjetas... -->
-      </div>
-    </section>
+        <section class="next-match">
+            <h2>Próximo Partido</h2>
+            <div class="match-card">
+                <img src="src/teams_logo/TARNISHED_logo.png" alt="TARNISHED" />
+                <span class="vs">VS</span>
+                <img src="src/teams_logo/NOOBS4WIN_logo.png" alt="NOOBS4WIN" />
+                <div class="match-info">
+                    <p>18/06/2025 - 18:00h</p>
+                    <p class="final">Gran Final</p>
+                </div>
+            </div>
+        </section>
 
-    <section class="sponsors">
-      <h2>Patrocinadores</h2>
-      <div class="sponsor-logos">
-        <img src="src/sponsors/tijuana.png" alt="Pipas Tijuana" />
-        <img src="src/sponsors/toblerone.png" alt="Toblerone" />
-      </div>
-    </section>
-  </main>
+        <section class="results">
+            <h2>Últimos Resultados</h2>
+            <div class="results-scroll">
+                <!-- Tarjetas de ejemplo -->
+                <div class="result-card">
+                    <p>SEMIFINAL</p>
+                    <img src="src/teams_logo/TARNISHED_logo.png" alt="TARNISHED" />
+                    <span class="vs">VS</span>
+                    <img src="src/teams_logo/MONOS CORUÑA_logo.png" alt="MONOS CORUÑA" />
+                    <p class="winner">Ganó TARNISHED</p>
+                </div>
+                <div class="result-card">
+                    <p>SEMIFINAL</p>
+                    <img src="src/teams_logo/NOOBS4WIN_logo.png" alt="NOOBS4WIN" />
+                    <span class="vs">VS</span>
+                    <img src="src/teams_logo/FF15_logo.png" alt="FF15" />
+                    <p class="winner">Ganó NOOBS4WIN</p>
+                </div>
+                <!-- Más tarjetas... -->
+            </div>
+        </section>
 
-  <footer class="footer">
-    <p>&copy; 2025 La Liga del Norte - Todos los derechos reservados</p>
-  </footer>
+        <section class="sponsors">
+            <h2>Patrocinadores</h2>
+            <div class="sponsor-logos">
+                <img src="src/sponsors/tijuana.png" alt="Pipas Tijuana" />
+                <img src="src/sponsors/toblerone.png" alt="Toblerone" />
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 La Liga del Norte - Todos los derechos reservados</p>
+    </footer>
 </body>
+
 </html>

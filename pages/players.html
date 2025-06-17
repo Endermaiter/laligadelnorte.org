@@ -1,37 +1,43 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jugadores - La Liga del Norte</title>
-  <link rel="stylesheet" href="../style/players.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jugadores - La Liga del Norte</title>
+    <link rel="stylesheet" href="../style/players.css" />
+    <link rel="icon" href="src/LLN_wolf_header_icon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
+
 <body>
-  <header class="navbar">
-    <div class="logo">LLN</div>
-    <nav class="nav-links">
-      <a href="../index.html">Inicio</a>
-      <a href="matches.html">Partidos</a>
-      <a href="scores.html">Clasificación</a>
-      <a href="teams.html">Equipos</a>
-      <a href="players.html" class="active">Jugadores</a>
-    </nav>
-  </header>
+    <header class="navbar">
+        <a href="../index.html" class="logo">
+            <img src="../src/LLN_wolf_header_icon.png" alt="LLN logo" />
+        </a>
+        <nav class="nav-links">
+            <a href="../index.html">Inicio</a>
+            <a href="matches.html">Partidos</a>
+            <a href="scores.html">Clasificación</a>
+            <a href="teams.html">Equipos</a>
+            <a href="players.html" class="active">Jugadores</a>
+        </nav>
+    </header>
 
-  <main class="players-container">
-    <h1>Jugadores</h1>
-    <input type="text" id="search" placeholder="Buscar jugador..." />
+    <main class="players-container">
+        <h1>Jugadores</h1>
+        <input type="text" id="search" placeholder="Buscar jugador..." />
 
-    <div id="players-grid" class="players-grid">
-      <!-- Jugadores se cargan dinámicamente -->
-    </div>
-  </main>
+        <div id="players-grid" class="players-grid">
+            <!-- Jugadores se cargan dinámicamente -->
+        </div>
+    </main>
 
-  <footer class="footer">
-    <p>&copy; 2025 La Liga del Norte - Todos los derechos reservados</p>
-  </footer>
+    <footer class="footer">
+        <p>&copy; 2025 La Liga del Norte - Todos los derechos reservados</p>
+    </footer>
 
-  <script type="module" src="../scripts/players.js"></script>
+    <script type="module" src="../scripts/players.js"></script>
 </body>
+
 </html>

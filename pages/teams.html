@@ -1,97 +1,91 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../src/LLN_wolf_header_icon.png" type="image/png">
-    <title>La Liga del Norte Tournament</title>
-    <link rel="stylesheet" href="../style/teams.css">
-</head>
-<body>
-    <header>
-        <img src="../src/LLN_text.png">
-    </header>
-    <nav>
-        <a href="../index.html">INICIO</a>
-        <a href="players.html">JuGADORES</a>
-        <a href="teams.html">EquIPOS</a>
-        <a href="scores.html">CLASIFICACIÓN</a>
-        <a href="matches.html">PARTIDOS</a>
-    </nav>
-    <div class="container">
-        <section id="teams" class="section">
-            <p>EquIPOS</p>
-            <p style="text-align:center;">─────────────────────────────────────────────────────────────────────────────</p>
-            <div class="teams">
-                <img class="teams-images" src="../src/teams/DMG.png" alt="DOMINGUEROS">
-            <p style="text-align:center;">─────────────────────────────────────────────────────────────────────────────</p>
-                <img class="teams-images" src="../src/teams/EGT.png" alt="EGO_TEAM">  
-                <p style="text-align:center;">─────────────────────────────────────────────────────────────────────────────</p>
-                <img class="teams-images" src="../src/teams/FF15.png" alt="FF15">
-                <p style="text-align:center;">─────────────────────────────────────────────────────────────────────────────</p>
-                <img class="teams-images" src="../src/teams/MNC.png" alt="MONOS_CORUÑA">
-                <p style="text-align:center;">─────────────────────────────────────────────────────────────────────────────</p>
-                <img class="teams-images" src="../src/teams/N4W.png" alt="NOOBS4WIN">
-                <p style="text-align:center;">─────────────────────────────────────────────────────────────────────────────</p>
-                <img class="teams-images" src="../src/teams/TNS.png" alt="TARNISHED">
-            </div>
-        </section>
-    </div>
-    <footer>
-        <div class="main-footer">
-            <div  class="logo-footer">
-                <img src="../src/LLN_lol_icon.jpg" alt="LLN logo">
-            </div>
-            <div class="social-media">
-                <ul style="list-style: none;">
-                    <li class="rrss-list">
-                        <a class="rrss-text" href="https://www.instagram.com/roicetee/" target="_blank">
-                            <img class="rrss-img"
-                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1024px-Instagram_logo_2022.svg.png"
-                                    alt="Logo de Instagram"> @la_liga_del_norte
-                        </a>
-                    </li>
-                    <li class="rrss-list">
-                        <a class="rrss-text" href="https://x.com/liga_del_norte" target="_blank">
-                            <img class="rrss-img"
-                            src="https://img.freepik.com/vector-gratis/nuevo-diseno-icono-x-logotipo-twitter-2023_1017-45418.jpg"
-                            alt="Logo de Twitter"> @liga_del_norte
-                        </a>
-                    </li>
-                    <li class="rrss-list">
-                        <a class="rrss-text" href="https://www.twitch.tv/laligadelnorte" target="_blank">
-                            <img class="rrss-img"
-                                    src="https://img.freepik.com/vector-premium/logotipo-contraccion_578229-259.jpg"
-                                    alt="Logo de Twitch"> @LaLigadelNorte
-                        </a>
-                    </li>
-                    <li class="rrss-list">
-                        <a class="rrss-text" href="https://www.youtube.com/@LALIGADELNORTE" target="_blank">
-                            <img class="rrss-img"
-                                    src="https://cdn3.iconfinder.com/data/icons/social-network-30/512/social-06-512.png"
-                                    alt="Logo de YouTube"> @LALIGADELNORTE
-                        </a>
-                    </li>
-                </ul>
-            </div>
-    
-            <div class="sponsor">
-                <a href="https://grefusa.com/" target="_blank">
-                    <img class="tijuana-img"
-                    src="../src/sponsors/tijuana.png"
-                    alt="Grefusa Pipas Tijuana">
-                </a>
-                <a href="https://www.toblerone.ch/de/" target="_blank">
-                    <img class="toblerone-img"
-                    src="../src/sponsors/toblerone.png"
-                    alt="Grefusa Pipas Tijuana">
-                </a>
-            </div>
-        </div>
-        <div class="footer-copy">
-            <p>COPYRIGHT &copy; 2025 La Liga del Norte - Todos los derechos reservados</p>
-        </div>
 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Equipos - La Liga del Norte</title>
+    <link rel="stylesheet" href="../style/teams.css" />
+    <link rel="icon" href="src/LLN_wolf_header_icon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="navbar">
+        <a href="../index.html" class="logo">
+            <img src="../src/LLN_wolf_header_icon.png" alt="LLN logo" />
+        </a>
+        <nav class="nav-links">
+            <a href="../index.html">Inicio</a>
+            <a href="matches.html">Partidos</a>
+            <a href="scores.html">Clasificación</a>
+            <a href="teams.html" class="active">Equipos</a>
+            <a href="players.html">Jugadores</a>
+        </nav>
+    </header>
+
+    <main class="teams-container">
+        <h1>Equipos Participantes</h1>
+        <div class="teams-grid">
+            <!-- Ejemplo de tarjeta de equipo -->
+            <div class="team-card" data-team="TNS">
+                <img src="../src/teams_logo/TARNISHED_logo.png" alt="TARNISHED" />
+                <p class="team-name">TARNISHED</p>
+            </div>
+            <div class="team-card" data-team="N4W">
+                <img src="../src/teams_logo/NOOBS4WIN_logo.png" alt="NOOBS4WIN" />
+                <p class="team-name">NOOBS4WIN</p>
+            </div>
+            <div class="team-card" data-team="FF15">
+                <img src="../src/teams_logo/FF15_logo.png" alt="FF15" />
+                <p class="team-name">FF15</p>
+            </div>
+            <div class="team-card" data-team="MNC">
+                <img src="../src/teams_logo/MONOS CORUÑA_logo.png" alt="MONOS CORUÑA" />
+                <p class="team-name">MONOS CORUÑA</p>
+            </div>
+            <div class="team-card" data-team="EGT">
+                <img src="../src/teams_logo/EGO TEAM_logo.png" alt="EGO TEAM" />
+                <p class="team-name">EGO TEAM</p>
+            </div>
+            <div class="team-card" data-team="DMG">
+                <img src="../src/teams_logo/DOMINGUEROS_logo.png" alt="DOMINGUEROS" />
+                <p class="team-name">DOMINGUEROS</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 La Liga del Norte - Todos los derechos reservados</p>
     </footer>
+
+    <div id="team-modal" class="team-modal hidden">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="closeModal()">✕</span>
+            <img id="team-card-image" src="" alt="Team Card" />
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById("team-modal");
+        const image = document.getElementById("team-card-image");
+
+        document.querySelectorAll(".team-card").forEach(card => {
+            card.addEventListener("click", () => {
+                const team = card.dataset.team;
+                image.src = `../src/teams/${team}.png`;
+                image.alt = `${team} Card`;
+                modal.classList.remove("hidden");
+            });
+        });
+
+        function closeModal() {
+            modal.classList.add("hidden");
+            image.src = "";
+        }
+
+        modal.addEventListener("click", closeModal);
+    </script>
 </body>
+
 </html>

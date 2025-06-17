@@ -7,6 +7,13 @@
   --radius: 16px;
 }
 
+@font-face {
+    font-family: 'Baron';
+    src: url('../src/fonts/Baron\ Neue.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -31,9 +38,21 @@ body {
 }
 
 .logo {
-  font-weight: 800;
-  font-size: 1.5rem;
-  color: var(--accent);
+  display: flex;
+  align-items: center;
+  height: 40px;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.logo img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
 }
 
 .nav-links a {
@@ -49,19 +68,79 @@ body {
 }
 
 .hero {
-  padding: 4rem 2rem;
-  text-align: center;
+  position: relative;
   background: linear-gradient(120deg, #1e293b, #111827);
+  padding: 4rem 2rem;
+  min-height: 250px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+  padding: 0 2rem;
+}
+
+.hero-title {
+  z-index: 1;
 }
 
 .hero h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  font-family: 'Baron';
+  color: var(--accent);
 }
 
 .hero p {
   font-size: 1.25rem;
   color: var(--gray);
+}
+
+/* LOBOS */
+
+.wolf {
+  height: 100%;
+  max-height: 220px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.3;
+  filter: brightness(1.1);
+  mix-blend-mode: screen;
+
+  /* Degradado solo en la parte inferior */
+  mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+}
+
+.wolf.left {
+  align-self: center;
+}
+
+.wolf.right {
+  align-self: center;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .wolf {
+    opacity: 0.1;
+    max-height: 140px;
+  }
 }
 
 .next-match, .results, .sponsors {
@@ -79,6 +158,7 @@ body {
   align-items: center;
   gap: 1rem;
   flex-wrap: wrap;
+  width: 50%;
 }
 
 .match-card img {
