@@ -1,0 +1,112 @@
+:root {
+  --primary: #10141e;
+  --accent: #facc15;
+  --text: #ffffff;
+  --gray: #9ca3af;
+  --bg-card: #1f2937;
+  --radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: var(--primary);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAVBAR */
+
+.navbar {
+  background: #0f172a;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-links a {
+  margin-left: 2rem;
+  text-decoration: none;
+  color: var(--gray);
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: var(--accent);
+}
+
+/* CONTENIDO PRINCIPAL */
+
+.winner-section {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.winner-section h1 {
+  font-size: 2.5rem;
+  color: var(--accent);
+  margin-bottom: 2rem;
+}
+
+.winner-section h2 {
+  color: var(--text);
+  margin-bottom: 2rem;
+}
+
+.winner-card {
+  background: var(--bg-card);
+  padding: 2rem;
+  border-radius: var(--radius);
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  margin-bottom: 5%;
+}
+
+.winner-card img {
+  width: 70%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.winner-card h2 {
+  font-size: 1.8rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.winner-card p {
+  font-size: 1rem;
+  color: var(--gray);
+}
+
+/* FOOTER */
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background: #0f172a;
+  font-size: 0.9rem;
+  color: var(--gray);
+}

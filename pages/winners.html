@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ganadores - La Liga del Norte</title>
+    <link rel="stylesheet" href="../style/winners.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+
+<body onload="launchConfetti()">
+    <header class="navbar">
+        <div class="logo">
+            <img src="../src/LLN_wolf_header_icon.png" alt="LLN logo" />
+        </div>
+        <nav class="nav-links">
+            <a href="../index.html">Inicio</a>
+            <a href="rules.html">Normativa</a>
+            <a href="players.html">Jugadores</a>
+            <a href="teams.html">Equipos</a>
+            <a href="calendar.html">Calendario</a>
+            <a href="matches.html">Partidos</a>
+            <a href="scores.html">Clasificación</a>
+            <a href="winners.html">Ganadores</a>
+        </nav>
+    </header>
+
+    <main class="winner-section">
+        <h1>TEMPORADA 2025</h1>
+        <h2>🏆 Campeones del split de invierno 🏆</h2>
+
+        <div class="winner-card">
+            <img src="../src/teams_logo/NOOBS4WIN_logo.png" alt="NOOBS4WIN Logo" />
+            <h2>NOOBS4WIN</h2>
+        </div>
+        <h1>TEMPORADA 2024</h1>
+        <h2>🏆 Campeones del split de verano 🏆</h2>
+        <div class="winner-card">
+            <img src="../src/teams_logo/MONOS CORUÑA OLD_logo.png" alt="NOOBS4WIN Logo" />
+            <h2>MONOS CORUÑA</h2>
+        </div>
+        <h2>🏆 Campeones del split de invierno 🏆</h2>
+        <div class="winner-card">
+            <img src="../src/teams_logo/FF15_logo.png" alt="NOOBS4WIN Logo" />
+            <h2>FF15</h2>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 La Liga del Norte - Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        function launchConfetti() {
+            confetti({
+                particleCount: 200,
+                spread: 90,
+                origin: { y: 0.6 },
+                colors: ['#facc15', '#ffffff', '#38bdf8'],
+            });
+        }
+    </script>
+</body>
+
+</html>
