@@ -61,6 +61,7 @@ body {
   color: var(--gray);
   font-weight: 600;
   transition: color 0.3s;
+  font-family: "Baron";
 }
 
 .nav-links a:hover {

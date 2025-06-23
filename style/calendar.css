@@ -7,6 +7,13 @@
   --radius: 16px;
 }
 
+@font-face {
+    font-family: 'Baron';
+    src: url('../src/fonts/Baron\ Neue.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -42,6 +49,7 @@ body {
   color: var(--gray);
   font-weight: 600;
   transition: color 0.3s;
+  font-family: "Baron";
 }
 
 .nav-links a:hover,
@@ -174,7 +182,10 @@ body {
 
 
 .match-card img {
-  height: 55px;
+  width: 100px;      /* ancho fijo */
+  height: 100px;     /* alto fijo */
+  object-fit: contain; /* para que la imagen mantenga proporción */
+  display: block;    /* evita espacios en línea */
 }
 
 .match-card span {
@@ -220,8 +231,8 @@ body {
   justify-content: center;
   height: auto;          /* que se ajuste al contenido */
   align-self: center;    /* centrar verticalmente según el grid */
-  min-height: 150px;      /* <-- altura mínima igual a tu tarjeta */
-  min-width: 250px;      /* <-- altura mínima igual a tu tarjeta */
+  min-height: 200px;      /* <-- altura mínima igual a tu tarjeta */
+  min-width: 360px;      /* <-- altura mínima igual a tu tarjeta */
 }
 
 .match-card-container {
@@ -231,11 +242,4 @@ body {
   align-items: center;
   height: 100%;
   position: relative;
-}
-
-.placeholder-card {
-  display: flex; /* se renderiza desde el principio */
-  opacity: 0;
-  pointer-events: none;
-  position: absolute;
 }
