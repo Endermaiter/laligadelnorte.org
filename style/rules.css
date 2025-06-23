@@ -1,0 +1,264 @@
+:root {
+  --primary: #10141e;
+  --accent: #facc15;
+  --text: #ffffff;
+  --gray: #9ca3af;
+  --bg-card: #1f2937;
+  --radius: 16px;
+}
+
+@font-face {
+    font-family: 'Baron';
+    src: url('../src/fonts/Baron\ Neue.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: var(--primary);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* NAVBAR */
+
+.navbar {
+  background: #0f172a;
+  padding: 1rem 2rem;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.nav-links a {
+  margin-left: 2rem;
+  text-decoration: none;
+  color: var(--gray);
+  font-weight: 600;
+  transition: color 0.3s;
+  font-family: "Baron";
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: var(--accent);
+}
+
+/* CONTENIDO PRINCIPAL */
+.rules-section {
+  flex-grow: 1;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.rules-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--accent);
+}
+
+.rules-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.rule-block {
+  background: var(--bg-card);
+  padding: 2rem;
+  border-radius: var(--radius);
+  text-align: left;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.rule-block h2 {
+  color: var(--accent);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.rule-block p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.rule-block ol {
+  margin-left: 1.5rem;
+  line-height: 1.8;
+}
+
+.rule-block li {
+  margin-bottom: 0.75rem;
+}
+
+#subtitle {
+  text-align: center;
+  color: var(--gray); /* o usa var(--accent) si lo quieres amarillo */
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+#calendar-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Opcional, si quieres que tenga esquinas redondeadas */
+  display: block;
+  margin-top: 1rem; /* Separación respecto al texto */
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  background: #0f172a;
+  font-size: 0.9rem;
+  color: var(--gray);
+}
+
+/* FOOTER */
+
+.footer {
+  background: #0f172a;
+  color: var(--gray);
+  padding: 3rem 2rem 2rem;
+  text-align: center;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1.8fr;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 auto 2rem;
+  padding: 0 1rem;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-section.logo-footer {
+  align-items: flex-end;
+}
+
+.footer-section.sponsors-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  padding-right: 0;
+  margin-left: auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+.logo-footer img {
+  max-height: 160px;
+  width: auto;
+  opacity: 0.5;
+  object-fit: contain;
+  mask-image: radial-gradient(circle, black 60%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle, black 60%, transparent 100%);
+}
+
+.social-media ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.social-media a {
+  text-decoration: none;
+  color: var(--gray);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.2s;
+}
+
+.social-media a:hover {
+  color: var(--accent);
+}
+
+.rrss-img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  mask-image: radial-gradient(circle, black 70%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle, black 70%, transparent 100%);
+  filter: brightness(0.95);
+}
+
+.sponsors-footer h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: var(--gray);
+  align-self: flex-end;
+}
+
+.sponsor-logos {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.sponsor-logos img {
+  height: 120px;
+  object-fit: contain;
+  opacity: 0.5;
+  mask-image: radial-gradient(circle, black 60%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle, black 60%, transparent 100%);
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+  color: var(--gray);
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .logo-footer img {
+    max-height: 100px;
+  }
+
+  .sponsor-logos img {
+    height: 70px;
+  }
+}
