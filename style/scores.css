@@ -84,42 +84,71 @@ body {
   padding: 2rem;
 }
 
+.team {
+  padding: 2rem;
+}
+
 .scores-container h1 {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 2rem;
+  color: var(--accent);
 }
 
 .scores-table {
   width: 100%;
-  border-collapse: collapse;
+  max-width: 600px;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 0 auto;
   background: var(--bg-card);
-  border-radius: var(--radius);
+  color: var(--text);
+  border: 3px solid var(--gray);
+  border-radius: 12px;
   overflow: hidden;
 }
 
 .scores-table thead {
   background: #0f172a;
-  color: var(--accent);
+  color: var(--gray);
 }
 
 .scores-table th,
 .scores-table td {
-  padding: 1rem;
-  text-align: left;
-  font-size: 1rem;
-  border-bottom: 1px solid #1e293b;
+  border: 1px solid var(--gray);
+  padding: 0.75rem 1rem;
+  text-align: center;
+}
+
+.scores-table th:first-child,
+.scores-table td:first-child {
+  text-align: center;
+  width: 50px; /* Ajusta según el tamaño que quieras para la columna # */
+}
+
+.scores-table th {
+  background: #1e293b;
+  color: var(--accent);
+}
+
+.scores-table tr:nth-child(even) {
+  background: #1f2937;
 }
 
 .scores-table tbody tr:hover {
-  background: #1e293b;
+  background: rgb(22, 53, 82);
 }
 
 .scores-table td img {
-  width: 24px;
-  height: 24px;
+  width: 20%;
+  height: auto;
   vertical-align: middle;
   margin-right: 0.5rem;
+}
+
+.rank {
+  color: var(--accent);
+  align-items: center;
 }
 
 /* FOOTER */
