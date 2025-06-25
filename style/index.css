@@ -264,7 +264,7 @@ body {
   width: 100%;
   height: 180px;
   object-fit: cover;
-  background-image: url('../src/teams_logo/NOOBS4WIN_logo.png');
+  background-image: url('../src/teams_logo/NOOBS4WIN.png');
   background-repeat: repeat; /* Repite en ambas direcciones */
   background-size: 30px 30px; /* Tamaño del logo repetido */
 }

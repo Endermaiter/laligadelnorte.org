@@ -1,49 +1,30 @@
-const teams = [
-  {
-    name: "TARNISHED",
-    logo: "../src/teams_logo/TARNISHED_logo.png",
-    score:0
-  },
-  {
-    name: "CHICKS DIG VISION",
-    logo: "../src/teams_logo/CHICKS_DIG_VISION_logo.png",
-    score:0
-  },
-  {
-    name: "FF15",
-    logo: "../src/teams_logo/FF15_logo.png",
-    score:0
-  },
-  {
-    name: "MONOS CORUÑA",
-    logo: "../src/teams_logo/MONOS CORUÑA_logo.png",
-    score:0
-  },
-  {
-    name: "EGO TEAM",
-    logo: "../src/teams_logo/EGO TEAM_logo.png",
-    score:0
-  },
-  {
-    name: "DOMINGUEROS",
-    logo: "../src/teams_logo/DOMINGUEROS_logo.png",
-    score:0
-  },
-];
+let scores = [];
 
-// Ordenar por más victorias
-teams.sort((a, b) => b.wins - a.wins);
+fetch("../data/scores.json")
+  .then(response => response.json())
+  .then(data => {
+    scores = data;
+    renderScores(scores);
+  })
+  .catch(err => console.error("Error cargando el JSON:", err));
 
-const tbody = document.getElementById("scores-body");
+function renderScores(list) {
 
-teams.forEach((team, index) => {
-  const row = document.createElement("tr");
+  list.sort((a, b) => b.score - a.score);
 
-  row.innerHTML = `
-    <td class="rank">${index + 1}</td>
-    <td class="team"><img src="${team.logo}" alt="${team.name}"> ${team.name}</td>
-    <td>${team.score}</td>
-  `;
+  const tbody = document.getElementById("scores-body");
 
-  tbody.appendChild(row);
-});
+  list.forEach((team, index) => {
+    const row = document.createElement("tr");
+    const teamSrc = `../src/teams_logo/${team.name}.png`
+
+    row.innerHTML = `
+      <td class="rank">${index + 1}</td>
+      <td class="team"><img src="${teamSrc}" alt="${team.name}"> ${team.name}</td>
+      <td>${team.score}</td>
+    `;
+
+    tbody.appendChild(row);
+  });
+
+}
