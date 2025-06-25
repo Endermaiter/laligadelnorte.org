@@ -90,7 +90,8 @@ body {
 .teams-container h1 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  color: var(--accent);
+  color: var(--text);
+  font-family: "Baron";
 }
 
 .teams-content {
