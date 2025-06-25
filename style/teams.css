@@ -83,8 +83,6 @@ body {
 
 .teams-container {
   flex-grow: 1;
-  max-width: 1000px;
-  margin: auto;
   padding: 2rem;
   text-align: center;
 }
@@ -92,15 +90,26 @@ body {
 .teams-container h1 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
+  color: var(--accent);
+}
+
+.teams-content {
+  max-width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 /* GRID DE EQUIPOS */
 
 .teams-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(2, minmax(160px, 1fr));
+  gap: 1rem;
   justify-items: center;
+  max-width: 20%; /* Ajusta según el tamaño que quieras */
+  margin: 0 auto;
 }
 
 /* TARJETA DE EQUIPO */
@@ -110,7 +119,6 @@ body {
   padding: 1rem;
   border-radius: var(--radius);
   width: 100%;
-  max-width: 180px;
   transition: transform 0.2s ease;
   cursor: default;
 }
