@@ -155,11 +155,6 @@ body {
   font-size: 0.9rem;
 }
 
-.day-cell.empty {
-  background: transparent;
-  pointer-events: none;
-}
-
 .calendar-month-row {
   display: grid;
   grid-template-columns: 2fr auto;
