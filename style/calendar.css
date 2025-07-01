@@ -109,10 +109,7 @@ body {
   border-radius: var(--radius);
   padding: 1.5rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
-}
-
-.calendar-month:hover {
-  transform: translateY(-5px);
+  min-height: 370px; /* Ejemplo: altura mínima de todo el bloque */
 }
 
 .calendar-month h2 {
@@ -156,10 +153,6 @@ body {
   color: var(--text);
   border-radius: 6px;
   font-size: 0.9rem;
-}
-
-.day-cell:hover {
-  background: #334155;
 }
 
 .day-cell.empty {
@@ -253,17 +246,19 @@ body {
   justify-content: center;
   height: auto;          /* que se ajuste al contenido */
   align-self: center;    /* centrar verticalmente según el grid */
-  min-height: 200px;      /* <-- altura mínima igual a tu tarjeta */
-  min-width: 360px;      /* <-- altura mínima igual a tu tarjeta */
+  min-height: 370px;      /* <-- altura mínima igual a tu tarjeta */
+  min-width: 360px;      /* <-- anchura mínima igual a tu tarjeta */
 }
 
 .match-card-container {
   width: 100%;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   height: 100%;
   position: relative;
+  gap: 1rem;
 }
 
 /* FOOTER */

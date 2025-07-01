@@ -45,9 +45,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const allCards = matchContainer.querySelectorAll('.match-card');
         allCards.forEach(card => card.style.display = 'none');
 
-        // Mostrar tarjeta correspondiente a la semana dentro de este mes
-        const target = matchContainer.querySelector('#week-' + weekId);
-        if (target) target.style.display = 'flex';
+        // Mostrar las dos tarjetas correspondientes a la semana
+        const target1 = matchContainer.querySelector('#week-' + weekId + '-match-1');
+        const target2 = matchContainer.querySelector('#week-' + weekId + '-match-2');
+
+        if (target1) target1.style.display = 'flex';
+        if (target2) target2.style.display = 'flex';
       });
     });
 
