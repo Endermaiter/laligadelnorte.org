@@ -21,7 +21,7 @@ function renderScores(list) {
     row.innerHTML = `
       <td class="rank">${index + 1}</td>
       <td class="team"><img src="${teamSrc}" alt="${team.name}"> ${team.name}</td>
-      <td>${team.score}</td>
+      <td class="scores">${team.score}</td>
     `;
 
     tbody.appendChild(row);

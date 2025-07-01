@@ -158,6 +158,117 @@ body {
   align-items: center;
 }
 
+.bracket {
+  margin: 2rem auto;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+}
+
+.bracket-container {
+  justify-content: center;
+  align-items: center;
+}
+
+/* Cada ronda (semifinal, final) */
+.round-semifinal {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* La ronda final es más estrecha y centrada */
+.round.final {
+  width: 50%;
+  height: auto;
+}
+
+/* Cada partido */
+.match1 {
+  background-color: var(--bg-card);
+  border-radius: 20px;
+  padding: 1rem;
+  border: solid 4px;
+  border-color: var(--gray);
+  gap: 0.5rem;
+}
+
+.match2 {
+  background-color: var(--bg-card);
+  border-radius: 20px;
+  padding: 1rem;
+  border: solid 4px;
+  border-color: var(--gray);
+  gap: 0.5rem;
+  margin-left: 11%;
+}
+
+/* Partido final más grande */
+.final-match {
+  background-color: var(--bg-card);
+  border: 1px;
+  border: solid 4px;
+  border-color: var(--gray);
+  border-radius: 20px;
+  padding: 1.5rem;
+}
+
+/* Equipos en cada partido */
+.team {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.scores {
+  color: var(--accent);
+}
+
+/* Equipo izquierdo y derecho */
+.team-left {
+  justify-content: flex-start;
+  gap: 0.75rem;
+  border-bottom: solid 2px;
+  border-color: var(--gray);
+}
+
+.team-right {
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+/* Logo del equipo */
+.team-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Nombre del equipo */
+.team-name {
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #ffffff;
+}
+
+/* Puntuación */
+.team-score {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--accent);
+  min-width: 24px;
+  text-align: center;
+}
+
+/* Separador entre equipos */
+.match:not(.final-match) .team-left,
+.match:not(.final-match) .team-right {
+  padding: 0.2rem 0;
+}
+
 /* FOOTER */
 
 .footer {
