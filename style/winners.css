@@ -86,6 +86,7 @@ body {
 .winner-section h2 {
   color: var(--text);
   margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .winner-section h3 {
