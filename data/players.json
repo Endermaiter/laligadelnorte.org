@@ -25,39 +25,19 @@
     "rank": "PLATINO"
   },
   {
-    "name": "Cαnyon Pαrαguαyo #FF15",
-    "team": "FF15",
-    "rank": "DIAMANTE"
+    "name": "CANICHEMANIA63 #nerf",
+    "team": "MAAA NUGUEETS",
+    "rank": "MASTER"
   },
   {
-    "name": "TR Chopero #MVP",
-    "team": "TARNISHED",
+    "name": "DrRedFlag #EUW",
+    "team": "MAAA NUGUEETS",
     "rank": "ESMERALDA"
   },
   {
-    "name": "TR Adria Kila #DKS",
-    "team": "TARNISHED",
-    "rank": "PLATINO"
-  },
-  {
-    "name": "TR Meowin #316",
-    "team": "TARNISHED",
-    "rank": "ESMERALDA"
-  },
-  {
-    "name": "TR Markos316 #GGWP",
-    "team": "TARNISHED",
-    "rank": "ORO"
-  },
-  {
-    "name": "eltopo81 #EUW",
-    "team": "NOOBS4WIN",
-    "rank": "BRONCE"
-  },
-  {
-    "name": "Erikbros #EUW",
-    "team": "NOOBS4WIN",
-    "rank": "DIAMANTE"
+    "name": "eiboll #eibol",
+    "team": "MAAA NUGUEETS",
+    "rank": "MASTER"
   },
   {
     "name": "Fallen starke #EUW",
@@ -90,6 +70,11 @@
     "rank": "DIAMANTE"
   },
   {
+    "name": "jadriab10 #shot",
+    "team": "MAAA NUGUEETS",
+    "rank": "DIAMANTE"
+  },
+  {
     "name": "MNC Roicetee #014",
     "team": "MONOS CORUÑA",
     "rank": "HIERRO"
@@ -105,14 +90,19 @@
     "rank": "PLATA"
   },
   {
-    "name": "Nómada #EUW",
-    "team": "NOOBS4WIN",
-    "rank": "ESMERALDA"
+    "name": "NoYorickees #wwd",
+    "team": "FF15",
+    "rank": "DIAMANTE"
   },
   {
     "name": "NXT Arkinos #EUW",
     "team": "EGO TEAM",
     "rank": "PLATINO"
+  },
+  {
+    "name": "Pitágoras Rabbit #ff15",
+    "team": "FF15",
+    "rank": "PLATA"
   },
   {
     "name": "PFAndoni #2010",
@@ -125,28 +115,43 @@
     "rank": "HIERRO"
   },
   {
+    "name": "RiskOfAshes #EUW",
+    "team": "MAAA NUGUEETS",
+    "rank": "ESMERALDA"
+  },
+  {
+    "name": "sam #scp",
+    "team": "MAAA NUGUEETS",
+    "rank": "DIAMANTE"
+  },
+  {
     "name": "SrKebab #ESP",
     "team": "EGO TEAM",
     "rank": "HIERRO"
   },
   {
-    "name": "Tugoldobello #YOKO",
-    "team": "MONOS CORUÑA",
-    "rank": "BRONCE"
-  },
-  {
-    "name": "VickViD #EUW",
-    "team": "NOOBS4WIN",
-    "rank": "ORO"
-  },
-  {
-    "name": "Zenit23 #EUW",
-    "team": "NOOBS4WIN",
+    "name": "TR Chopero #MVP",
+    "team": "TARNISHED",
     "rank": "ESMERALDA"
   },
   {
-    "name": "Zeus Boliviαno #FF15",
-    "team": "FF15",
-    "rank": "PLATA"
+    "name": "TR Adria Kila #DKS",
+    "team": "TARNISHED",
+    "rank": "PLATINO"
+  },
+  {
+    "name": "TR Meowin #316",
+    "team": "TARNISHED",
+    "rank": "ESMERALDA"
+  },
+  {
+    "name": "TR Markos316 #GGWP",
+    "team": "TARNISHED",
+    "rank": "ORO"
+  },
+  {
+    "name": "Tugoldobello #YOKO",
+    "team": "MONOS CORUÑA",
+    "rank": "BRONCE"
   }
 ]
