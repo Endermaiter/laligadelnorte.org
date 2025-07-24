@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendario - La Liga del Norte</title>
+    <link rel="stylesheet" href="../style/calendar.css" />
+    <link rel="icon" href="../src/LLN_wolf_header_icon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="navbar-content">
+            <div class="logo">
+                <a href="../index.html" class="logo">
+                    <img src="../src/LLN_wolf_header_icon.png" alt="LLN logo" />
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="rules.html">NORMATIvA</a>
+                <a href="players.html">JuGADORES</a>
+                <a href="teams.html">EQuIPOS</a>
+                <a href="calendar.html">CALENDARIO</a>
+                <a href="matches.html">PARTIDOS</a>
+                <a href="scores.html">CLASIFICACIÓN</a>
+                <a href="winners.html">GANADORES</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="calendar-section">
+        <h1>CALENDARIO</h1>
+        <p id="subtitle">SPLIT DE VERANO</p>
+
+        <div class="calendar-content">
+
+            <div class="calendar-month-row">
+
+                <div class="calendar-month">
+                    <h2>Septiembre</h2>
+                    <div class="month-grid" data-month="septiembre">
+
+                        <div class="day-name">L</div>
+                        <div class="day-name">M</div>
+                        <div class="day-name">X</div>
+                        <div class="day-name">J</div>
+                        <div class="day-name">V</div>
+                        <div class="day-name">S</div>
+                        <div class="day-name">D</div>
+
+                        <div class="week" data-week="1">
+                            <div class="day-cell">1</div>
+                            <div class="day-cell">2</div>
+                            <div class="day-cell">3</div>
+                            <div class="day-cell">4</div>
+                            <div class="day-cell">5</div>
+                            <div class="day-cell">6</div>
+                            <div class="day-cell">7</div>
+                        </div>
+
+                        <div class="week" data-week="2">
+                            <div class="day-cell">8</div>
+                            <div class="day-cell">9</div>
+                            <div class="day-cell">10</div>
+                            <div class="day-cell">11</div>
+                            <div class="day-cell">12</div>
+                            <div class="day-cell">13</div>
+                            <div class="day-cell">14</div>
+                        </div>
+
+                        <div class="week" data-week="3">
+                            <div class="day-cell">15</div>
+                            <div class="day-cell">16</div>
+                            <div class="day-cell">17</div>
+                            <div class="day-cell">18</div>
+                            <div class="day-cell">19</div>
+                            <div class="day-cell">20</div>
+                            <div class="day-cell">21</div>
+                        </div>
+
+                        <div class="week" data-week="4">
+                            <div class="day-cell">22</div>
+                            <div class="day-cell">23</div>
+                            <div class="day-cell">24</div>
+                            <div class="day-cell">25</div>
+                            <div class="day-cell">26</div>
+                            <div class="day-cell">27</div>
+                            <div class="day-cell">28</div>
+                        </div>
+
+                        <div class="week" data-week="5">
+                            <div class="day-cell">29</div>
+                            <div class="day-cell">30</div>
+                            <div class="day-cell empty"></div>
+                            <div class="day-cell empty"></div>
+                            <div class="day-cell empty"></div>
+                            <div class="day-cell empty"></div>
+                            <div class="day-cell empty"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Tarjeta dinámica de partido -->
+                <div class="calendar-dynamic-match">
+                    <div class="match-card-container">
+                        <div class="match-card" id="week-1-match-1">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <div class="match-card" id="week-1-match-2">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <div class="match-card" id="week-2-match-1">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <div class="match-card" id="week-2-match-2">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <div class="match-card" id="week-3-match-1">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <div class="match-card" id="week-3-match-2">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <div class="match-card" id="week-4-match-1">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <div class="match-card" id="week-4-match-2">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <div class="match-card" id="week-5-match-1">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <div class="match-card" id="week-5-match-2">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <!-- Más tarjetas ocultas por defecto -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-month-row">
+
+                <div class="calendar-month">
+                    <h2>Octubre</h2>
+                    <div class="month-grid" data-month="octubre">
+
+                            <div class="day-name">L</div>
+                            <div class="day-name">M</div>
+                            <div class="day-name">X</div>
+                            <div class="day-name">J</div>
+                            <div class="day-name">V</div>
+                            <div class="day-name">S</div>
+                            <div class="day-name">D</div>
+
+                        <div class="week" data-week="1">
+                            <div class="day-cell empty"></div>
+                            <div class="day-cell empty"></div>
+                            <div class="day-cell">1</div>
+                            <div class="day-cell">2</div>
+                            <div class="day-cell">3</div>
+                            <div class="day-cell">4</div>
+                            <div class="day-cell">5</div>
+                        </div>
+
+                        <div class="week" data-week="2">
+                            <div class="day-cell">6</div>
+                            <div class="day-cell">7</div>
+                            <div class="day-cell">8</div>
+                            <div class="day-cell">9</div>
+                            <div class="day-cell">10</div>
+                            <div class="day-cell">11</div>
+                            <div class="day-cell">12</div>
+                        </div>
+                        
+                        <div class="week" data-week="3">
+                            <div class="day-cell">13</div>
+                            <div class="day-cell">14</div>
+                            <div class="day-cell">15</div>
+                            <div class="day-cell">16</div>
+                            <div class="day-cell">17</div>
+                            <div class="day-cell">18</div>
+                            <div class="day-cell">19</div>
+                        </div>
+                        
+                        <div class="week" data-week="4">
+                            <div class="day-cell">20</div>
+                            <div class="day-cell">21</div>
+                            <div class="day-cell">22</div>
+                            <div class="day-cell">23</div>
+                            <div class="day-cell">24</div>
+                            <div class="day-cell">25</div>
+                            <div class="day-cell">26</div>
+                        </div>
+                        
+                        <div class="week" data-week="5">
+                            <div class="day-cell">27</div>
+                            <div class="day-cell">28</div>
+                            <div class="day-cell">29</div>
+                            <div class="day-cell">30</div>
+                            <div class="day-cell">31</div>
+                            <div class="day-cell empty"></div>
+                            <div class="day-cell empty"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Tarjeta dinámica de partido -->
+                <div class="calendar-dynamic-match">
+                    <div class="match-card-container">
+                        <div class="match-card" id="week-1-match-1">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <div class="match-card" id="week-1-match-2">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <div class="match-card" id="week-2-match-1">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <div class="match-card" id="week-2-match-2">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <div class="match-card" id="week-3-match-1">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <div class="match-card" id="week-3-match-2">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <div class="match-card" id="week-4-match-1">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <div class="match-card" id="week-4-match-2">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <div class="match-card" id="week-5-match-1">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <div class="match-card" id="week-5-match-2">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <!-- Más tarjetas ocultas por defecto -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-month-row">
+
+                <div class="calendar-month">
+                    <h2>Noviembre</h2>
+                    <div class="month-grid" data-month="noviembre">
+
+                        <div class="day-name">L</div>
+                        <div class="day-name">M</div>
+                        <div class="day-name">X</div>
+                        <div class="day-name">J</div>
+                        <div class="day-name">V</div>
+                        <div class="day-name">S</div>
+                        <div class="day-name">D</div>
+
+                        <div class="week" data-week="1">
+                            <div class="day-cell empty"></div>
+                            <div class="day-cell empty"></div>
+                            <div class="day-cell empty"></div>
+                            <div class="day-cell empty"></div>
+                            <div class="day-cell empty"></div>
+                            <div class="day-cell">1</div>
+                            <div class="day-cell">2</div>
+                        </div>
+                        
+                        <div class="week" data-week="2">
+                            <div class="day-cell">3</div>
+                            <div class="day-cell">4</div>
+                            <div class="day-cell">5</div>
+                            <div class="day-cell">6</div>
+                            <div class="day-cell">7</div>
+                            <div class="day-cell">8</div>
+                            <div class="day-cell">9</div>
+                        </div>
+                        
+                        <div class="week" data-week="3">
+                            <div class="day-cell">10</div>
+                            <div class="day-cell">11</div>
+                            <div class="day-cell">12</div>
+                            <div class="day-cell">13</div>
+                            <div class="day-cell">14</div>
+                            <div class="day-cell">15</div>
+                            <div class="day-cell">16</div>
+                        </div>
+                        
+                        <div class="week" data-week="4">
+                            <div class="day-cell">17</div>
+                            <div class="day-cell">18</div>
+                            <div class="day-cell">19</div>
+                            <div class="day-cell">20</div>
+                            <div class="day-cell">21</div>
+                            <div class="day-cell">22</div>
+                            <div class="day-cell">23</div>
+                        </div>
+                        
+                        <div class="week" data-week="5">
+                            <div class="day-cell">24</div>
+                            <div class="day-cell">25</div>
+                            <div class="day-cell">26</div>
+                            <div class="day-cell">27</div>
+                            <div class="day-cell">28</div>
+                            <div class="day-cell">29</div>
+                            <div class="day-cell">30</div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Tarjeta dinámica de partido -->
+                <div class="calendar-dynamic-match">
+                    <div class="match-card-container">
+                        <div class="match-card" id="week-1-match-1">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <div class="match-card" id="week-1-match-2">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <div class="match-card" id="week-2-match-1">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <div class="match-card" id="week-2-match-2">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <div class="match-card" id="week-3-match-1">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <div class="match-card" id="week-3-match-2">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <div class="match-card" id="week-4-match-1">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <div class="match-card" id="week-4-match-2">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <div class="match-card" id="week-5-match-1">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <div class="match-card" id="week-5-match-2">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <!-- Más tarjetas ocultas por defecto -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="calendar-month-row">
+
+                <div class="calendar-month">
+                    <h2>Diciembre</h2>
+                    <div class="month-grid" data-month="diciembre">
+
+                        <div class="day-name">L</div>
+                        <div class="day-name">M</div>
+                        <div class="day-name">X</div>
+                        <div class="day-name">J</div>
+                        <div class="day-name">V</div>
+                        <div class="day-name">S</div>
+                        <div class="day-name">D</div>
+
+                        <div class="week" data-week="1">
+                            <div class="day-cell">1</div>
+                            <div class="day-cell">2</div>
+                            <div class="day-cell">3</div>
+                            <div class="day-cell">4</div>
+                            <div class="day-cell">5</div>
+                            <div class="day-cell">6</div>
+                            <div class="day-cell">7</div>
+                        </div>
+
+                        <div class="week" data-week="2">
+                            <div class="day-cell">8</div>
+                            <div class="day-cell">9</div>
+                            <div class="day-cell">10</div>
+                            <div class="day-cell">11</div>
+                            <div class="day-cell">12</div>
+                            <div class="day-cell">13</div>
+                            <div class="day-cell">14</div>
+                        </div>
+
+                        <div class="week" data-week="3">
+                            <div class="day-cell">15</div>
+                            <div class="day-cell">16</div>
+                            <div class="day-cell">17</div>
+                            <div class="day-cell">18</div>
+                            <div class="day-cell">19</div>
+                            <div class="day-cell">20</div>
+                            <div class="day-cell">21</div>
+                        </div>
+
+                        <div class="week" data-week="4">
+                            <div class="day-cell">22</div>
+                            <div class="day-cell">23</div>
+                            <div class="day-cell">24</div>
+                            <div class="day-cell">25</div>
+                            <div class="day-cell">26</div>
+                            <div class="day-cell">27</div>
+                            <div class="day-cell">28</div>
+                        </div>
+
+                        <div class="week" data-week="5">
+                            <div class="day-cell">29</div>
+                            <div class="day-cell">30</div>
+                            <div class="day-cell">31</div>
+                            <div class="day-cell empty"></div>
+                            <div class="day-cell empty"></div>
+                            <div class="day-cell empty"></div>
+                            <div class="day-cell empty"></div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Tarjeta dinámica de partido -->
+                <div class="calendar-dynamic-match">
+                    <div class="match-card-container">
+                        <div class="match-card" id="week-1-match-1">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <div class="match-card" id="week-1-match-2">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <div class="match-card" id="week-2-match-1">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <div class="match-card" id="week-2-match-2">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <div class="match-card" id="week-3-match-1">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <div class="match-card" id="week-3-match-2">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <div class="match-card" id="week-4-match-1">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <div class="match-card" id="week-4-match-2">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <div class="match-card" id="week-5-match-1">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <div class="match-card" id="week-5-match-2">
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                            <span>VS</span>
+                            <img src="../src/LLN_wolf_header_icon.png" />
+                        </div>
+
+                        <!-- Más tarjetas ocultas por defecto -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <!-- CENTRO: REDES SOCIALES -->
+            <div class="footer-section social-media">
+                <ul>
+                    <li><a href="https://www.instagram.com/roicetee/" target="_blank"><img class="rrss-img"
+                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1024px-Instagram_logo_2022.svg.png"
+                                alt="Instagram" />@la_liga_del_norte</a></li>
+                    <li><a href="https://x.com/liga_del_norte" target="_blank"><img class="rrss-img"
+                                src="https://img.freepik.com/vector-gratis/nuevo-diseno-icono-x-logotipo-twitter-2023_1017-45418.jpg"
+                                alt="Twitter" />@liga_del_norte</a></li>
+                    <li><a href="https://www.twitch.tv/laligadelnorte" target="_blank"><img class="rrss-img"
+                                src="https://img.freepik.com/vector-premium/logotipo-contraccion_578229-259.jpg"
+                                alt="Twitch" />@LaLigadelNorte</a></li>
+                    <li><a href="https://www.youtube.com/@LALIGADELNORTE" target="_blank"><img class="rrss-img"
+                                src="https://cdn3.iconfinder.com/data/icons/social-network-30/512/social-06-512.png"
+                                alt="YouTube" />@LALIGADELNORTE</a></li>
+                </ul>
+            </div>
+            <!-- IZQUIERDA: LOGO -->
+            <div class="footer-section logo-footer">
+                <img src="../src/LLN_lol_icon.jpg" alt="Logo LLN" />
+            </div>
+
+            <!-- DERECHA: SPONSORS -->
+            <div class="footer-section sponsors-footer">
+                <div class="sponsor-logos">
+                    <img src="../src/sponsors/tijuana.png" alt="Grefusa" />
+                    <img src="../src/sponsors/toblerone.png" alt="Toblerone" />
+                </div>
+            </div>
+        </div>
+
+        <p class="footer-copy">&copy; 2025 La Liga del Norte - Todos los derechos reservados</p>
+    </footer>
+    <script src="../scripts/calendar.js"></script>
+</body>
+
+</html>

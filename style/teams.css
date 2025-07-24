@@ -1,5 +1,11 @@
-
-/* Generic Style */
+:root {
+  --primary: #10141e;
+  --accent: #facc15;
+  --text: #ffffff;
+  --gray: #9ca3af;
+  --bg-card: #1f2937;
+  --radius: 16px;
+}
 
 @font-face {
     font-family: 'Baron';
@@ -8,182 +14,323 @@
     font-style: normal;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(90deg, #0d1b2a, #1b263b, #415a77, #778da9);
-    color: #ffffff;
+  background: var(--primary);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-header {
-    background: 
-        url('../src/LLN_wolf.jpg') no-repeat left center,
-        url('../src/LLN_wolf_inverted.jpg') no-repeat right center;
-    background-size: auto;
-    background-position: left center, right center;
-    background-color: black;
-    text-align: center;
-    padding: 120px 40px;
-    color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-    position: relative;
+/* NAVBAR */
+
+.navbar {
+  background: #0f172a;
+  padding: 1rem 2rem;
 }
 
-header::after {
-    background-size: cover;
-    width: calc(100% - 80px);
-    height: 100%;
-    background-position: center;
-    left: 40px;
+.navbar-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-nav {
-    background: #102a43;
-    padding: 15px;
-    text-align: center;
-    border-bottom: 3px solid #1b263b;
-    border-top: 4px solid #778da9;
-    border-bottom: 2px solid #484d53;
+.nav-links {
+  display: flex;
+  gap: 1rem;
 }
 
-nav a {
-    color: #ffffff;
-    margin: 0 20px;
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: color 0.3s ease;
-    font-family: 'Baron';
+.logo {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
-nav a:hover {
-    color: #ffa500;
+.logo img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+.logo:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
 }
 
-.teams-h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+.nav-links a {
+  margin-left: 2rem;
+  text-decoration: none;
+  color: var(--gray);
+  font-weight: 600;
+  transition: color 0.3s;
+  font-family: "Baron";
 }
 
-.teams-images {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+.nav-links a:hover,
+.nav-links .active {
+  color: var(--accent);
 }
 
-.team {
-    text-align: center;
+/* CONTENIDO */
+
+.teams-container {
+  flex-grow: 1;
+  padding: 2rem;
+  text-align: center;
 }
 
-/* Exclude format */
-
-.section p:first-child:not([id="exclude-format"]) {
-    text-align: center;
-    font-size: 2.4em;
-    margin-bottom: 30px;
+.teams-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--text);
+  font-family: "Baron";
 }
 
-.section p:first-of-type:not([id="exclude-format"]){
-    font-family: 'Baron';
+.teams-content {
+  max-width: 50%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.section b:not([id="exclude-format"]) {
-    text-align: center;
+/* GRID DE EQUIPOS */
+
+.teams-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(160px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+  max-width: 20%; /* Ajusta según el tamaño que quieras */
+  margin: 0 auto;
 }
 
-/* Footer */
+/* TARJETA DE EQUIPO */
 
-.main-footer {
-    text-align: center;
-    background: #000000;
-    padding: 10px;
-    border-top: 3px solid #1b263b;
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    gap: 10%;
+.team-card {
+  background: var(--bg-card);
+  padding: 1rem;
+  border-radius: var(--radius);
+  width: 100%;
+  transition: transform 0.2s ease;
+  cursor: default;
 }
 
-footer p {
-    margin: 0;
-    font-size: 1em;
+.team-card:hover {
+  transform: scale(1.05);
+  background: #273447;
 }
 
-.logo-footer {
-    flex: 1;
-    max-width: 33.33%;
-    box-sizing: border-box;
-}
-  
-.social-media {
-    text-align: center;
-    max-width: 33.33%;
-    box-sizing: border-box;
-    font-size: 100%;
-    margin-top: 5%;
-}
-  
-.sponsor {
-    text-align: right;
-    max-width: 33.33%;
-    box-sizing: border-box;
+.team-card img {
+  width: 100%;
+  height: auto;
+  max-height: 100px;
+  object-fit: contain;
+  margin-bottom: 1rem;
 }
 
-.footer-copy {
-    text-align: center;
-    font-style: inherit;
-    padding: 10px;
-    font-size: 14px;
-    color: #969696;
-    background-color: #000000;
+.team-name {
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 1rem;
 }
 
-.sponsor {
-    align-items: center;
+/* FOOTER */
+
+footer.footer {
+  text-align: center;
+  padding: 2rem;
+  background: #0f172a;
+  font-size: 0.9rem;
+  color: var(--gray);
 }
 
-.tijuana-img {
-    border-radius: 15px;
-    width: 30%;
-    vertical-align: middle;
-    margin-top: 15%;
+.team-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 2rem;
 }
 
-.toblerone-img {
-    border-radius: 15px;
-    width: 60%;
-    vertical-align: middle;
-    margin-top: 15%;
+.team-modal.hidden {
+  display: none;
 }
 
-.rrss-text {
-    color: #fff;
-    text-decoration: solid;
-    font-weight: bold;
-    margin-bottom: 10%;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    color: inherit;
+.modal-content {
+  position: relative;
+  background: #1f2937;
+  padding: 1rem;
+  border-radius: var(--radius);
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: auto;
+}
+
+.modal-content {
+  position: relative;
+  background: #1f2937;
+  padding: 2rem;
+  border-radius: var(--radius);
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content img {
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  object-fit: contain;
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 1.5rem;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+/* FOOTER */
+
+.footer {
+  background: #0f172a;
+  color: var(--gray);
+  padding: 3rem 2rem 2rem;
+  text-align: center;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1.8fr;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 auto 2rem;
+  padding: 0 1rem;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-section.logo-footer {
+  align-items: flex-end;
+}
+
+.footer-section.sponsors-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  padding-right: 0;
+  margin-left: auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+.logo-footer img {
+  max-height: 160px;
+  width: auto;
+  opacity: 0.5;
+  object-fit: contain;
+  mask-image: radial-gradient(circle, black 60%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle, black 60%, transparent 100%);
+}
+
+.social-media ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.social-media a {
+  text-decoration: none;
+  color: var(--gray);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.2s;
+}
+
+.social-media a:hover {
+  color: var(--accent);
 }
 
 .rrss-img {
-    border-radius: 15px;
-    width: 30px;
-    margin-right: 2%;
-    height: 24px;
-    width: auto;
-    display: block;
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  mask-image: radial-gradient(circle, black 70%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle, black 70%, transparent 100%);
+  filter: brightness(0.95);
 }
 
-.rrss-list {
-    margin-bottom: 2%;
+.sponsors-footer h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: var(--gray);
+  align-self: flex-end;
+}
+
+.sponsor-logos {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.sponsor-logos img {
+  height: 120px;
+  object-fit: contain;
+  opacity: 0.5;
+  mask-image: radial-gradient(circle, black 60%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle, black 60%, transparent 100%);
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+  color: var(--gray);
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .logo-footer img {
+    max-height: 100px;
+  }
+
+  .sponsor-logos img {
+    height: 70px;
+  }
 }

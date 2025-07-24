@@ -1,272 +1,162 @@
-{
-    "player1": {
-      "lol": {
-        "summonerName": "5x30",
-        "tag": "DAYY",
-        "elo": "ESMERALDA"
-      },
-      "discord": "",
-      "team": "FF15"
-    },
-    "player2": {
-      "lol": {
-        "summonerName": "Alejan1",
-        "tag": "EUW",
-        "elo": "BRONCE"
-      },
-      "discord": "",
-      "team": "DOMINGUEROS"
-    },
-    "player3": {
-      "lol": {
-        "summonerName": "ARK Zackielazo",
-        "tag": "EUW",
-        "elo": "PLATA"
-      },
-      "discord": "",
-      "team": "DOMINGUEROS"
-    },
-    "player4": {
-      "lol": {
-        "summonerName": "alex132mini",
-        "tag": "EUW",
-        "elo": "PLATA"
-      },
-      "discord": "",
-      "team": "TARNISHED"
-    },
-    "player5": {
-      "lol": {
-        "summonerName": "BlackCloudForce",
-        "tag": "EUW",
-        "elo": "PLATINO"
-      },
-      "discord": "",
-      "team": "DOMINGUEROS"
-    },
-    "player6": {
-      "lol": {
-        "summonerName": "Cαnyon Pαrαguαyo",
-        "tag": "FF15",
-        "elo": "DIAMANTE"
-      },
-      "discord": "",
-      "team": "FF15"
-    },
-    "player7": {
-      "lol": {
-        "summonerName": "TR Chopero",
-        "tag": "MVP",
-        "elo": "ESMERALDA"
-      },
-      "discord": "",
-      "team": "TARNISHED"
-    },
-    "player8": {
-      "lol": {
-        "summonerName": "TR Adria Kila",
-        "tag": "DKS",
-        "elo": "PLATINO"
-      },
-      "discord": "",
-      "team": "TARNISHED"
-    },
-    "player9": {
-      "lol": {
-        "summonerName": "TR Meowin",
-        "tag": "316",
-        "elo": "ESMERALDA"
-      },
-      "discord": "",
-      "team": "TARNISHED"
-    },
-    "player10": {
-      "lol": {
-        "summonerName": "TR Markos316",
-        "tag": "GGWP",
-        "elo": "ORO"
-      },
-      "discord": "",
-      "team": "TARNISHED"
-    },
-    "player11": {
-      "lol": {
-        "summonerName": "eltopo81",
-        "tag": "EUW",
-        "elo": "BRONCE"
-      },
-      "discord": "",
-      "team": "NOOBS4WIN"
-    },
-    "player12": {
-      "lol": {
-        "summonerName": "Erikbros",
-        "tag": "EUW",
-        "elo": "DIAMANTE"
-      },
-      "discord": "",
-      "team": "NOOBS4WIN"
-    },
-    "player13": {
-      "lol": {
-        "summonerName": "Fallen starke",
-        "tag": "EUW",
-        "elo": "PLATA"
-      },
-      "discord": "",
-      "team": "DOMINGUEROS"
-    },
-    "player14": {
-      "lol": {
-        "summonerName": "FF15 Endermaiter",
-        "tag": "FF15",
-        "elo": "ESMERALDA"
-      },
-      "discord": "",
-      "team": "FF15"
-    },
-    "player15": {
-      "lol": {
-        "summonerName": "Gumayusi Peruano",
-        "tag": "Peruu",
-        "elo": "BRONCE"
-      },
-      "discord": "",
-      "team": "FF15"
-    },
-    "player16": {
-      "lol": {
-        "summonerName": "Guren no Shogun",
-        "tag": "EUW",
-        "elo": "BRONCE"
-      },
-      "discord": "",
-      "team": "DOMINGUEROS"
-    },
-    "player17": {
-      "lol": {
-        "summonerName": "Iontxas",
-        "tag": "MNC",
-        "elo": "BRONCE"
-      },
-      "discord": "",
-      "team": "MONOS CORUÑA"
-    },
-    "player18": {
-      "lol": {
-        "summonerName": "lnvencheater",
-        "tag": "EUW",
-        "elo": "DIAMANTE"
-      },
-      "discord": "",
-      "team": "EGO TEAM"
-    },
-    "player19": {
-      "lol": {
-        "summonerName": "MNC Roicetee",
-        "tag": "014",
-        "elo": "HIERRO"
-      },
-      "discord": "",
-      "team": "MONOS CORUÑA"
-    },
-    "player20": {
-      "lol": {
-        "summonerName": "MNC T0m Baker",
-        "tag": "MNC",
-        "elo": "PLATA"
-      },
-      "discord": "",
-      "team": "MONOS CORUÑA"
-    },
-    "player21": {
-      "lol": {
-        "summonerName": "NeoZoro91",
-        "tag": "EUW",
-        "elo": "PLATA"
-      },
-      "discord": "",
-      "team": "MONOS CORUÑA"
-    },
-    "player22": {
-      "lol": {
-        "summonerName": "Nómada",
-        "tag": "EUW",
-        "elo": "ESMERALDA"
-      },
-      "discord": "",
-      "team": "NOOBS4WIN"
-    },
-    "player23": {
-      "lol": {
-        "summonerName": "NXT Arkinos",
-        "tag": "EUW",
-        "elo": "PLATINO"
-      },
-      "discord": "",
-      "team": "EGO TEAM"
-    },
-    "player24": {
-      "lol": {
-        "summonerName": "PFAndoni",
-        "tag": "2010",
-        "elo": "HIERRO"
-      },
-      "discord": "",
-      "team": "EGO TEAM"
-    },
-    "player25": {
-      "lol": {
-        "summonerName": "Quinijr",
-        "tag": "2000",
-        "elo": "HIERRO"
-      },
-      "discord": "",
-      "team": "EGO TEAM"
-    },
-    "player26": {
-      "lol": {
-        "summonerName": "SrKebab",
-        "tag": "ESP",
-        "elo": "HIERRO"
-      },
-      "discord": "",
-      "team": "EGO TEAM"
-    },
-    "player27": {
-      "lol": {
-        "summonerName": "Tugoldobello",
-        "tag": "YOKO",
-        "elo": "BRONCE"
-      },
-      "discord": "",
-      "team": "MONOS CORUÑA"
-    },
-    "player28": {
-      "lol": {
-        "summonerName": "VickViD",
-        "tag": "EUW",
-        "elo": "ORO"
-      },
-      "discord": "",
-      "team": "NOOBS4WIN"
-    },
-    "player29": {
-      "lol": {
-        "summonerName": "Zenit23",
-        "tag": "EUW",
-        "elo": "ESMERALDA"
-      },
-      "discord": "",
-      "team": "NOOBS4WIN"
-    },
-    "player30": {
-      "lol": {
-        "summonerName": "Zeus Boliviαno",
-        "tag": "FF15",
-        "elo": "PLATA"
-      },
-      "discord": "",
-      "team": "FF15"
-    }
+[
+  {
+    "name": "5x30 #DAYY",
+    "team": "FF15",
+    "rank": "ESMERALDA"
+  },
+  {
+    "name": "Alejan1 #EUW",
+    "team": "DOMINGUEROS",
+    "rank": "BRONCE"
+  },
+  {
+    "name": "ARK Zackielazo #EUW",
+    "team": "DOMINGUEROS",
+    "rank": "PLATA"
+  },
+  {
+    "name": "alex132mini #EUW",
+    "team": "TARNISHED",
+    "rank": "PLATA"
+  },
+  {
+    "name": "BlackCloudForce #EUW",
+    "team": "DOMINGUEROS",
+    "rank": "PLATINO"
+  },
+  {
+    "name": "CANICHEMANIA63 #nerf",
+    "team": "MAAA NUGUEETS",
+    "rank": "MASTER"
+  },
+  {
+    "name": "DrRedFlag #EUW",
+    "team": "MAAA NUGUEETS",
+    "rank": "ESMERALDA"
+  },
+  {
+    "name": "eiboll #eibol",
+    "team": "MAAA NUGUEETS",
+    "rank": "MASTER"
+  },
+  {
+    "name": "Fallen starke #EUW",
+    "team": "DOMINGUEROS",
+    "rank": "PLATA"
+  },
+  {
+    "name": "FF15 Endermaiter #FF15",
+    "team": "FF15",
+    "rank": "ESMERALDA"
+  },
+  {
+    "name": "Gumayusi Peruano #Peruu",
+    "team": "FF15",
+    "rank": "BRONCE"
+  },
+  {
+    "name": "Guren no Shogun #EUW",
+    "team": "DOMINGUEROS",
+    "rank": "BRONCE"
+  },
+  {
+    "name": "Iontxas #MNC",
+    "team": "MONOS CORUÑA",
+    "rank": "BRONCE"
+  },
+  {
+    "name": "lnvencheater #EUW",
+    "team": "EGO TEAM",
+    "rank": "DIAMANTE"
+  },
+  {
+    "name": "jadriab10 #shot",
+    "team": "MAAA NUGUEETS",
+    "rank": "DIAMANTE"
+  },
+  {
+    "name": "MNC Roicetee #014",
+    "team": "MONOS CORUÑA",
+    "rank": "HIERRO"
+  },
+  {
+    "name": "MNC T0m Baker #MNC",
+    "team": "MONOS CORUÑA",
+    "rank": "PLATA"
+  },
+  {
+    "name": "NeoZoro91 #EUW",
+    "team": "MONOS CORUÑA",
+    "rank": "PLATA"
+  },
+  {
+    "name": "NoYorickees #wwd",
+    "team": "FF15",
+    "rank": "DIAMANTE"
+  },
+  {
+    "name": "NXT Arkinos #EUW",
+    "team": "EGO TEAM",
+    "rank": "PLATINO"
+  },
+  {
+    "name": "Pitágoras Rabbit #ff15",
+    "team": "FF15",
+    "rank": "PLATA"
+  },
+  {
+    "name": "puminy #EUW",
+    "team": "MAAA NUGUEETS",
+    "rank": "DIAMANTE"
+  },
+  {
+    "name": "PFAndoni #2010",
+    "team": "EGO TEAM",
+    "rank": "HIERRO"
+  },
+  {
+    "name": "Quinijr #2000",
+    "team": "EGO TEAM",
+    "rank": "HIERRO"
+  },
+  {
+    "name": "RiskOfAshes #EUW",
+    "team": "MAAA NUGUEETS",
+    "rank": "ESMERALDA"
+  },
+  {
+    "name": "sam #scp",
+    "team": "MAAA NUGUEETS",
+    "rank": "DIAMANTE"
+  },
+  {
+    "name": "SrKebab #ESP",
+    "team": "EGO TEAM",
+    "rank": "HIERRO"
+  },
+  {
+    "name": "TR Chopero #MVP",
+    "team": "TARNISHED",
+    "rank": "ESMERALDA"
+  },
+  {
+    "name": "TR Adria Kila #DKS",
+    "team": "TARNISHED",
+    "rank": "PLATINO"
+  },
+  {
+    "name": "TR Meowin #316",
+    "team": "TARNISHED",
+    "rank": "ESMERALDA"
+  },
+  {
+    "name": "TR Markos316 #GGWP",
+    "team": "TARNISHED",
+    "rank": "ORO"
+  },
+  {
+    "name": "Tugoldobello #YOKO",
+    "team": "MONOS CORUÑA",
+    "rank": "BRONCE"
   }
+]

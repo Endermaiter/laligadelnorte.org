@@ -1,3 +1,12 @@
+:root {
+  --primary: #10141e;
+  --accent: #facc15;
+  --text: #ffffff;
+  --gray: #9ca3af;
+  --bg-card: #1f2937;
+  --radius: 12px;
+}
+
 @font-face {
     font-family: 'Baron';
     src: url('../src/fonts/Baron\ Neue.otf') format('opentype');
@@ -5,205 +14,391 @@
     font-style: normal;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(90deg, #0d1b2a, #1b263b, #415a77, #778da9);
-    color: #ffffff;
+  background: var(--primary);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-header {
-    background: 
-        url('../src/LLN_wolf.jpg') no-repeat left center,
-        url('../src/LLN_wolf_inverted.jpg') no-repeat right center;
-    background-size: auto;
-    background-position: left center, right center;
-    background-color: black;
-    text-align: center;
-    padding: 120px 40px;
-    color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-    position: relative;
+.navbar {
+  background: #0f172a;
+  padding: 1rem 2rem;
 }
 
-header::after {
-    background-size: cover;
-    width: calc(100% - 80px);
-    height: 100%;
-    background-position: center;
-    left: 40px;
+.navbar-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-nav {
-    background: #102a43;
-    padding: 15px;
-    text-align: center;
-    border-bottom: 3px solid #1b263b;
-    border-top: 4px solid #778da9;
-    border-bottom: 2px solid #484d53;
+.nav-links {
+  display: flex;
+  gap: 1rem;
 }
 
-nav a {
-    color: #ffffff;
-    margin: 0 20px;
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: color 0.3s ease;
-    font-family: 'Baron';
+.logo {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
-nav a:hover {
-    color: #ffa500;
+.logo img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
 }
 
-.container {
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+.logo:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
 }
 
-.table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    font-size: 1.2em;
-    background: #1b263b;
-    border-radius: 10px;
-    overflow: hidden;
+.nav-links a {
+  margin-left: 2rem;
+  text-decoration: none;
+  color: var(--gray);
+  font-weight: 600;
+  transition: color 0.3s;
+  font-family: "Baron";
 }
 
-.table th,
-.table td {
-    border: 1px solid #415a77;
-    padding: 15px;
-    text-align: center;
-    color: #fff;
-    table-layout: fixed;
-    width: 50%;
-    font-family: 'Baron';
+.nav-links a:hover,
+.nav-links .active {
+  color: var(--accent);
 }
 
-#score {
-    font-size:180%;
+.scores-container {
+  flex-grow: 1;
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
 }
 
-.table img {
-    width: 40%;
-    
+.team {
+  padding: 2rem;
 }
 
-.table th {
-    background: #102a43;
-    font-weight: bold;
+.scores-container h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--text);
+  font-family: "Baron";
 }
 
-.table tr:nth-child(even) {
-    background: #1f4068;
+.scores-container h2 {
+  text-align: center;
+  margin: 2rem;
+  color: var(--accent);
 }
 
-/* Exclude format */
-
-.section p:first-child:not([id="exclude-format"]) {
-    text-align: center;
-    font-size: 2.4em;
-    margin-bottom: 30px;
+.scores-table {
+  width: 100%;
+  max-width: 600px;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 0 auto;
+  background: var(--bg-card);
+  color: var(--text);
+  border: 3px solid var(--gray);
+  border-radius: 12px;
+  overflow: hidden;
 }
 
-.section p:first-of-type:not([id="exclude-format"]){
-    font-family: 'Baron';
+.scores-table thead {
+  background: #0f172a;
+  color: var(--gray);
 }
 
-.section b:not([id="exclude-format"]) {
-    text-align: center;
+.scores-table th,
+.scores-table td {
+  border: 1px solid var(--gray);
+  padding: 0.75rem 1rem;
+  text-align: center;
 }
 
-/* Footer */
-
-.main-footer {
-    text-align: center;
-    background: #000000;
-    padding: 10px;
-    border-top: 3px solid #1b263b;
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    gap: 10%;
+.scores-table td {
+  font-weight: bold;
 }
 
-footer p {
-    margin: 0;
-    font-size: 1em;
+.scores-table th:first-child,
+.scores-table td:first-child {
+  text-align: center;
+  width: 50px; /* Ajusta según el tamaño que quieras para la columna # */
 }
 
-.logo-footer {
-    flex: 1;
-    max-width: 33.33%;
-    box-sizing: border-box;
-}
-  
-.social-media {
-    text-align: center;
-    max-width: 33.33%;
-    box-sizing: border-box;
-    font-size: 100%;
-    margin-top: 5%;
-}
-  
-.sponsor {
-    text-align: right;
-    max-width: 33.33%;
-    box-sizing: border-box;
+.scores-table th {
+  background: #1e293b;
+  color: var(--accent);
 }
 
-.footer-copy {
-    text-align: center;
-    font-style: inherit;
-    padding: 10px;
-    font-size: 14px;
-    color: #969696;
-    background-color: #000000;
+.scores-table tr:nth-child(even) {
+  background: #1f2937;
 }
 
-.sponsor {
-    align-items: center;
+.scores-table tbody tr:hover {
+  background: rgb(22, 53, 82);
 }
 
-.tijuana-img {
-    border-radius: 15px;
-    width: 30%;
-    vertical-align: middle;
-    margin-top: 15%;
+.scores-table td img {
+  width: 20%;
+  height: auto;
+  vertical-align: middle;
+  margin-right: 0.5rem;
 }
 
-.toblerone-img {
-    border-radius: 15px;
-    width: 60%;
-    vertical-align: middle;
-    margin-top: 15%;
+.rank {
+  color: var(--accent);
+  align-items: center;
 }
 
-.rrss-text {
-    color: #fff;
-    text-decoration: solid;
-    font-weight: bold;
-    margin-bottom: 10%;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
-    color: inherit;
+.bracket-playoffs {
+  margin: 2rem auto;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+}
+
+.bracket-playoffs-container {
+  justify-content: center;
+  align-items: center;
+}
+
+.bracket-final {
+  display: flex;
+  justify-content: center;
+}
+
+/* Cada ronda (semifinal, final) */
+.round-semifinal {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* La ronda final es más estrecha y centrada */
+.round.final {
+  width: 50%;
+  height: auto;
+  align-items: center;
+}
+
+/* Cada partido */
+.match1 {
+  background-color: var(--bg-card);
+  border-radius: 20px;
+  padding: 1rem;
+  border: solid 4px;
+  border-color: var(--gray);
+  gap: 0.5rem;
+}
+
+.match2 {
+  background-color: var(--bg-card);
+  border-radius: 20px;
+  padding: 1rem;
+  border: solid 4px;
+  border-color: var(--gray);
+  gap: 0.5rem;
+  margin-left: 11%;
+}
+
+/* Partido final más grande */
+.final-match {
+  background-color: var(--bg-card);
+  border: 1px;
+  border: solid 4px;
+  border-color: var(--gray);
+  border-radius: 20px;
+  padding: 1.5rem;
+}
+
+/* Equipos en cada partido */
+.team {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.scores {
+  color: var(--accent);
+}
+
+/* Equipo izquierdo y derecho */
+.team-left {
+  justify-content: flex-start;
+  gap: 0.75rem;
+  border-bottom: solid 2px;
+  border-color: var(--gray);
+}
+
+.team-right {
+  justify-content: flex-end;
+  gap: 0.75rem;
+}
+
+/* Logo del equipo */
+.team-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* Nombre del equipo */
+.team-name {
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #ffffff;
+}
+
+/* Puntuación */
+.team-score {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--accent);
+  min-width: 24px;
+  text-align: center;
+}
+
+/* Separador entre equipos */
+.match:not(.final-match) .team-left,
+.match:not(.final-match) .team-right {
+  padding: 0.2rem 0;
+}
+
+/* FOOTER */
+
+.footer {
+  background: #0f172a;
+  color: var(--gray);
+  padding: 3rem 2rem 2rem;
+  text-align: center;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1.8fr;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 auto 2rem;
+  padding: 0 1rem;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-section.logo-footer {
+  align-items: flex-end;
+}
+
+.footer-section.sponsors-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  padding-right: 0;
+  margin-left: auto;
+  width: 100%;
+  max-width: 100%;
+}
+
+.logo-footer img {
+  max-height: 160px;
+  width: auto;
+  opacity: 0.5;
+  object-fit: contain;
+  mask-image: radial-gradient(circle, black 60%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle, black 60%, transparent 100%);
+}
+
+.social-media ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.social-media a {
+  text-decoration: none;
+  color: var(--gray);
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.2s;
+}
+
+.social-media a:hover {
+  color: var(--accent);
 }
 
 .rrss-img {
-    border-radius: 15px;
-    width: 30px;
-    margin-right: 2%;
-    height: 24px;
-    width: auto;
-    display: block;
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  mask-image: radial-gradient(circle, black 70%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle, black 70%, transparent 100%);
+  filter: brightness(0.95);
 }
 
-.rrss-list {
-    margin-bottom: 2%;
+.sponsors-footer h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: var(--gray);
+  align-self: flex-end;
+}
+
+.sponsor-logos {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2rem;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.sponsor-logos img {
+  height: 120px;
+  object-fit: contain;
+  opacity: 0.5;
+  mask-image: radial-gradient(circle, black 60%, transparent 100%);
+  -webkit-mask-image: radial-gradient(circle, black 60%, transparent 100%);
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+  color: var(--gray);
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .logo-footer img {
+    max-height: 100px;
+  }
+
+  .sponsor-logos img {
+    height: 70px;
+  }
 }

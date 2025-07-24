@@ -2,139 +2,110 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="src/LLN_wolf_header_icon.png" type="image/png">
-    <title>La Liga del Norte Tournament</title>
-    <link rel="stylesheet" href="style/index.css">
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio - La Liga del Norte</title>
+  <link rel="stylesheet" href="style/index.css" />
+  <link rel="icon" href="src/LLN_wolf_header_icon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <img src="src/LLN_text.png">
-    </header>
-    <nav>
-        <a href="index.html">INICIO</a>
-        <a href="web/players.html">JuGADORES</a>
-        <a href="web/teams.html">EquIPOS</a>
-        <a href="web/scores.html">CLASIFICACIÓN</a>
-        <a href="web/matches.html">PARTIDOS</a>
-    </nav>
-    <div class="container">
-        <section id="intro" class="intro">
-            <h1>¡Bienvenid@ a la web oficial de LLN!</h1>
-            <p style="width: 60%; text-align: center; margin: 0 auto;">Un torneo épico de League of Legends ambientado
-                en la majestuosidad del norte. </p>
-            <p>✪ 6 equipos luchan con honor bajo el estandarte de los lobos ✪</p>
-            <p style="font-weight: bold;">¿Quién se coronará como campeón?</p>
-        </section>
-        <p style="text-align: center;">────────────────── ✦ ──────────────────</p>
-        <!--<section id="social-video" style="display: flex; justify-content: space-between;">
-            
-            <div id="video" style="width: 55%;">
-                <h2>¡Disfruta de la primera "Charla Norteña"!</h2>
-                <iframe class="video-frame" 
-                src="https://www.youtube.com/embed/T6Wq1eqs0So?si=p4ICvhAbxyhT6K3T"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen>
-            </iframe>
-        </div>
-    </section>-->
-        <div class="winners">
-            <h1 style="margin-top: 80px; text-align: center;">🎉 GANADOR DEL SPLIT DE INvIERNO DE LLN 🎉</h1>
-            <div class="news-images">
-                <img src="src/teams_logo/NOOBS4WIN_logo.png" alt="NOOBS4WIN" style="width: 40%;">
-            </div>
-            <h1 style="margin-top: 80px; text-align: center;">⥼ NOOBS4WIN ⥽</h1>
-        </div>
-        <p style="text-align: center; margin-top: 80px;">────────────────── ✦ ──────────────────</p>
-            <h2 style="margin-top: 80px; text-align: center;">✻ TABLÓN DE NOTICIAS ✻</h2>
-            <div class="news-images">
-                <img src="src/diego_out_of_team.jpg" alt="El diego" style="width: 40%;">
-            </div>
+  <header class="navbar">
+    <div class="navbar-content">
+      <div class="logo">
+        <a href="index.html" class="logo">
+          <img src="src/LLN_wolf_header_icon.png" alt="LLN logo" />
+        </a>
+      </div>
+      <nav class="nav-links">
+            <a href="pages/rules.html">NORMATIvA</a>
+            <a href="pages/players.html">JuGADORES</a>
+            <a href="pages/teams.html">EQuIPOS</a>
+            <a href="pages/calendar.html">CALENDARIO</a>
+            <a href="pages/matches.html">PARTIDOS</a>
+            <a href="pages/scores.html">CLASIFICACIÓN</a>
+            <a href="pages/winners.html">GANADORES</a>
+        </nav>
     </div>
-    <footer>
-        <div class="main-footer">
-            <div class="logo-footer">
-                <img src="src/LLN_lol_icon.jpg" alt="LLN logo">
-            </div>
-            <div class="social-media">
-                <ul style="list-style: none;">
-                    <li class="rrss-list">
-                        <a class="rrss-text" href="https://www.instagram.com/roicetee/" target="_blank">
-                            <img class="rrss-img"
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1024px-Instagram_logo_2022.svg.png"
-                                alt="Logo de Instagram"> @la_liga_del_norte
-                        </a>
-                    </li>
-                    <li class="rrss-list">
-                        <a class="rrss-text" href="https://x.com/liga_del_norte" target="_blank">
-                            <img class="rrss-img"
-                                src="https://img.freepik.com/vector-gratis/nuevo-diseno-icono-x-logotipo-twitter-2023_1017-45418.jpg"
-                                alt="Logo de Twitter"> @liga_del_norte
-                        </a>
-                    </li>
-                    <li class="rrss-list">
-                        <a class="rrss-text" href="https://www.twitch.tv/laligadelnorte" target="_blank">
-                            <img class="rrss-img"
-                                src="https://img.freepik.com/vector-premium/logotipo-contraccion_578229-259.jpg"
-                                alt="Logo de Twitch"> @LaLigadelNorte
-                        </a>
-                    </li>
-                    <li class="rrss-list">
-                        <a class="rrss-text" href="https://www.youtube.com/@LALIGADELNORTE" target="_blank">
-                            <img class="rrss-img"
-                                src="https://cdn3.iconfinder.com/data/icons/social-network-30/512/social-06-512.png"
-                                alt="Logo de YouTube"> @LALIGADELNORTE
-                        </a>
-                    </li>
-                </ul>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-background">
+        <img src="src/LLN_wolf.png" alt="Lobo izquierdo" class="wolf left" />
+        <img src="src/LLN_wolf_inverted.png" alt="Lobo derecho" class="wolf right" />
+      </div>
+
+      <div class="hero-title">
+        <h1>LA LIGA DEL NORTE</h1>
+        <p>League of Legends Tournament</p>
+      </div>
+    </section>
+
+    <section class="news">
+      <h2>Noticias</h2>
+      <div class="news-grid">
+        <!-- Ejemplo de tarjeta -->
+        <div class="news-card">
+          <img src="src/teams_logo/NOOBS4WIN.png" alt="Diego fuera del equipo" />
+          <div class="news-content">
+            <h3>NOOBS4WIN se retira de La Liga del Norte tras conquistar el título</h3>
+            <h4>El equipo campeón anuncia su salida de la competición tras una temporada imbatible</h4>
+
+            <div class="news-expanded hidden">
+              <p>NOOBS4WIN, el equipo que dominó la última edición de La Liga del Norte de League of Legends,
+                ha sorprendido a la comunidad al anunciar su retirada de la competición. Tras alzarse con el
+                campeonato de forma contundente, el conjunto ha decidido dar un paso al lado y explorar nuevos
+                retos fuera de esta liga regional. Los fans y rivales esperan ahora cómo se reorganizará la escena
+                competitiva sin uno de sus equipos más fuertes.</p>
             </div>
 
-            <div class="sponsor">
-                <a href="https://grefusa.com/" target="_blank">
-                    <img class="tijuana-img" src="src/sponsors/tijuana.png" alt="Grefusa Pipas Tijuana">
-                </a>
-                <a href="https://www.toblerone.ch/de/" target="_blank">
-                    <img class="toblerone-img" src="src/sponsors/toblerone.png" alt="Grefusa Pipas Tijuana">
-                </a>
-            </div>
+            <button class="read-more-btn">Leer más →</button>
+          </div>
         </div>
-        <div class="footer-copy">
-            <p>COPYRIGHT &copy; 2025 La Liga del Norte - Todos los derechos reservados</p>
+        <!-- Repite para cada noticia -->
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-grid">
+        <!-- CENTRO: REDES SOCIALES -->
+        <div class="footer-section social-media">
+          <ul>
+            <li><a href="https://www.instagram.com/roicetee/" target="_blank"><img class="rrss-img"
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1024px-Instagram_logo_2022.svg.png"
+                  alt="Instagram" />@la_liga_del_norte</a></li>
+            <li><a href="https://x.com/liga_del_norte" target="_blank"><img class="rrss-img"
+                  src="https://img.freepik.com/vector-gratis/nuevo-diseno-icono-x-logotipo-twitter-2023_1017-45418.jpg"
+                  alt="Twitter" />@liga_del_norte</a></li>
+            <li><a href="https://www.twitch.tv/laligadelnorte" target="_blank"><img class="rrss-img"
+                  src="https://img.freepik.com/vector-premium/logotipo-contraccion_578229-259.jpg"
+                  alt="Twitch" />@LaLigadelNorte</a></li>
+            <li><a href="https://www.youtube.com/@LALIGADELNORTE" target="_blank"><img class="rrss-img"
+                  src="https://cdn3.iconfinder.com/data/icons/social-network-30/512/social-06-512.png"
+                  alt="YouTube" />@LALIGADELNORTE</a></li>
+          </ul>
+        </div>
+        <!-- IZQUIERDA: LOGO -->
+        <div class="footer-section logo-footer">
+          <img src="src/LLN_lol_icon.jpg" alt="Logo LLN" />
         </div>
 
+        <!-- DERECHA: SPONSORS -->
+        <div class="footer-section sponsors-footer">
+          <div class="sponsor-logos">
+            <img src="src/sponsors/tijuana.png" alt="Grefusa" />
+            <img src="src/sponsors/toblerone.png" alt="Toblerone" />
+          </div>
+        </div>
+      </div>
+
+      <p class="footer-copy">&copy; 2025 La Liga del Norte - Todos los derechos reservados</p>
     </footer>
-    <script>
-        function launchConfetti() {
-            const duration = 2 * 1000; // 2 segundos
-            const animationEnd = Date.now() + duration;
-            const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 1000 };
-
-            const interval = setInterval(() => {
-                const timeLeft = animationEnd - Date.now();
-
-                if (timeLeft <= 0) {
-                    return clearInterval(interval);
-                }
-
-                confetti({
-                    ...defaults,
-                    particleCount: 50,
-                    origin: { x: Math.random(), y: Math.random() * 0.5 }
-                });
-            }, 100);
-        }
-
-        // Ejecutar al cargar la página
-        window.onload = function () {
-            launchConfetti();
-        };
-    </script>
+    <script src="scripts/index.js"></script>
 </body>
 
 </html>
