@@ -96,6 +96,12 @@ body {
   font-family: "Baron";
 }
 
+.instruction {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--gray);
+}
+
 /* BUSCADOR */
 
 #search {

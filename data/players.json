@@ -5,6 +5,11 @@
     "rank": "ESMERALDA"
   },
   {
+    "name": "Afelaino #9703",
+    "team": "CHORBITOS",
+    "rank": "UNRANKED"
+  },
+  {
     "name": "Alejan1 #EUW",
     "team": "DOMINGUEROS",
     "rank": "BRONCE"
@@ -23,6 +28,11 @@
     "name": "BlackCloudForce #EUW",
     "team": "DOMINGUEROS",
     "rank": "PLATINO"
+  },
+  {
+    "name": "Bochi #7630",
+    "team": "CHORBITOS",
+    "rank": "DIAMANTE"
   },
   {
     "name": "CANICHEMANIA63 #nerf",
@@ -90,6 +100,11 @@
     "rank": "PLATA"
   },
   {
+    "name": "Nuuna #nuna",
+    "team": "CHORBITOS",
+    "rank": "UNRANKED"
+  },
+  {
     "name": "NoYorickees #wwd",
     "team": "FF15",
     "rank": "DIAMANTE"
@@ -98,6 +113,11 @@
     "name": "NXT Arkinos #EUW",
     "team": "EGO TEAM",
     "rank": "PLATINO"
+  },
+  {
+    "name": "Panker #MV3",
+    "team": "CHORBITOS",
+    "rank": "DIAMANTE"
   },
   {
     "name": "Pitágoras Rabbit #ff15",
@@ -158,5 +178,10 @@
     "name": "Tugoldobello #YOKO",
     "team": "MONOS CORUÑA",
     "rank": "BRONCE"
+  },
+  {
+    "name": "zhao #ESP",
+    "team": "CHORBITOS",
+    "rank": "UNRANKED"
   }
 ]

@@ -48,9 +48,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // Mostrar las dos tarjetas correspondientes a la semana
         const target1 = matchContainer.querySelector('#week-' + weekId + '-match-1');
         const target2 = matchContainer.querySelector('#week-' + weekId + '-match-2');
+        const target3 = matchContainer.querySelector('#week-' + weekId + '-match-3');
 
         if (target1) target1.style.display = 'flex';
         if (target2) target2.style.display = 'flex';
+        if (target3) target3.style.display = 'flex';
       });
     });
 
