@@ -8,10 +8,10 @@
 }
 
 @font-face {
-    font-family: 'Baron';
-    src: url('../src/fonts/Baron\ Neue.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Baron';
+  src: url('../src/fonts/Baron Neue.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 * {
@@ -29,6 +29,7 @@ body {
   flex-direction: column;
 }
 
+/* NAVBAR */
 .navbar {
   background: #0f172a;
   padding: 1rem 2rem;
@@ -77,6 +78,7 @@ body {
   color: var(--accent);
 }
 
+/* MAIN */
 main.match-sections {
   padding: 2rem;
   max-width: 1200px;
@@ -116,8 +118,8 @@ h2 {
 
 .match-card-container {
   perspective: 1000px;
-  width: 25vw;          /* ancho proporcional */
-  aspect-ratio: 8 / 5;  /* relación de aspecto (ancho : alto) */
+  width: 25vw;
+  aspect-ratio: 8 / 5;
   max-width: 400px;
   margin: 0.5rem auto;
 }
@@ -166,7 +168,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem; /* separa un poco las imágenes y el VS */
+  gap: 1rem;
 }
 
 .teams-row img {
@@ -189,16 +191,7 @@ h2 {
   margin-top: 0.3rem;
 }
 
-footer.footer {
-  text-align: center;
-  padding: 2rem;
-  background: #0f172a;
-  font-size: 0.9rem;
-  color: var(--gray);
-}
-
 /* FOOTER */
-
 .footer {
   background: #0f172a;
   color: var(--gray);
@@ -231,10 +224,8 @@ footer.footer {
   flex-direction: column;
   align-items: flex-end;
   text-align: right;
-  padding-right: 0;
   margin-left: auto;
   width: 100%;
-  max-width: 100%;
 }
 
 .logo-footer img {
@@ -248,8 +239,6 @@ footer.footer {
 
 .social-media ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -290,7 +279,6 @@ footer.footer {
   justify-content: flex-end;
   gap: 2rem;
   flex-wrap: wrap;
-  max-width: 100%;
 }
 
 .sponsor-logos img {
