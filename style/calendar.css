@@ -225,11 +225,17 @@ body {
 
 .week {
   display: contents;
+  cursor: pointer;
 }
 
-.week:hover .day-cell {
-  background-color: #334155;
+.day-cell {
+  background-color: transparent;
   transition: background 0.2s;
+  transition: background-color 0.5s ease; /* duración y suavizado */
+}
+
+.day-cell.selected {
+  background-color: #334155;
 }
 
 .calendar-dynamic-match {

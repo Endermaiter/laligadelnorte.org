@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Evento mouseenter para cada semana dentro de ese mes
     weeks.forEach(week => {
-      week.addEventListener('mouseenter', () => {
+      week.addEventListener('click', () => {
         const weekId = week.dataset.week;
 
         // Ocultar mensaje si está visible
@@ -56,9 +56,13 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Evento mouseleave del conjunto mes+tarjetas para mostrar mensaje
-    row.addEventListener('mouseleave', () => {
-      showNoSelectionMessage();
+    document.querySelectorAll(".week").forEach(week => {
+      week.addEventListener("click", () => {
+        // quitar seleccion de todos los day-cell
+        document.querySelectorAll(".day-cell").forEach(c => c.classList.remove("selected"));
+        // añadirla a los hijos de la semana clicada
+        week.querySelectorAll(".day-cell").forEach(c => c.classList.add("selected"));
+      });
     });
 
   });
