@@ -84,6 +84,15 @@ body {
   padding: 2rem;
 }
 
+.scores-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center; /* Centra tabla + leyenda */
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
 .team {
   padding: 2rem;
 }
@@ -155,6 +164,53 @@ body {
   height: auto;
   vertical-align: middle;
   margin-right: 0.5rem;
+}
+
+.scores-legend {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 5%;
+  background: var(--bg-card);
+  border: 2px solid var(--gray);
+  border-radius: 10px;
+  padding: 1rem;
+  color: var(--text);
+  min-width: 50%;
+}
+
+.scores-legend h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: var(--accent);
+  margin-bottom: 4%;
+}
+
+.scores-legend color-text {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.scores-legend ul {
+  list-style-type: disc;
+  list-style-position: inside;
+  display: blocK;
+  padding-left: 1.2rem;
+  margin: 0;
+  color: var(--text);
+}
+
+.scores-legend li {
+  display: list-item;
+  margin-bottom: 2%;
+}
+
+.scores-legend .color {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 0.5rem;
+  border-radius: 3px;
 }
 
 .rank {
