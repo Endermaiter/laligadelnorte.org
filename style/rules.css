@@ -87,6 +87,26 @@ body {
   gap: 2rem;
 }
 
+.rules-container .sub-rules {
+  margin-left: 2.5rem;   /* sangría hacia la derecha */
+  list-style-type:disc; /* opcional: guion largo en vez de viñetas */
+  font-size: 0.95em;   /* un poco más pequeño para diferenciar */
+}
+
+.rules-container .sub-rules2 {
+  margin-left: 2.5rem;   /* sangría hacia la derecha */
+  list-style-type:square; /* opcional: guion largo en vez de viñetas */
+  font-size: 0.95em;   /* un poco más pequeño para diferenciar */
+}
+
+code {
+  background-color: #535353;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.95em;
+}
+
 .rule-block {
   background: var(--bg-card);
   padding: 2rem;
