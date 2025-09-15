@@ -20,14 +20,14 @@
     "rank": "PLATA"
   },
   {
-    "name": "TR alex132mini #ASF",
-    "team": "TARNISHED",
-    "rank": "PLATA"
-  },
-  {
     "name": "BlackCloudForce #EUW",
     "team": "DOMINGUEROS",
     "rank": "PLATINO"
+  },
+  {
+    "name": "BocataLomoYa #FF15",
+    "team": "FF15",
+    "rank": "ESMERALDA"
   },
   {
     "name": "Bochi #7630",
@@ -45,6 +45,11 @@
     "rank": "ESMERALDA"
   },
   {
+    "name": "Efmun #EUW",
+    "team": "CHICKS DIG VISION",
+    "rank": "PLATA"
+  },
+  {
     "name": "eiboll #eibol",
     "team": "MAAA NUGUEETS",
     "rank": "MASTER"
@@ -60,9 +65,9 @@
     "rank": "PLATA"
   },
   {
-    "name": "BocataLomoYa #FF15",
-    "team": "FF15",
-    "rank": "ESMERALDA"
+    "name": "GathererMike #EUW",
+    "team": "CHICKS DIG VISION",
+    "rank": "PLATA"
   },
   {
     "name": "GG nonoerc #NRC",
@@ -85,13 +90,18 @@
     "rank": "BRONCE"
   },
   {
-    "name": "lnvencheater #EUW",
-    "team": "EGO TEAM",
+    "name": "jadriab10 #shot",
+    "team": "MAAA NUGUEETS",
     "rank": "DIAMANTE"
   },
   {
-    "name": "jadriab10 #shot",
-    "team": "MAAA NUGUEETS",
+    "name": "Kay Otey #EUW",
+    "team": "CHICKS DIG VISION",
+    "rank": "ESMERALDA"
+  },
+  {
+    "name": "lnvencheater #EUW",
+    "team": "EGO TEAM",
     "rank": "DIAMANTE"
   },
   {
@@ -110,19 +120,24 @@
     "rank": "PLATA"
   },
   {
+    "name": "MrsGatherer #EUW",
+    "team": "CHICKS DIG VISION",
+    "rank": "GOLD"
+  },
+  {
     "name": "NeoZoro91 #EUW",
     "team": "MONOS CORUÑA",
     "rank": "PLATA"
   },
   {
-    "name": "Nuuna #nuna",
-    "team": "CHORBITOS",
-    "rank": "UNRANKED"
-  },
-  {
     "name": "NoYorickees #wwd",
     "team": "FF15",
     "rank": "DIAMANTE"
+  },
+  {
+    "name": "Nuuna #nuna",
+    "team": "CHORBITOS",
+    "rank": "UNRANKED"
   },
   {
     "name": "NXT Arkinos #EUW",
@@ -140,6 +155,11 @@
     "rank": "DIAMANTE"
   },
   {
+    "name": "PFAndoni #2010",
+    "team": "EGO TEAM",
+    "rank": "HIERRO"
+  },
+  {
     "name": "Pitágoras Rabbit #ff15",
     "team": "FF15",
     "rank": "PLATA"
@@ -148,11 +168,6 @@
     "name": "puminy #EUW",
     "team": "MAAA NUGUEETS",
     "rank": "DIAMANTE"
-  },
-  {
-    "name": "PFAndoni #2010",
-    "team": "EGO TEAM",
-    "rank": "HIERRO"
   },
   {
     "name": "Puletin 愛 #UwU",
@@ -170,6 +185,11 @@
     "rank": "ESMERALDA"
   },
   {
+    "name": "Rryzen #EUW",
+    "team": "CHICKS DIG VISION",
+    "rank": "GOLD"
+  },
+  {
     "name": "sam #scp",
     "team": "MAAA NUGUEETS",
     "rank": "DIAMANTE"
@@ -180,14 +200,24 @@
     "rank": "HIERRO"
   },
   {
+    "name": "TR Adria Kila #DKS",
+    "team": "TARNISHED",
+    "rank": "PLATINO"
+  },
+  {
+    "name": "TR alex132mini #ASF",
+    "team": "TARNISHED",
+    "rank": "PLATA"
+  },
+  {
     "name": "TR Chopero #MVP",
     "team": "TARNISHED",
     "rank": "ESMERALDA"
   },
   {
-    "name": "TR Adria Kila #DKS",
+    "name": "TR Markos316 #GGWP",
     "team": "TARNISHED",
-    "rank": "PLATINO"
+    "rank": "ORO"
   },
   {
     "name": "TR Meowin #316",
@@ -200,14 +230,14 @@
     "rank": "ORO"
   },
   {
-    "name": "TR Markos316 #GGWP",
-    "team": "TARNISHED",
-    "rank": "ORO"
-  },
-  {
     "name": "Tugoldobello #YOKO",
     "team": "MONOS CORUÑA",
     "rank": "BRONCE"
+  },
+  {
+    "name": "YellowDino #EUW",
+    "team": "CHICKS DIG VISION",
+    "rank": "PLATA"
   },
   {
     "name": "zhao #ESP",
