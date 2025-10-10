@@ -1,7 +1,16 @@
+import * as utils from "./utils.js";
+
 const grid = document.getElementById("players-grid");
 const search = document.getElementById("search");
 
 let players = [];
+
+utils.loadJSON("../data/players.json").then(data => {
+  if (data) {
+    players = data;
+    renderPlayers(players);
+  }
+});
 
 function renderPlayers(list) {
   grid.innerHTML = "";
@@ -10,10 +19,10 @@ function renderPlayers(list) {
     const imgSrc = `../src/rank/${player.rank}.png`;
     const teamSrc = `../src/teams_logo/${player.team}.png`;
     const opgg_url = `https://op.gg/es/lol/summoners/euw/${player.name.replace(" ", "%20").replace("#", "-")}`;
+
     card.className = "player-card";
     card.innerHTML = `
       <h3 class="player-name">${player.name}</h3>
-
       <div class="info-row">
         <div class="info-block-1">
           <img class="rank-icon" src="${imgSrc}" alt="${player.rank}" />
@@ -29,14 +38,6 @@ function renderPlayers(list) {
     grid.appendChild(card);
   });
 }
-
-fetch("../data/players.json")
-  .then(response => response.json())
-  .then(data => {
-    players = data;
-    renderPlayers(players);
-  })
-  .catch(err => console.error("Error cargando el JSON:", err));
 
 search.addEventListener("input", () => {
   const query = search.value.toLowerCase();

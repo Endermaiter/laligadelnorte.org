@@ -1,34 +1,33 @@
-function navigate(index) {
-    const slider = document.querySelector('.container-matches').getElementsByClassName("match-section"); // Aseguramos que selecciona el contenedor correcto
-    console.log(slider.length)
-    for (let i=0;i < slider.length; i++){
-        if (i==index){
-            
-        }
+import * as utils from "./utils.js";
+
+window.navigate = function (index) {
+  const slider = document.querySelector('.container-matches').getElementsByClassName("match-section");
+  console.log(slider.length)
+  for (let i = 0; i < slider.length; i++) {
+    if (i == index) {
+
     }
+  }
 }
 
-function flipCard(cardElement, isFinal = false) {
-      const inner = cardElement.querySelector('.card-inner');
-      const isFlipped = inner.classList.contains('flipped');
-      inner.classList.toggle('flipped');
+window.flipCard = function (cardElement) {
+  const inner = cardElement.querySelector('.card-inner');
+  inner.classList.toggle('flipped');
+  const isFlipped = inner.classList.contains('flipped');
+  console.log('isFlipped:', isFlipped);
 
-      if (!isFlipped && isFinal) {
-        setTimeout(() => {
-          const duration = 3000;
-          const animationEnd = Date.now() + duration;
-          const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 1000 };
-
-          const interval = setInterval(() => {
-            const timeLeft = animationEnd - Date.now();
-            if (timeLeft <= 0) return clearInterval(interval);
-
-            confetti({
-              ...defaults,
-              particleCount: 60,
-              origin: { x: Math.random(), y: Math.random() * 0.6 }
-            });
-          }, 150);
-        }, 300);
-      }
-    }
+  if (isFlipped) {
+    console.log("Hola");
+    utils.generateConffeti(
+      4000, // duration: 4 segundos
+      0,    // delay
+      150,  // interval entre ráfagas
+      15,   // startVelocity: partículas no muy rápidas
+      60,   // spread: arco moderado
+      120,  // ticks: duración de cada partícula
+      1000, // zIndex
+      12,   // particleCount por ráfaga
+      ['#FFC1CC', '#FFECB3', '#B2DFDB', '#AEDFF7', '#E1BEE7'], // colores pastel
+    );
+  }
+}
