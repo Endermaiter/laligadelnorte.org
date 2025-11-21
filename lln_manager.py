@@ -40,14 +40,14 @@ def push_all():
     current_date= datetime.now().strftime("%d/%m/%Y - %H:%M:%S")
 
     subprocess.run("git add *", shell=True)
-    subprocess.run(f'git commit -m "Auto push {current_date}"', shell=True)
+    commit_output = subprocess.run(f'git commit -m "Auto push {current_date}"', shell=True, capture_output=True)
     current_branch = subprocess.run(["git", "branch", "--show-current"], capture_output=True, text=True)
     push_output = subprocess.run(f"git push origin {current_branch.stdout}", shell=True)
 
     if push_output.returncode == 0:
         print_succeed("Push succeed!")
     else:
-        print_error("Push failed!")
+        print_error("Push failed!")  
         
 def print_exit():
     print(f"\n\t{Style.BRIGHT}{Fore.RED}[Exiting]{Style.RESET_ALL}\n")
