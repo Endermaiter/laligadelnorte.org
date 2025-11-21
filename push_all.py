@@ -2,7 +2,7 @@ import subprocess
 from datetime import datetime
 
 
-current_date= datetime.now().strftime("%d/%m/%Y - %H:%M")
+current_date= datetime.now().strftime("%d/%m/%Y - %H:%M:%S")
 
 subprocess.run("git add *", shell=True)
 subprocess.run(f'git commit -m "Auto push {current_date}"', shell=True)
