@@ -1,6 +1,8 @@
 import subprocess
 from datetime import datetime
+from pyfiglet import Figlet
 
+print(Figlet().renderText("LLN Manager"))
 
 current_date= datetime.now().strftime("%d/%m/%Y - %H:%M:%S")
 
