@@ -10,7 +10,8 @@ def main():
     
     show_menu()
     
-    option = input ("\n\tSelect Option => ")
+    option = input (f"\n\tSelect Option => {Style.BRIGHT}{Fore.YELLOW}")
+    print(f"{Style.RESET_ALL}", end="")
     
     match option:
         case "1":
@@ -59,7 +60,7 @@ def push_all():
     if push_output.returncode == 0:
         print_succeed(f"Push succeed on branch {current_branch.stdout.strip()}!")
     else:
-        print_error("Push failed!")    
+        print_error("Push failed!")
         
 def print_exit():
     print(f"\n\t{Style.BRIGHT}{Fore.RED}[Exiting]{Style.RESET_ALL}\n")
