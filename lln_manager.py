@@ -1,7 +1,10 @@
 import subprocess
+import re
+import numpy as np
 from datetime import datetime
 from pyfiglet import Figlet
 from colorama import Fore, Style
+from PIL import Image
         
 def main():
     
@@ -15,11 +18,16 @@ def main():
         case "2":
             print("TBD")
         case "3":
-            push_all()
+            print("TBD")
         case "4":
             print_exit()
+        case "5":
+            push_all()
+        case "6":
+            print_exit()
             exit()
-    
+            
+            
 
 def show_menu():
     
@@ -27,14 +35,18 @@ def show_menu():
     print(Figlet().renderText("LLN  Manager"))
     
     menu = {
-    "1. [TBD]",
-    "2. [TBD]",
-    "3. Push All",
-    "4. Exit (Use Ctrl+C to exit wherever)" 
+    "[ 1 ] | Add match",
+    "[ 2 ] | Modify match",
+    "[ 3 ] | Update Scores",
+    "[ 4 ] | Add new",
+    "[ 5 ] | Push All",
+    "[ 6 ] | Exit (Ctrl+C)" 
     }
     
     for option in sorted(menu):
-        print(f"\t{option}")
+        pattern = re.compile(r"\[\s*(\d+)\s*\]")
+        highlighted = pattern.sub(lambda m: f"[ {Fore.YELLOW}{Style.BRIGHT}{m.group(1)}{Style.RESET_ALL} ]", option)
+        print(f"\t{highlighted}")
 
 def push_all():
     current_date= datetime.now().strftime("%d/%m/%Y - %H:%M:%S")
