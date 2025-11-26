@@ -53,10 +53,10 @@ def print_exit():
     print(f"\n\t{Style.BRIGHT}{Fore.RED}[Exiting]{Style.RESET_ALL}\n")
     
 def print_error(msg:str):
-    print(f"\t{Style.BRIGHT}{Fore.RED}\n❌  | {msg}{Style.RESET_ALL}\n")
+    print(f"\n\t{Style.BRIGHT}{Fore.RED}❌  | {msg}{Style.RESET_ALL}\n")
     
 def print_succeed(msg:str):
-    print(f"\t{Style.BRIGHT}{Fore.GREEN}\n✅  | {msg}{Style.RESET_ALL}\n")
+    print(f"\n\t{Style.BRIGHT}{Fore.GREEN}✅  | {msg}{Style.RESET_ALL}\n")
 
 def clear_console():
     subprocess.run("cls", shell=True)
