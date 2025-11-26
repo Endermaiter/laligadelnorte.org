@@ -45,7 +45,7 @@ def push_all():
     push_output = subprocess.run(f"git push origin {current_branch.stdout}", shell=True, capture_output=True)
 
     if push_output.returncode == 0:
-        print_succeed(f"Push succeed on branch {current_branch.stdout}!")
+        print_succeed(f"Push succeed on branch {current_branch.stdout.strip()}!")
     else:
         print_error("Push failed!")    
         
