@@ -27,6 +27,7 @@ def main():
             main()
         case "5":
             push_all()
+            main()
         case "6":
             print_exit()
             exit()
