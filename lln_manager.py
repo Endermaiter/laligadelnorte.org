@@ -1,12 +1,14 @@
 import subprocess
 import re
-import numpy as np
+import json
 from datetime import datetime
 from pyfiglet import Figlet
 from colorama import Fore, Style
-from PIL import Image
         
 def main():
+    """
+    
+    """
     
     show_menu()
     
@@ -19,7 +21,7 @@ def main():
         case "2":
             print("TBD")
         case "3":
-            print("TBD")
+            update_scores()
         case "4":
             print_exit()
         case "5":
@@ -31,7 +33,9 @@ def main():
             
 
 def show_menu():
+    """
     
+    """
     clear_console()
     print(Figlet().renderText("LLN  Manager"))
     
@@ -49,7 +53,37 @@ def show_menu():
         highlighted = pattern.sub(lambda m: f"[ {Fore.YELLOW}{Style.BRIGHT}{m.group(1)}{Style.RESET_ALL} ]", option)
         print(f"\t{highlighted}")
 
+
+def show_title():
+    """
+    
+    """
+    print(Figlet().renderText("LLN  Manager"))
+
+def update_scores():
+    """
+    
+    """
+    clear_console()
+    show_scores()
+    
+def show_scores():
+    """
+    
+    """
+    show_title()
+    with open("data/scores.json", "r", encoding="utf-8") as score_files:
+        score_list = json.load(score_files)
+
+    score_list_sorted = sorted(score_list, key=lambda team: team['score'], reverse=True)
+    for team in score_list_sorted:
+        print(f"\t· {Style.BRIGHT}{Fore.MAGENTA}{team['name']} - {Style.BRIGHT}{Fore.BLUE}{team['score']}{Style.RESET_ALL}")
+        
+
 def push_all():
+    """
+    
+    """
     current_date= datetime.now().strftime("%d/%m/%Y - %H:%M:%S")
 
     subprocess.run("git add *", shell=True)
@@ -63,15 +97,27 @@ def push_all():
         print_error("Push failed!")
         
 def print_exit():
+    """
+    
+    """
     print(f"\n\t{Style.BRIGHT}{Fore.RED}[Exiting]{Style.RESET_ALL}\n")
     
 def print_error(msg:str):
+    """
+    
+    """
     print(f"\n\t{Style.BRIGHT}{Fore.RED}❌  | {msg}{Style.RESET_ALL}\n")
     
 def print_succeed(msg:str):
+    """
+    
+    """
     print(f"\n\t{Style.BRIGHT}{Fore.GREEN}✅  | {msg}{Style.RESET_ALL}\n")
 
 def clear_console():
+    """
+    
+    """
     subprocess.run("cls", shell=True)
         
 if __name__ == '__main__':
