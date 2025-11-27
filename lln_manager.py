@@ -104,6 +104,7 @@ def push_all():
     print("Comming back to the menu in 2")
     time.sleep(1)
     print("Comming back to the menu in 1")
+    time.sleep(1)
         
 def print_exit():
     """
