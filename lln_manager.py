@@ -17,19 +17,19 @@ def main():
     
     match option:
         case "1":
-            print("TBD")
+            main()
         case "2":
-            print("TBD")
+            main()
         case "3":
             update_scores()
+            main()
         case "4":
-            print_exit()
+            main()
         case "5":
             push_all()
         case "6":
             print_exit()
             exit()
-            
             
 
 def show_menu():
@@ -66,6 +66,7 @@ def update_scores():
     """
     clear_console()
     show_scores()
+    input()
     
 def show_scores():
     """
