@@ -1,7 +1,6 @@
 import subprocess
 import re
 import json
-import time
 from datetime import datetime
 from pyfiglet import Figlet
 from colorama import Fore, Style
@@ -98,13 +97,7 @@ def push_all():
         print_succeed(f"Push succeed on branch {current_branch.stdout.strip()}!")
     else:
         print_error("Push failed!")
-    time.sleep(1)
-    print("Comming back to the menu in 3")
-    time.sleep(1)
-    print("Comming back to the menu in 2")
-    time.sleep(1)
-    print("Comming back to the menu in 1")
-    time.sleep(1)
+    input("\tPress enter to continue...")
         
 def print_exit():
     """
