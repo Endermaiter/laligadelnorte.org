@@ -70,25 +70,32 @@ def update_scores():
     with open("data/scores.json", "r", encoding="utf-8") as score_files:
         score_dict = json.load(score_files)
     score_dict_sorted = sorted(score_dict, key=lambda team: team['score'], reverse=True)
-    team_list = []
-    for team in score_dict_sorted:
-        team_list.append(team['name'])
     
     show_scores(score_dict_sorted)
     
-    action = input("\t[V] Add Victory / [D] Add Defeat => ")
+    action = input("\t[ V ] Add Victory / [ D ] Add Defeat => ")
     if action.lower() != "v" and action.lower() != "d":
         input("Invalid action. Enter to try again...")
         update_scores()
-    selected_team = int(input("Select team from list => "))
+    selected_team = int(input("\tSelect team from list => "))
     if selected_team not in range(1, len(score_dict_sorted)+1):
         input("Invalid number team. Enter to try again...")
         update_scores()
     added_score = 2 if action.lower() == "v" else 1
-    score_dict_sorted[selected_team+1]['score'] = score_dict_sorted[selected_team+1]['score'] + added_score
-    
-    with open("data/scores.json", "w", encoding="utf-8") as f:
-        json.dump(score_dict_sorted, f, indent=4, ensure_ascii=False)
+    score_dict_sorted[selected_team-1]['score'] = score_dict_sorted[selected_team-1]['score'] + added_score
+    clear_console()
+    show_scores(score_dict_sorted)
+    check = input("\tIs correct? [ y / n ] => ")
+    if check == "y" or check == "":
+        with open("data/scores.json", "w", encoding="utf-8") as f:
+            json.dump(score_dict_sorted, f, indent=4, ensure_ascii=False)
+        print_succeed("Score updated!")
+    elif check == "n":
+        print_error("Table score wrongly modifed")
+        update_scores()
+    else:
+        input("Invalid option. Enter to try again...")
+
     
 def show_scores(scores: dict):
     """
@@ -117,8 +124,8 @@ def push_all():
         print_succeed(f"Push succeed on branch {current_branch.stdout.strip()}!")
     else:
         print_error("Push failed!")
-    input("\tPress enter to continue...")
-        
+
+   
 def print_exit():
     """
     
@@ -129,13 +136,13 @@ def print_error(msg:str):
     """
     
     """
-    print(f"\n\t{Style.BRIGHT}{Fore.RED}❌  | {msg}{Style.RESET_ALL}\n")
+    input(f"\n\t{Style.BRIGHT}{Fore.RED}❌  | {msg}. Press enter to continue...{Style.RESET_ALL}")
     
 def print_succeed(msg:str):
     """
     
     """
-    print(f"\n\t{Style.BRIGHT}{Fore.GREEN}✅  | {msg}{Style.RESET_ALL}\n")
+    input(f"\n\t{Style.BRIGHT}{Fore.GREEN}✅  | {msg}. Press enter to continue...{Style.RESET_ALL}")
 
 def clear_console():
     """
