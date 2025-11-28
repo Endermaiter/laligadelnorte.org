@@ -66,20 +66,40 @@ def update_scores():
     
     """
     clear_console()
-    show_scores()
-    input()
     
-def show_scores():
+    with open("data/scores.json", "r", encoding="utf-8") as score_files:
+        score_dict = json.load(score_files)
+    score_dict_sorted = sorted(score_dict, key=lambda team: team['score'], reverse=True)
+    team_list = []
+    for team in score_dict_sorted:
+        team_list.append(team['name'])
+    
+    show_scores(score_dict_sorted)
+    
+    action = input("\t[V] Add Victory / [D] Add Defeat => ")
+    if action.lower() != "v" and action.lower() != "d":
+        input("Invalid action. Enter to try again...")
+        update_scores()
+    selected_team = int(input("Select team from list => "))
+    if selected_team not in range(1, len(score_dict_sorted)+1):
+        input("Invalid number team. Enter to try again...")
+        update_scores()
+    added_score = 2 if action.lower() == "v" else 1
+    score_dict_sorted[selected_team+1]['score'] = score_dict_sorted[selected_team+1]['score'] + added_score
+    
+    with open("data/scores.json", "w", encoding="utf-8") as f:
+        json.dump(score_dict_sorted, f, indent=4, ensure_ascii=False)
+    
+def show_scores(scores: dict):
     """
     
     """
     show_title()
-    with open("data/scores.json", "r", encoding="utf-8") as score_files:
-        score_list = json.load(score_files)
-
-    score_list_sorted = sorted(score_list, key=lambda team: team['score'], reverse=True)
-    for team in score_list_sorted:
-        print(f"\t· {Style.BRIGHT}{Fore.MAGENTA}{team['name']} - {Style.BRIGHT}{Fore.BLUE}{team['score']}{Style.RESET_ALL}")
+    index = 1
+    for team in scores:
+        print(f"\t[ {Style.BRIGHT}{Fore.YELLOW}{index}{Style.RESET_ALL} ] {Style.BRIGHT}{Fore.MAGENTA}{team['name']} - {Style.BRIGHT}{Fore.BLUE}{team['score']}{Style.RESET_ALL}")
+        index +=1
+    print("")
         
 
 def push_all():
