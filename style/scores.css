@@ -109,6 +109,7 @@ body {
   text-align: center;
   margin: 2rem;
   color: var(--accent);
+  margin-top: 10%;
 }
 
 .scores-table {
@@ -169,14 +170,13 @@ body {
 .scores-legend {
   position: absolute;
   top: 0;
-  left: 100%;
-  margin-left: 5%;
+  left: calc(100% + 40px);  /* separación real */
   background: var(--bg-card);
   border: 2px solid var(--gray);
   border-radius: 10px;
   padding: 1rem;
   color: var(--text);
-  min-width: 50%;
+  min-width: 280px;
 }
 
 .scores-legend h3 {
@@ -225,8 +225,9 @@ body {
 }
 
 .bracket-playoffs-container {
+  position: relative;
+  display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .bracket-final {
@@ -234,11 +235,12 @@ body {
   justify-content: center;
 }
 
-/* Cada ronda (semifinal, final) */
 .round-semifinal {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  width: fit-content;   /* 🔥 importantísimo */
+  margin: 0 auto;
 }
 
 /* La ronda final es más estrecha y centrada */
@@ -265,7 +267,14 @@ body {
   border: solid 4px;
   border-color: var(--gray);
   gap: 0.5rem;
-  margin-left: 11%;
+}
+
+.match1,
+.match2 {
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  width: 50%;      /* prueba 500–560 */
+  flex-shrink: 0;    /* evita que se encojan */
 }
 
 /* Partido final más grande */
@@ -282,9 +291,9 @@ body {
 .team {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   font-weight: 600;
   font-size: 1.1rem;
+  text-align: right;
 }
 
 .scores {
@@ -306,8 +315,7 @@ body {
 
 /* Logo del equipo */
 .team-logo {
-  width: 40px;
-  height: 40px;
+  width: 30%;
   object-fit: contain;
 }
 
@@ -318,6 +326,8 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   color: #ffffff;
+  text-align: center;
+  font-weight: bold;
 }
 
 /* Puntuación */
